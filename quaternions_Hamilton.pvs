@@ -1,9 +1,0 @@
-quaternions_Hamilton: THEORY
-
-BEGIN
-IMPORTING quaternions[real,+,*,0,1,-1,-1]
-
-T_pres_norm: CONJECTURE FORALL(q:quat)(v:(pure_quat)):
-     red_norm(q)`x = 1 IMPLIES red_norm(T(q)(v))`x = red_norm(v)`x
-   %define standard norm over R (or verify it other libraries) and re-specify the conjec. 
-END quaternions_Hamilton
