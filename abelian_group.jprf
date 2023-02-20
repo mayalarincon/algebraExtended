@@ -1,0 +1,267 @@
+{
+ "abelian_group.IMP_group_TCC1": [
+  {
+   "info": {
+    "theory": "abelian_group",
+    "formula": "IMP_group_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "73168d510a7420ae77bab1b763127734eb0cb0a691a079283ee391e2c16b6e90"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "IMP_group_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(lemma \"fullset_is_abelian_group\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"abelian_group?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(flatten)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "abelian_group.abelian_group_TCC1": [
+  {
+   "info": {
+    "theory": "abelian_group",
+    "formula": "abelian_group_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "73168d510a7420ae77bab1b763127734eb0cb0a691a079283ee391e2c16b6e90"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "abelian_group_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(lemma \"fullset_is_abelian_group\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(propax)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "abelian_group.abelian_group_is_group": [
+  {
+   "info": {
+    "theory": "abelian_group",
+    "formula": "abelian_group_is_group",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "73168d510a7420ae77bab1b763127734eb0cb0a691a079283ee391e2c16b6e90"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "abelian_group_is_group",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(judgement-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "abelian_group.abelian_group_is_commutative_monoid": [
+  {
+   "info": {
+    "theory": "abelian_group",
+    "formula": "abelian_group_is_commutative_monoid",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "73168d510a7420ae77bab1b763127734eb0cb0a691a079283ee391e2c16b6e90"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "abelian_group_is_commutative_monoid",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(judgement-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "abelian_group.finite_abelian_group_TCC1": [
+  {
+   "info": {
+    "theory": "abelian_group",
+    "formula": "finite_abelian_group_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "73168d510a7420ae77bab1b763127734eb0cb0a691a079283ee391e2c16b6e90"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "finite_abelian_group_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(inst + \"singleton[T](one)\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"finite_abelian_group?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"commutative?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skosimp*)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(grind)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"y!1\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"x!1\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"singleton\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(replace -1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(hide -1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(replace -1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(propax)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "abelian_group.finite_abelian_group_is_abelian_group": [
+  {
+   "info": {
+    "theory": "abelian_group",
+    "formula": "finite_abelian_group_is_abelian_group",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "73168d510a7420ae77bab1b763127734eb0cb0a691a079283ee391e2c16b6e90"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "finite_abelian_group_is_abelian_group",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(judgement-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "abelian_group.finite_abelian_group_is_finite_group": [
+  {
+   "info": {
+    "theory": "abelian_group",
+    "formula": "finite_abelian_group_is_finite_group",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "73168d510a7420ae77bab1b763127734eb0cb0a691a079283ee391e2c16b6e90"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "finite_abelian_group_is_finite_group",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(judgement-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ]
+}

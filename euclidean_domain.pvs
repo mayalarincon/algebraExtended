@@ -1,0 +1,57 @@
+%%----------------------------------------------------------------------------
+%%
+%% Authors:	
+%% 		Thaynara Arielly de Lima
+%% 		Universidade Federal de Goiás - Brasil
+%%
+%%  		Andréia Borges Avelar da Silva
+%%		Universidade de Brasília - Brasil
+%%			
+%%		André Luiz Galdino
+%%		Universidade Federal de Catalão - Brasil
+%%
+%%		Mauricio Ayala-Rincón
+%%		Universidade de Brasília - Brasil
+%%
+%%----------------------------------------------------------------------------
+%%
+%%  Results about a Euclidean Domain 
+%%
+%%	Last version: March 22, 2022
+%%
+%%----------------------------------------------------------------------------
+
+euclidean_domain[T:TYPE+, +,*:[T,T -> T], zero,one:T]: THEORY
+
+  BEGIN
+
+  ASSUMING IMPORTING ring_with_one_def[T,+,*,zero,one]
+    
+	 fullset_is_ring_with_one: ASSUMPTION ring_with_one?(fullset[T])
+
+   ENDASSUMING
+
+  IMPORTING euclidean_domain_def,
+            ring_with_one_basic_properties[T,+,*,zero,one], 
+            ring_zn, 
+            field_def[T,+,*,zero,one],
+            euclidean_ring[T,+,*,zero],
+            ring_unique_factorization_domain[T,+,*,zero,one]
+
+
+  F, R: VAR set[T]
+
+
+  % @QED integers_is_euclidean_domain proved by thaynaradelima on Thu, 24 Mar 2022 19:12:58 GMT
+  integers_is_euclidean_domain: LEMMA
+    euclidean_domain?[int,+,*,0,1](fullset[int])
+  
+  % @QED field_is_euclidean_domain proved by thaynaradelima on Thu, 10 Mar 2022 19:21:16 GMT
+  field_is_euclidean_domain: LEMMA
+    FORALL (F: (field?)): euclidean_domain?[T,+,*,zero,one](F)
+
+  % @QED euclidean_is_unique_factorization_domain proved by thaynaradelima on Sun, 10 Apr 2022 20:39:28 GMT
+  euclidean_is_unique_factorization_domain: LEMMA
+     FORALL (R: (euclidean_domain?[T,+,*,zero,one])): unique_factorization_domain?[T,+,*,zero,one](R)
+
+  END euclidean_domain

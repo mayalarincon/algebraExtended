@@ -1,0 +1,34 @@
+abstract[T:TYPE]: THEORY
+BEGIN
+
+  AbstractSyntax : DATATYPE
+  BEGIN
+    variable(index: nat): var? 
+    const(value: T): const? 
+    SumaAbs(operands: list[AbstractSyntax]): summ?
+ %   ProdAbs(operands: list[AbstractSyntax]): prod?
+  END AbstractSyntax
+
+%   summation(xs: list[T]): RECURSIVE T
+%   = IF null?(xs) THEN zero_T
+%     ELSE car(xs) + summation(cdr(xs)) ENDIF
+%   MEASURE BY <<
+
+  eval(expr: AbstractSyntax, env: [nat -> T]): RECURSIVE T
+  = CASES OF expr
+      variable(index): env(index),
+      constant(value): value,
+      SumaAbs(operands): % summation()
+        IF null?(operands) THEN zero_t ELSE eval(car(operands), env) + eval(cdr(SumaAbs), env) ENDIF
+    ENDCASES
+  MEASURE BY lex2(size(expr), IF summ?(expr) tHEN length(operands(expr) ELSE 0 ENDIF)) 
+
+% en la demo
+%   q`y + v`y + a + q`x = eval(SumaAbs( [# variable(0), variable(1), variable(2), variable(3) #]), 
+%     LAMBDA(i:nat): IF i=0 THEN q`y 
+%                    ELSIF i=1 THEN )
+
+  split: THEOREM
+  eval(SumaAbs( append(l1, l2)), env) = eval(SumaAbs(l1), env) + eval(SumaAbs(l2), env)
+
+END abstract

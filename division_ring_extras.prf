@@ -1,0 +1,850 @@
+(division_ring_extras
+ (IMP_ring_unit_TCC1 0
+  (IMP_ring_unit_TCC1-1 nil 3801236149
+   ("" (rewrite "fullset_is_ring_with_one") nil nil)
+   ((fullset_is_ring_with_one formula-decl nil division_ring_extras
+     nil))
+   nil
+   (IMP_ring_unit assuming
+    "ring_unit[division_ring_extras.T, division_ring_extras.+, division_ring_extras.*, division_ring_extras.zero, division_ring_extras.one].ring_unit"
+    "fullset_is_ring_with_one: ASSUMPTION ring_with_one_def[ring_unit.T, ring_unit.+, ring_unit.*, ring_unit.zero, ring_unit.one].ring_with_one?(sets[ring_unit.T].fullset)")))
+ (xyx_division_ring 0
+  (xyx_division_ring-1 nil 3801236653
+   ("" (skosimp)
+    (("" (expand "division_ring?")
+      (("" (lemma xyx_ring_with_one)
+        ((""
+          (case "nz_closed?(fullset[T]) AND subring?(S!1, fullset[T])")
+          (("1" (inst -2 "fullset[T]" "S!1")
+            (("1" (assert)
+              (("1" (flatten)
+                (("1" (assert)
+                  (("1" (expand "group?")
+                    (("1" (expand "monoid?")
+                      (("1" (expand "monad?")
+                        (("1" (split)
+                          (("1" (expand "ring_with_one?")
+                            (("1" (expand "ring?")
+                              (("1"
+                                (flatten)
+                                (("1"
+                                  (expand "star_closed?")
+                                  (("1"
+                                    (hide-all-but 1)
+                                    (("1"
+                                      (lemma "xyx_is_x_nz_closed")
+                                      (("1"
+                                        (inst -1 "S!1")
+                                        (("1"
+                                          (expand "nz_closed?")
+                                          (("1"
+                                            (expand "star_closed?")
+                                            (("1" (propax) nil nil))
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil)
+                           ("2" (expand "member")
+                            (("2" (expand "remove")
+                              (("2"
+                                (expand "ring_with_one?")
+                                (("2"
+                                  (expand "monoid?")
+                                  (("2"
+                                    (expand "monad?")
+                                    (("2"
+                                      (flatten)
+                                      (("2"
+                                        (assert)
+                                        (("2"
+                                          (lemma no_singleton_nzx)
+                                          (("2"
+                                            (inst -1 "S!1")
+                                            (("2"
+                                              (assert)
+                                              (("2"
+                                                (skosimp)
+                                                (("2"
+                                                  (lemma one_times)
+                                                  (("2"
+                                                    (inst -1 "nzx!1")
+                                                    (("2"
+                                                      (replace
+                                                       -2
+                                                       -1
+                                                       rl)
+                                                      (("2"
+                                                        (assert)
+                                                        nil
+                                                        nil))
+                                                      nil))
+                                                    nil))
+                                                  nil))
+                                                nil))
+                                              nil))
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil)
+                           ("3" (expand "identity?")
+                            (("3" (expand "restrict")
+                              (("3"
+                                (skosimp)
+                                (("3" (assert) nil nil))
+                                nil))
+                              nil))
+                            nil)
+                           ("4" (expand "ring_with_one?")
+                            (("4" (expand "ring?")
+                              (("4"
+                                (flatten)
+                                (("4"
+                                  (hide-all-but (-5 1))
+                                  (("4"
+                                    (expand "associative?")
+                                    (("4"
+                                      (skosimp)
+                                      (("4"
+                                        (expand "restrict")
+                                        (("4"
+                                          (inst -1 "x!1" "y!1" "z!1")
+                                          (("1"
+                                            (typepred "z!1")
+                                            (("1"
+                                              (expand "remove")
+                                              (("1" (assert) nil nil))
+                                              nil))
+                                            nil)
+                                           ("2"
+                                            (typepred "y!1")
+                                            (("2"
+                                              (expand "remove")
+                                              (("2" (assert) nil nil))
+                                              nil))
+                                            nil)
+                                           ("3"
+                                            (typepred "x!1")
+                                            (("3"
+                                              (expand "remove")
+                                              (("3" (assert) nil nil))
+                                              nil))
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil)
+                           ("5" (lemma "xyx_R_unit")
+                            (("5" (inst -1 "fullset[T]" "S!1")
+                              (("1"
+                                (assert)
+                                (("1"
+                                  (expand "inv_exists?")
+                                  (("1"
+                                    (skosimp)
+                                    (("1"
+                                      (inst -1 "x!1")
+                                      (("1"
+                                        (skosimp)
+                                        (("1"
+                                          (inst 1 "y!1")
+                                          (("1" (assert) nil nil)
+                                           ("2"
+                                            (expand "remove")
+                                            (("2"
+                                              (assert)
+                                              (("2"
+                                                (lemma
+                                                 no_singleton_nzx)
+                                                (("2"
+                                                  (inst -1 "S!1")
+                                                  (("2"
+                                                    (assert)
+                                                    (("2"
+                                                      (skosimp)
+                                                      (("2"
+                                                        (lemma
+                                                         one_times)
+                                                        (("2"
+                                                          (inst
+                                                           -1
+                                                           "nzx!1")
+                                                          (("2"
+                                                            (replace
+                                                             -2
+                                                             -3
+                                                             rl)
+                                                            (("2"
+                                                              (rewrite
+                                                               "times_zero")
+                                                              (("2"
+                                                                (replace
+                                                                 -3
+                                                                 -1
+                                                                 rl)
+                                                                (("2"
+                                                                  (assert)
+                                                                  nil
+                                                                  nil))
+                                                                nil))
+                                                              nil))
+                                                            nil))
+                                                          nil))
+                                                        nil))
+                                                      nil))
+                                                    nil))
+                                                  nil))
+                                                nil))
+                                              nil))
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil)
+                               ("2"
+                                (rewrite "fullset_is_ring_with_one")
+                                nil
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil)
+             ("2" (rewrite "fullset_is_ring_with_one") nil nil))
+            nil)
+           ("2" (rewrite "fullset_is_nz_closed")
+            (("2" (hide - 3)
+              (("2" (expand "subring?")
+                (("2" (typepred "S!1")
+                  (("2" (expand "xyx_R?")
+                    (("2" (flatten)
+                      (("2" (assert)
+                        (("2" (expand "subset?")
+                          (("2" (hide-all-but 1)
+                            (("2" (grind) nil nil)) nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil)
+           ("3" (prop)
+            (("1" (hide-all-but 2)
+              (("1" (lemma "fullset_is_ring_with_one")
+                (("1" (expand "ring_with_one?")
+                  (("1" (assert) nil nil)) nil))
+                nil))
+              nil)
+             ("2" (hide-all-but 2)
+              (("2" (lemma "fullset_is_ring_with_one")
+                (("2" (expand "ring_with_one?")
+                  (("2" (assert) nil nil)) nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((xyx_R type-eq-decl nil ring_xyx_is_x_def nil)
+    (xyx_R? const-decl "bool" ring_xyx_is_x_def nil)
+    (fullset const-decl "set" sets nil) (set type-eq-decl nil sets nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (IMPLIES const-decl "[bool, bool -> bool]" booleans nil)
+    (nonempty_singleton_finite application-judgement
+     "non_empty_finite_set" finite_sets nil)
+    (xyx_is_x_nz_closed formula-decl nil ring_xyx_is_x nil)
+    (remove const-decl "set" sets nil)
+    (no_singleton_nzx formula-decl nil ring_basic_properties nil)
+    (member const-decl "bool" sets nil)
+    (restrict const-decl "R" restrict nil)
+    (identity? const-decl "bool" operator_defs nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (associative? const-decl "bool" operator_defs nil)
+    (fullset_is_ring_with_one formula-decl nil division_ring_extras
+     nil)
+    (xyx_R_unit formula-decl nil ring_w_one_xyx_is_x nil)
+    (subset? const-decl "bool" sets nil)
+    (subset_is_partial_order name-judgement "(partial_order?[set[T]])"
+     sets_lemmas nil)
+    (fullset_is_nz_closed formula-decl nil division_ring_extras nil)
+    (xyx_ring_with_one formula-decl nil ring_w_one_xyx_is_x nil)
+    (T formal-nonempty-type-decl nil division_ring_extras nil)
+    (+ formal-const-decl "[T, T -> T]" division_ring_extras nil)
+    (* formal-const-decl "[T, T -> T]" division_ring_extras nil)
+    (zero formal-const-decl "T" division_ring_extras nil)
+    (one formal-const-decl "T" division_ring_extras nil))
+   nil))
+ (div_ring_nz_unit_TCC1 0
+  (div_ring_nz_unit_TCC1-1 nil 3800211745
+   ("" (skosimp)
+    (("" (skosimp)
+      (("" (typepred "x!1")
+        (("" (expand "remove")
+          (("" (expand "member") (("" (assert) nil nil)) nil)) nil))
+        nil))
+      nil))
+    nil)
+   ((nonempty_singleton_finite application-judgement
+     "non_empty_finite_set" finite_sets nil)
+    (member const-decl "bool" sets nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (T formal-nonempty-type-decl nil division_ring_extras nil)
+    (set type-eq-decl nil sets nil) (remove const-decl "set" sets nil)
+    (zero formal-const-decl "T" division_ring_extras nil)
+    (+ formal-const-decl "[T, T -> T]" division_ring_extras nil)
+    (* formal-const-decl "[T, T -> T]" division_ring_extras nil)
+    (one formal-const-decl "T" division_ring_extras nil))
+   nil
+   (div_ring_nz_unit subtype "division_ring_extras.x"
+    "(division_ring_extras.S)")))
+ (div_ring_nz_unit 0
+  (div_ring_nz_unit-3 nil 3801236194
+   ("" (skosimp)
+    (("" (split)
+      (("1" (skosimp)
+        (("1" (split)
+          (("1" (expand "division_ring?")
+            (("1" (expand "group?")
+              (("1" (expand "monoid?")
+                (("1" (expand "monad?")
+                  (("1" (expand "member")
+                    (("1" (flatten)
+                      (("1" (hide-all-but (-1 -3))
+                        (("1" (expand "remove")
+                          (("1" (expand "member")
+                            (("1" (flatten)
+                              (("1"
+                                (expand "singleton")
+                                (("1"
+                                  (decompose-equality)
+                                  (("1"
+                                    (inst -1 "one")
+                                    (("1"
+                                      (iff)
+                                      (("1" (assert) nil nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil)
+           ("2" (expand "division_ring?")
+            (("2" (expand "group?")
+              (("2" (expand "inv_exists?")
+                (("2" (flatten)
+                  (("2" (skosimp)
+                    (("2" (expand "unit?")
+                      (("2" (split)
+                        (("1" (expand "l_invertible?")
+                          (("1" (inst -2 "x!1")
+                            (("1" (skosimp)
+                              (("1"
+                                (inst 1 "y!1")
+                                (("1"
+                                  (typepred "y!1")
+                                  (("1"
+                                    (expand "remove")
+                                    (("1"
+                                      (expand "member")
+                                      (("1" (assert) nil nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil)
+                         ("2" (expand "r_invertible?")
+                          (("2" (inst -2 "x!1")
+                            (("2" (skosimp)
+                              (("2"
+                                (inst 1 "y!1")
+                                (("2"
+                                  (typepred "y!1")
+                                  (("2"
+                                    (expand "remove")
+                                    (("2"
+                                      (expand "member")
+                                      (("2" (assert) nil nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil)
+       ("2" (prop)
+        (("2" (lemma unit_xyx_R)
+          (("2" (inst -1 "S!1")
+            (("2" (case "xyx_R?(S!1)")
+              (("1" (lemma xyx_division_ring)
+                (("1" (inst -1 "S!1")
+                  (("1" (case "S!1 /= singleton(zero)")
+                    (("1" (assert) nil nil) ("2" (assert) nil nil))
+                    nil))
+                  nil))
+                nil)
+               ("2" (assert) nil nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((xyx_division_ring formula-decl nil division_ring_extras nil)
+    (nonempty_singleton_finite application-judgement
+     "non_empty_finite_set" finite_sets nil)
+    (/= const-decl "boolean" notequal nil)
+    (singleton? const-decl "bool" sets nil)
+    (xyx_R type-eq-decl nil ring_xyx_is_x_def nil)
+    (xyx_R? const-decl "bool" ring_xyx_is_x_def nil)
+    (unit_xyx_R formula-decl nil ring_w_one_xyx_is_x nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (l_invertible? const-decl "bool" ring_unit_def nil)
+    (r_invertible? const-decl "bool" ring_unit_def nil)
+    (unit? const-decl "bool" ring_unit_def nil)
+    (member const-decl "bool" sets nil)
+    (singleton const-decl "(singleton?)" sets nil)
+    (one formal-const-decl "T" division_ring_extras nil)
+    (zero formal-const-decl "T" division_ring_extras nil)
+    (* formal-const-decl "[T, T -> T]" division_ring_extras nil)
+    (+ formal-const-decl "[T, T -> T]" division_ring_extras nil)
+    (set type-eq-decl nil sets nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (T formal-nonempty-type-decl nil division_ring_extras nil)
+    (remove const-decl "set" sets nil))
+   nil)
+  (div_ring_nz_unit-2 nil 3800212386
+   ("" (skosimp)
+    (("" (split)
+      (("1" (skosimp)
+        (("1" (split)
+          (("1" (expand "division_ring?")
+            (("1" (expand "group?")
+              (("1" (expand "monoid?")
+                (("1" (expand "monad?")
+                  (("1" (expand "member")
+                    (("1" (flatten)
+                      (("1" (hide-all-but (-1 -3))
+                        (("1" (expand "remove")
+                          (("1" (expand "member")
+                            (("1" (flatten)
+                              (("1"
+                                (expand "singleton")
+                                (("1"
+                                  (decompose-equality)
+                                  (("1"
+                                    (inst -1 "one")
+                                    (("1"
+                                      (iff)
+                                      (("1" (assert) nil nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil)
+           ("2" (expand "division_ring?")
+            (("2" (expand "group?")
+              (("2" (expand "inv_exists?")
+                (("2" (flatten)
+                  (("2" (skosimp)
+                    (("2" (expand "unit?")
+                      (("2" (split)
+                        (("1" (expand "l_invertible?")
+                          (("1" (inst -2 "x!1")
+                            (("1" (skosimp)
+                              (("1"
+                                (inst 1 "y!1")
+                                (("1"
+                                  (typepred "y!1")
+                                  (("1"
+                                    (expand "remove")
+                                    (("1"
+                                      (expand "member")
+                                      (("1" (assert) nil nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil)
+                         ("2" (expand "r_invertible?")
+                          (("2" (inst -2 "x!1")
+                            (("2" (skosimp)
+                              (("2"
+                                (inst 1 "y!1")
+                                (("2"
+                                  (typepred "y!1")
+                                  (("2"
+                                    (expand "remove")
+                                    (("2"
+                                      (expand "member")
+                                      (("2" (assert) nil nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil)
+       ("2" (prop)
+        (("2" (lemma div_ring_xyx_R)
+          (("2" (inst -1 "S!1")
+            (("2" (case "xyx_R?(S!1)")
+              (("1" (lemma xyx_division_ring)
+                (("1" (inst -1 "S!1")
+                  (("1" (case "S!1 /= singleton(zero)")
+                    (("1" (assert) nil nil) ("2" (assert) nil nil))
+                    nil))
+                  nil))
+                nil)
+               ("2" (assert) nil nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((nonempty_singleton_finite application-judgement
+     "non_empty_finite_set" finite_sets nil)
+    (/= const-decl "boolean" notequal nil)
+    (singleton? const-decl "bool" sets nil)
+    (xyx_R type-eq-decl nil ring_xyx_is_x_def nil)
+    (xyx_R? const-decl "bool" ring_xyx_is_x_def nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (l_invertible? const-decl "bool" ring_unit_def nil)
+    (r_invertible? const-decl "bool" ring_unit_def nil)
+    (unit? const-decl "bool" ring_unit_def nil)
+    (member const-decl "bool" sets nil)
+    (singleton const-decl "(singleton?)" sets nil)
+    (one formal-const-decl "T" division_ring_extras nil)
+    (zero formal-const-decl "T" division_ring_extras nil)
+    (* formal-const-decl "[T, T -> T]" division_ring_extras nil)
+    (+ formal-const-decl "[T, T -> T]" division_ring_extras nil)
+    (set type-eq-decl nil sets nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (T formal-nonempty-type-decl nil division_ring_extras nil)
+    (remove const-decl "set" sets nil))
+   nil)
+  (div_ring_nz_unit-1 nil 3800212256 ("" (postpone) nil nil) nil
+   shostak))
+ (no_prop_l_ideal_div_ring 0
+  (no_prop_l_ideal_div_ring-1 nil 3808585012
+   ("" (skosimp)
+    (("" (lemma no_prop_l_ideal_nz_unit)
+      (("" (inst -1 "S!1")
+        (("" (prop)
+          (("" (lemma div_ring_nz_unit)
+            (("" (inst -1 "S!1")
+              (("" (flatten) (("" (assert) nil nil)) nil)) nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (set type-eq-decl nil sets nil)
+    (ring_with_one? const-decl "bool" ring_with_one_def nil)
+    (ring_with_one nonempty-type-eq-decl nil ring_with_one nil)
+    (div_ring_nz_unit formula-decl nil division_ring_extras nil)
+    (nonempty_singleton_finite application-judgement
+     "non_empty_finite_set" finite_sets nil)
+    (no_prop_l_ideal_nz_unit formula-decl nil ring_unit nil)
+    (T formal-nonempty-type-decl nil division_ring_extras nil)
+    (+ formal-const-decl "[T, T -> T]" division_ring_extras nil)
+    (* formal-const-decl "[T, T -> T]" division_ring_extras nil)
+    (zero formal-const-decl "T" division_ring_extras nil)
+    (one formal-const-decl "T" division_ring_extras nil))
+   nil))
+ (no_prop_r_ideal_div_ring 0
+  (no_prop_r_ideal_div_ring-1 nil 3808837715
+   ("" (skosimp)
+    (("" (lemma no_prop_r_ideal_nz_unit)
+      (("" (inst -1 "S!1")
+        (("" (prop)
+          (("" (lemma div_ring_nz_unit)
+            (("" (inst -1 "S!1")
+              (("" (flatten) (("" (assert) nil nil)) nil)) nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (set type-eq-decl nil sets nil)
+    (ring_with_one? const-decl "bool" ring_with_one_def nil)
+    (ring_with_one nonempty-type-eq-decl nil ring_with_one nil)
+    (div_ring_nz_unit formula-decl nil division_ring_extras nil)
+    (nonempty_singleton_finite application-judgement
+     "non_empty_finite_set" finite_sets nil)
+    (no_prop_r_ideal_nz_unit formula-decl nil ring_unit nil)
+    (T formal-nonempty-type-decl nil division_ring_extras nil)
+    (+ formal-const-decl "[T, T -> T]" division_ring_extras nil)
+    (* formal-const-decl "[T, T -> T]" division_ring_extras nil)
+    (zero formal-const-decl "T" division_ring_extras nil)
+    (one formal-const-decl "T" division_ring_extras nil))
+   nil))
+ (div_ring_no_prop_ideal 0
+  (div_ring_no_prop_ideal-1 nil 3808837784
+   ("" (skosimp)
+    (("" (skosimp)
+      (("" (decompose-equality 2)
+        (("" (iff)
+          (("" (split)
+            (("1" (prop)
+              (("1" (typepred "I!1")
+                (("1" (expand "ideal?")
+                  (("1" (expand "left_ideal?")
+                    (("1" (expand "subring?")
+                      (("1" (expand "subset?")
+                        (("1" (flatten)
+                          (("1" (inst -1 "x!1")
+                            (("1" (expand "member")
+                              (("1" (assert) nil nil)) nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil)
+             ("2" (prop)
+              (("2" (lemma no_singleton_nzx)
+                (("2" (inst -1 "I!1")
+                  (("2" (flatten)
+                    (("2" (assert)
+                      (("2" (skosimp)
+                        (("2" (typepred "I!1")
+                          (("2" (expand "ideal?")
+                            (("2" (expand "left_ideal?")
+                              (("2"
+                                (expand "left_swallow?")
+                                (("2"
+                                  (flatten)
+                                  (("2"
+                                    (rewrite div_ring_nz_unit)
+                                    (("2"
+                                      (flatten)
+                                      (("2"
+                                        (inst -5 "nzx!1")
+                                        (("1"
+                                          (expand "unit?")
+                                          (("1"
+                                            (expand "l_invertible?")
+                                            (("1"
+                                              (flatten)
+                                              (("1"
+                                                (skosimp)
+                                                (("1"
+                                                  (inst
+                                                   -2
+                                                   "y!1"
+                                                   "nzx!1")
+                                                  (("1"
+                                                    (replace -5 -2)
+                                                    (("1"
+                                                      (expand
+                                                       "right_ideal?")
+                                                      (("1"
+                                                        (expand
+                                                         "right_swallow?")
+                                                        (("1"
+                                                          (flatten)
+                                                          (("1"
+                                                            (inst
+                                                             -4
+                                                             "x!1"
+                                                             "one")
+                                                            (("1"
+                                                              (rewrite
+                                                               one_times)
+                                                              (("1"
+                                                                (expand
+                                                                 "member")
+                                                                (("1"
+                                                                  (propax)
+                                                                  nil
+                                                                  nil))
+                                                                nil))
+                                                              nil)
+                                                             ("2"
+                                                              (expand
+                                                               "member")
+                                                              (("2"
+                                                                (propax)
+                                                                nil
+                                                                nil))
+                                                              nil))
+                                                            nil))
+                                                          nil))
+                                                        nil))
+                                                      nil))
+                                                    nil))
+                                                  nil))
+                                                nil))
+                                              nil))
+                                            nil))
+                                          nil)
+                                         ("2"
+                                          (expand "remove")
+                                          (("2"
+                                            (split)
+                                            (("1"
+                                              (expand "/=")
+                                              (("1" (assert) nil nil))
+                                              nil)
+                                             ("2"
+                                              (expand "member")
+                                              (("2"
+                                                (typepred "nzx!1")
+                                                (("2"
+                                                  (expand "subring?")
+                                                  (("2"
+                                                    (expand "subset?")
+                                                    (("2"
+                                                      (expand "member")
+                                                      (("2"
+                                                        (flatten)
+                                                        (("2"
+                                                          (inst
+                                                           -2
+                                                           "nzx!1")
+                                                          (("2"
+                                                            (assert)
+                                                            nil
+                                                            nil))
+                                                          nil))
+                                                        nil))
+                                                      nil))
+                                                    nil))
+                                                  nil))
+                                                nil))
+                                              nil))
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((nonempty_singleton_finite application-judgement
+     "non_empty_finite_set" finite_sets nil)
+    (+ formal-const-decl "[T, T -> T]" division_ring_extras nil)
+    (* formal-const-decl "[T, T -> T]" division_ring_extras nil)
+    (zero formal-const-decl "T" division_ring_extras nil)
+    (ring? const-decl "bool" ring_def nil)
+    (ideal? const-decl "bool" ring_ideal_def nil)
+    (one formal-const-decl "T" division_ring_extras nil)
+    (ring_with_one? const-decl "bool" ring_with_one_def nil)
+    (ring_with_one nonempty-type-eq-decl nil ring_with_one nil)
+    (ideal type-eq-decl nil ring_ideal_def nil)
+    (set type-eq-decl nil sets nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (T formal-nonempty-type-decl nil division_ring_extras nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (left_ideal? const-decl "bool" ring_ideal_def nil)
+    (subset? const-decl "bool" sets nil)
+    (member const-decl "bool" sets nil)
+    (subring? const-decl "bool" ring_def nil)
+    (no_singleton_nzx formula-decl nil ring_basic_properties nil)
+    (left_swallow? const-decl "bool" ring_ideal_def nil)
+    (div_ring_nz_unit formula-decl nil division_ring_extras nil)
+    (remove const-decl "set" sets nil)
+    (S!1 skolem-const-decl "ring_with_one[T, +, *, zero, one]"
+     division_ring_extras nil)
+    (I!1 skolem-const-decl "ideal[T, +, *, zero](S!1)"
+     division_ring_extras nil)
+    (nzx!1 skolem-const-decl "(I!1)" division_ring_extras nil)
+    (l_invertible? const-decl "bool" ring_unit_def nil)
+    (right_swallow? const-decl "bool" ring_ideal_def nil)
+    (one_times formula-decl nil ring_with_one nil)
+    (right_ideal? const-decl "bool" ring_ideal_def nil)
+    (unit? const-decl "bool" ring_unit_def nil)
+    (/= const-decl "boolean" notequal nil)
+    (ring nonempty-type-eq-decl nil ring nil))
+   nil)))
+
