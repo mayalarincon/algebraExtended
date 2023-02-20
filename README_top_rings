@@ -20,11 +20,17 @@
 %  the theorem concerning the correctness of the Euclidean gcd
 %  algorithm for Euclidean Domains. 
 %
+%  Advances in course, include application of rings and fields to build
+%  the abstract theory of Quaternions built over abstract rings, which 
+%  will provide the required abstract framework to specify the famous
+%  Hamilton's Quaternions through parameterization using the ring of 
+%  reals. 
+%
 %  Authors: André L. Galdino, Andréia Borges Avelar,
 %           Thaynara Arielly de Lima, André Camapum Carvalho de Freitas,
 	    Mauricio Ayala-Rincón
 %
-%  Last modified: May 16, 2022
+%  Last modified: February 20 2023
 %
 %  This theory is integrated to the PVS theory algebra and checked
 %  in PVS 7.1.0.   Below we describe only the files related with rings.
