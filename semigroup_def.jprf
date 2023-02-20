@@ -1,0 +1,82 @@
+{
+ "semigroup_def.semigroup?_TCC1": [
+  {
+   "info": {
+    "theory": "semigroup_def",
+    "formula": "semigroup?_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "2ae502cd9decb95602efcf775257d7d4dd5007b2ed478ddaffc44a589c62bb68"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "semigroup?_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(expand \"star_closed?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"member\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skosimp*)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "semigroup_def.finite_commutative_semigroup?_TCC1": [
+  {
+   "info": {
+    "theory": "semigroup_def",
+    "formula": "finite_commutative_semigroup?_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "2ae502cd9decb95602efcf775257d7d4dd5007b2ed478ddaffc44a589c62bb68"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "finite_commutative_semigroup?_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(expand \"finite_semigroup?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"star_closed?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"member\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skosimp*)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ]
+}

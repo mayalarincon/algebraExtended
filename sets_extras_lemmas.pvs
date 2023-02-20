@@ -1,0 +1,86 @@
+%%----------------------------------------------------------------------------
+%%
+%% Authors:	
+%% 		Thaynara Arielly de Lima
+%% 		Universidade Federal de Goiás - Brasil
+%%
+%%		André Camapum Carvalho de Freitas
+%%		Universidade Federal de Goiás - Brasil
+%%
+%%----------------------------------------------------------------------------
+%%
+%%	Formalization of some results about Set Theory: in particular
+%%	properties about set's difference
+%%
+%%	Last version: August 5th, 2021
+%%
+%%----------------------------------------------------------------------------
+
+sets_extras_lemmas[T: TYPE]: THEORY
+
+ BEGIN
+ 
+
+ right_diff_over_union: LEMMA 
+	FORALL (a,b,c:set[T]):
+	       difference(union(a,b),c)=union(difference(a,c),difference(b,c))
+
+ left_diff_over_union: LEMMA 
+ 	FORALL (a,b,c:set[T]):
+	       difference(a,union(b,c))=intersection(difference(a,b),difference(a,c))
+
+ inter_over_diff: LEMMA 
+	FORALL (a,b,c:set[T]):
+	       intersection(a,difference(b,c))=difference(intersection(a,b),intersection(a,c))
+
+ symm_diff_equiv_1: LEMMA 
+	FORALL (a,b:set[T]):
+	       symmetric_difference(a,b) = difference(union(a,b),intersection(a,b))
+
+ symm_diff_equiv_2: LEMMA 
+	FORALL (a,b:set[T]):
+	       symmetric_difference(a,b) = union(intersection(a,complement(b)),intersection(complement(a),b))
+
+ symm_diff_equiv_3: LEMMA 
+	FORALL (a,b:set[T]):
+	       symmetric_difference(a,b) = intersection(union(a,b),union(complement(a),complement(b)))
+
+ symm_diff_associativity: LEMMA 
+	FORALL (a,b,c:set[T]):
+	       symmetric_difference(symmetric_difference(a,b),c) = symmetric_difference(a,symmetric_difference(b,c))
+
+ symm_diff_commutativity: LEMMA
+	FORALL (a,b:set[T]):
+	       symmetric_difference(a,b) = symmetric_difference(b,a)
+
+ l_inter_over_symm_diff: LEMMA
+	FORALL (a,b,c:set[T]):
+	       intersection(a,symmetric_difference(b,c))=symmetric_difference(intersection(a,b),intersection(a,c))
+
+ r_inter_over_symm_diff: LEMMA
+	FORALL (a,b,c:set[T]):
+	       intersection(symmetric_difference(a,b),c)=symmetric_difference(intersection(a,c),intersection(b,c))
+
+ card_1_power_set_charac: LEMMA 
+ 	FORALL (a:finite_set[T]):
+	       card(a) <= 1 IFF powerset(a) = {y: setof[T] | y = emptyset OR y = a}
+
+ power_set_full_set1: LEMMA
+	FORALL (a:set[T],b:set[(a)]):
+	       member(b,powerset(a)) IFF member(b,fullset[set[(a)]])
+
+ power_set_full_set2: COROLLARY
+	FORALL (a:set[T]):
+	       powerset[(a)](a) = fullset[set[(a)]]
+
+ set_of_set_finite: LEMMA
+	FORALL (a:set[T],b:set[set[T]]):
+	       ((FORALL (c:T): (member(c,a) IMPLIES member(singleton[(a)](c),b))) AND is_finite(b)) IMPLIES is_finite(a)
+
+ power_set_finite: COROLLARY
+	FORALL (a:set[T]):
+	       is_finite(powerset(a)) IMPLIES is_finite(a) 
+
+ 
+
+END sets_extras_lemmas

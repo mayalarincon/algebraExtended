@@ -1,0 +1,95 @@
+{
+ "ring.IMP_abelian_group_TCC1": [
+  {
+   "info": {
+    "theory": "ring",
+    "formula": "IMP_abelian_group_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "82be03a57f179e8863441b5896be4f464cc37f0ffd38ac3cb1c279ad0efab99c"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "IMP_abelian_group_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(lemma \"fullset_is_ring\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"ring?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(flatten)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "ring.ring_TCC1": [
+  {
+   "info": {
+    "theory": "ring",
+    "formula": "ring_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "82be03a57f179e8863441b5896be4f464cc37f0ffd38ac3cb1c279ad0efab99c"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "ring_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(lemma \"fullset_is_ring\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(propax)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "ring.ring_is_abelian_group": [
+  {
+   "info": {
+    "theory": "ring",
+    "formula": "ring_is_abelian_group",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "82be03a57f179e8863441b5896be4f464cc37f0ffd38ac3cb1c279ad0efab99c"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "ring_is_abelian_group",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(judgement-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ]
+}

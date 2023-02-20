@@ -1,0 +1,132 @@
+{
+ "semigroup.fullset_is_semigroup_TCC1": [
+  {
+   "info": {
+    "theory": "semigroup",
+    "formula": "fullset_is_semigroup_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "9d2f2a13d76ad4995cc37b5c9c0f9444ed6c84bd0cd0ba9c06386b57e60f7a3d"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "fullset_is_semigroup_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "semigroup.semigroup_TCC1": [
+  {
+   "info": {
+    "theory": "semigroup",
+    "formula": "semigroup_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "9d2f2a13d76ad4995cc37b5c9c0f9444ed6c84bd0cd0ba9c06386b57e60f7a3d"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "semigroup_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep*)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"star_closed?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(inst -1 \"x1`1\" \"x1`2\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"member\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "semigroup.semigroup_TCC2": [
+  {
+   "info": {
+    "theory": "semigroup",
+    "formula": "semigroup_TCC2",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "9d2f2a13d76ad4995cc37b5c9c0f9444ed6c84bd0cd0ba9c06386b57e60f7a3d"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "semigroup_TCC2",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(lemma \"fullset_is_semigroup\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(propax)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "semigroup.semigroup_is_groupoid": [
+  {
+   "info": {
+    "theory": "semigroup",
+    "formula": "semigroup_is_groupoid",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "9d2f2a13d76ad4995cc37b5c9c0f9444ed6c84bd0cd0ba9c06386b57e60f7a3d"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "semigroup_is_groupoid",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(judgement-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ]
+}

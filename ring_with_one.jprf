@@ -1,0 +1,157 @@
+{
+ "ring_with_one.IMP_ring_TCC1": [
+  {
+   "info": {
+    "theory": "ring_with_one",
+    "formula": "IMP_ring_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "e25f317d0d7e64e5ba8beac6e865f39a4827aa60e9d8858a83902c446069623d"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "IMP_ring_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(lemma \"fullset_is_ring_with_one\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"ring_with_one?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(flatten)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "ring_with_one.IMP_monoid_TCC1": [
+  {
+   "info": {
+    "theory": "ring_with_one",
+    "formula": "IMP_monoid_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "e25f317d0d7e64e5ba8beac6e865f39a4827aa60e9d8858a83902c446069623d"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "IMP_monoid_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(lemma \"fullset_is_ring_with_one\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"ring_with_one?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(flatten)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "ring_with_one.ring_with_one_TCC1": [
+  {
+   "info": {
+    "theory": "ring_with_one",
+    "formula": "ring_with_one_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "e25f317d0d7e64e5ba8beac6e865f39a4827aa60e9d8858a83902c446069623d"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "ring_with_one_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(lemma \"fullset_is_ring_with_one\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(propax)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "ring_with_one.ring_with_one_is_ring": [
+  {
+   "info": {
+    "theory": "ring_with_one",
+    "formula": "ring_with_one_is_ring",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "e25f317d0d7e64e5ba8beac6e865f39a4827aa60e9d8858a83902c446069623d"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "ring_with_one_is_ring",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(judgement-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "ring_with_one.ring_with_one_is_monoid": [
+  {
+   "info": {
+    "theory": "ring_with_one",
+    "formula": "ring_with_one_is_monoid",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "e25f317d0d7e64e5ba8beac6e865f39a4827aa60e9d8858a83902c446069623d"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "ring_with_one_is_monoid",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(judgement-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ]
+}
