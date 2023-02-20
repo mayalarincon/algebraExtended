@@ -1,0 +1,39 @@
+%%----------------------------------------------------------------------------
+%%
+%% Authors:	
+%% 		Thaynara Arielly de Lima
+%% 		Universidade Federal de Goiás - Brasil
+%%
+%%  	Andréia Borges Avelar da Silva
+%%		Universidade de Brasília - Brasil
+%%			
+%%		André Luiz Galdino
+%%		Universidade Federal de Catalão - Brasil
+%%
+%%		Mauricio Ayala-Rincón
+%%		Universidade de Brasília - Brasil
+%%
+%%----------------------------------------------------------------------------
+%%
+%%  Definition of a Module over a Ring 
+%%
+%%	Last version: September 6, 2022
+%%
+%%----------------------------------------------------------------------------
+module_def[T, U: Type+, *T,+T[T,T->T], zeroT:T, +U[U,U->U],zeroU:U] : THEORY
+
+BEGIN
+IMPORTING ring_def
+
+B: VAR set[U]
+F: VAR set[T]
+
+module?(B): bool = abelian_group?[U,+U,zeroU](B) AND 
+                   EXISTS (phi: [F x B -> (B)]): 
+                   FORALL (r,s:(F), a,b:(B)): 
+                     (phi(r,a +U b) = phi(r, a) +U phi(r,b) AND
+                      phi(r +T s, a) = phi(r,a) +U phi(s,a) AND
+                      phi(r, phi(s,a)) = phi (r *T s, a))
+
+
+end module_def

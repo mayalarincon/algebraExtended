@@ -1,0 +1,189 @@
+{
+ "ring_basic_properties.IMP_ring_TCC1": [
+  {
+   "info": {
+    "theory": "ring_basic_properties",
+    "formula": "IMP_ring_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "2c234a491dda3c4f471109d7741dde35c4a4c73f8663d44c02c57ec505cb8ced"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "IMP_ring_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(rewrite fullset_is_ring)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "ring_basic_properties.subring_transitive_TCC1": [
+  {
+   "info": {
+    "theory": "ring_basic_properties",
+    "formula": "subring_transitive_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "2c234a491dda3c4f471109d7741dde35c4a4c73f8663d44c02c57ec505cb8ced"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "subring_transitive_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skosimp)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"subring?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "ring_basic_properties.R_sigma_TCC1": [
+  {
+   "info": {
+    "theory": "ring_basic_properties",
+    "formula": "R_sigma_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "2c234a491dda3c4f471109d7741dde35c4a4c73f8663d44c02c57ec505cb8ced"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "R_sigma_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(termination-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "ring_basic_properties.R_sigma_TCC2": [
+  {
+   "info": {
+    "theory": "ring_basic_properties",
+    "formula": "R_sigma_TCC2",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "2c234a491dda3c4f471109d7741dde35c4a4c73f8663d44c02c57ec505cb8ced"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "R_sigma_TCC2",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(termination-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "ring_basic_properties.R_sigma_R_sigma_TCC1": [
+  {
+   "info": {
+    "theory": "ring_basic_properties",
+    "formula": "R_sigma_R_sigma_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "2c234a491dda3c4f471109d7741dde35c4a4c73f8663d44c02c57ec505cb8ced"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "R_sigma_R_sigma_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "ring_basic_properties.R_sigma_R_sigma_TCC2": [
+  {
+   "info": {
+    "theory": "ring_basic_properties",
+    "formula": "R_sigma_R_sigma_TCC2",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "2c234a491dda3c4f471109d7741dde35c4a4c73f8663d44c02c57ec505cb8ced"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "R_sigma_R_sigma_TCC2",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "ring_basic_properties.nlzd_TCC1": [
+  {
+   "info": {
+    "theory": "ring_basic_properties",
+    "formula": "nlzd_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "2c234a491dda3c4f471109d7741dde35c4a4c73f8663d44c02c57ec505cb8ced"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "nlzd_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ]
+}

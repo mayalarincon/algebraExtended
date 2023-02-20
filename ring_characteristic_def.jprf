@@ -1,0 +1,77 @@
+{
+ "ring_characteristic_def.IMP_ring_basic_properties_TCC1": [
+  {
+   "info": {
+    "theory": "ring_characteristic_def",
+    "formula": "IMP_ring_basic_properties_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "3b6a07f566b5d17f6d0a0ae05c96952cd132dae849c28d37d13b5d71980f297e"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "IMP_ring_basic_properties_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(rewrite \"fullset_is_ring\")",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "ring_characteristic_def.charac_TCC1": [
+  {
+   "info": {
+    "theory": "ring_characteristic_def",
+    "formula": "charac_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "3b6a07f566b5d17f6d0a0ae05c96952cd132dae849c28d37d13b5d71980f297e"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "charac_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "ring_characteristic_def.member_N_or_zero_TCC1": [
+  {
+   "info": {
+    "theory": "ring_characteristic_def",
+    "formula": "member_N_or_zero_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "3b6a07f566b5d17f6d0a0ae05c96952cd132dae849c28d37d13b5d71980f297e"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "member_N_or_zero_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ]
+}

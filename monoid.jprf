@@ -1,0 +1,700 @@
+{
+ "monoid.IMP_monad_TCC1": [
+  {
+   "info": {
+    "theory": "monoid",
+    "formula": "IMP_monad_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "483ac6f4882f929211e938c3bb29a351e2e323a4e530c8abec368a99c6d2751d"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "IMP_monad_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(lemma \"fullset_is_monoid\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"monoid?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(flatten)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "monoid.IMP_semigroup_TCC1": [
+  {
+   "info": {
+    "theory": "monoid",
+    "formula": "IMP_semigroup_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "483ac6f4882f929211e938c3bb29a351e2e323a4e530c8abec368a99c6d2751d"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "IMP_semigroup_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(lemma \"fullset_is_monoid\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"monoid?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"monad?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(flatten)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "monoid.monoid_TCC1": [
+  {
+   "info": {
+    "theory": "monoid",
+    "formula": "monoid_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "483ac6f4882f929211e938c3bb29a351e2e323a4e530c8abec368a99c6d2751d"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "monoid_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(lemma \"fullset_is_monoid\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(propax)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "monoid.monoid_is_monad": [
+  {
+   "info": {
+    "theory": "monoid",
+    "formula": "monoid_is_monad",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "483ac6f4882f929211e938c3bb29a351e2e323a4e530c8abec368a99c6d2751d"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "monoid_is_monad",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(judgement-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "monoid.monoid_is_semigroup": [
+  {
+   "info": {
+    "theory": "monoid",
+    "formula": "monoid_is_semigroup",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "483ac6f4882f929211e938c3bb29a351e2e323a4e530c8abec368a99c6d2751d"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "monoid_is_semigroup",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(judgement-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "monoid.finite_monoid_TCC1": [
+  {
+   "info": {
+    "theory": "monoid",
+    "formula": "finite_monoid_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "483ac6f4882f929211e938c3bb29a351e2e323a4e530c8abec368a99c6d2751d"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "finite_monoid_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(inst + \"singleton[T](one)\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"finite_monoid?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"monoid?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"monad?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"star_closed?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"member\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(prop)",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(skosimp*)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(grind)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(typepred \"x!1\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(typepred \"y!1\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(expand \"singleton\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(replace -1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(hide -1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(replace -1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(hide -1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(rewrite \"left_identity\")",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(grind)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "3",
+        "name": "(3)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "3",
+          "name": "(grind)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "4",
+        "name": "(4)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "4",
+          "name": "(grind)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "monoid.finite_monoid_is_monoid": [
+  {
+   "info": {
+    "theory": "monoid",
+    "formula": "finite_monoid_is_monoid",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "483ac6f4882f929211e938c3bb29a351e2e323a4e530c8abec368a99c6d2751d"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "finite_monoid_is_monoid",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(judgement-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "monoid.finite_monoid_is_finite_monad": [
+  {
+   "info": {
+    "theory": "monoid",
+    "formula": "finite_monoid_is_finite_monad",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "483ac6f4882f929211e938c3bb29a351e2e323a4e530c8abec368a99c6d2751d"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "finite_monoid_is_finite_monad",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(judgement-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "monoid.commutative_monoid_TCC1": [
+  {
+   "info": {
+    "theory": "monoid",
+    "formula": "commutative_monoid_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "483ac6f4882f929211e938c3bb29a351e2e323a4e530c8abec368a99c6d2751d"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "commutative_monoid_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(inst + \"singleton[T](one)\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"commutative_monoid?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(prop)",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(expand \"monoid?\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(prop)",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "1.1",
+            "name": "(1.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.1",
+              "name": "(expand \"monad?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(prop)",
+              "type": "proof-command",
+              "rules": [
+               {
+                "branch": "1.1.1",
+                "name": "(1.1.1)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "1.1.1",
+                  "name": "(expand \"singleton\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.1.1",
+                  "name": "(expand \"star_closed?\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.1.1",
+                  "name": "(skosimp*)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.1.1",
+                  "name": "(expand \"member\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.1.1",
+                  "name": "(assert)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.1.1",
+                  "name": "(typepred \"x!1\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.1.1",
+                  "name": "(typepred \"y!1\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.1.1",
+                  "name": "(replace -1)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.1.1",
+                  "name": "(hide -1)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.1.1",
+                  "name": "(replace -1)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.1.1",
+                  "name": "(hide -1)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.1.1",
+                  "name": "(rewrite \"left_identity\")",
+                  "type": "proof-command",
+                  "rules": []
+                 }
+                ]
+               },
+               {
+                "branch": "1.1.2",
+                "name": "(1.1.2)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "1.1.2",
+                  "name": "(expand \"member\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.1.2",
+                  "name": "(expand \"singleton\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.1.2",
+                  "name": "(propax)",
+                  "type": "proof-command",
+                  "rules": []
+                 }
+                ]
+               },
+               {
+                "branch": "1.1.3",
+                "name": "(1.1.3)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "1.1.3",
+                  "name": "(expand \"identity?\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.1.3",
+                  "name": "(skosimp*)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.1.3",
+                  "name": "(expand \"restrict\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.1.3",
+                  "name": "(assert)",
+                  "type": "proof-command",
+                  "rules": []
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "branch": "1.2",
+            "name": "(1.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.2",
+              "name": "(expand \"associative?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(skosimp*)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(grind)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(rewrite \"associative\")",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(grind)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "monoid.commutative_monoid_is_monoid": [
+  {
+   "info": {
+    "theory": "monoid",
+    "formula": "commutative_monoid_is_monoid",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "483ac6f4882f929211e938c3bb29a351e2e323a4e530c8abec368a99c6d2751d"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "commutative_monoid_is_monoid",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(judgement-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "monoid.commutative_monoid_is_commutative_monad": [
+  {
+   "info": {
+    "theory": "monoid",
+    "formula": "commutative_monoid_is_commutative_monad",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "483ac6f4882f929211e938c3bb29a351e2e323a4e530c8abec368a99c6d2751d"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "commutative_monoid_is_commutative_monad",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(judgement-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ]
+}

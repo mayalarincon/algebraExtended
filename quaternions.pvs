@@ -1,0 +1,304 @@
+%%----------------------------------------------------------------------------
+%%
+%% Authors:	
+%% 	Thaynara Arielly de Lima
+%% 	Universidade Federal de Goiás - Brasil
+%%			
+%%		André Luiz Galdino
+%%		Universidade Federal de Catalão - Brasil
+%%
+%%  	Andréia Borges Avelar da Silva
+%%		Universidade de Brasília - Brasil
+%%
+%%		Mauricio Ayala-Rincón
+%%		Universidade de Brasília - Brasil
+%%----------------------------------------------------------------------------
+%%
+%%	Formalization of some results about Ring of Quaternions
+%%
+%%	Last version: February 09, 2023
+%%
+%%----------------------------------------------------------------------------
+quaternions[T:Type+,+,*:[T,T->T],zero,one:T,a,b:(remove(zero,fullset[T]))]: THEORY
+
+BEGIN
+
+ASSUMING IMPORTING field[T,+,*,zero,one]
+
+       fullset_is_field: ASSUMPTION field?(fullset[T])
+
+   ENDASSUMING
+
+
+IMPORTING quaternions_def[T,+,*,zero,one,a,b],
+          ring_characteristic_def[T,+,*,zero],
+          ring_nz_closed_aux [T,+,*,zero],
+          op_finseq,
+          field,
+          group
+
+q,u,v: VAR quat
+c, d, x, y : VAR T
+
+% --//--
+% Simple lemmas to build strategies to deal with AC operators 
+% --//--
+
+% @QED move_three_times proved by mauricioayalarincon on Fri, 20 Jan 2023 14:19:40 GMT
+% @QED times_heading_third proved by mauricioayalarincon on Fri, 20 Jan 2023 14:30:11 GMT
+times_heading_third : LEMMA FORALL(s1, s2, s3 : T) :
+   s1 * s2 * s3 = s3 * s1 * s2
+
+% @QED move_four_times proved by mauricioayalarincon on Fri, 20 Jan 2023 14:23:58 GMT
+% @QED times_heading_fourth proved by mauricioayalarincon on Fri, 20 Jan 2023 14:31:35 GMT
+times_heading_fourth : LEMMA FORALL   (s1, s2, s3, s4 : T) :
+   s1 * s2 * s3 * s4  = s4 * s1 * s2 * s3
+
+% @QED times_heading_fifth proved by mauricioayalarincon on Fri, 20 Jan 2023 14:33:30 GMT
+times_heading_fifth : LEMMA FORALL   (s1, s2, s3, s4, s5 : T) :
+   s1 * s2 * s3 * s4 * s5 = s5 * s1 * s2 * s3 * s4
+
+% @QED times_heading_sixth proved by mauricioayalarincon on Fri, 20 Jan 2023 14:34:36 GMT
+times_heading_sixth : LEMMA FORALL   (s1, s2, s3, s4, s5, s6 : T) :
+   s1 * s2 * s3 * s4 * s5 * s6 = s6 * s1 * s2 * s3 * s4 * s5  
+
+% @QED times_heading_seventh proved by mauricioayalarincon on Fri, 20 Jan 2023 14:35:29 GMT
+times_heading_seventh : LEMMA FORALL   (s1, s2, s3, s4, s5, s6, s7 : T) :
+   s1 * s2 * s3 * s4 * s5 * s6 * s7 = s7 * s1 * s2 * s3 * s4 * s5 * s6  
+
+% @QED plus_heading_third proved by mauricioayalarincon on Fri, 20 Jan 2023 14:38:39 GMT
+plus_heading_third : LEMMA FORALL(s1, s2, s3 : T) :
+   s1 + s2 + s3 = s3 + s1 + s2
+
+% @QED move_four_times proved by mauricioayalarincon on Fri, 20 Jan 2023 14:23:58 GMT
+% @QED times_heading_fourth proved by mauricioayalarincon on Fri, 20 Jan 2023 14:31:35 GMT
+% @QED plus_heading_fourth proved by mauricioayalarincon on Fri, 20 Jan 2023 14:42:36 GMT
+plus_heading_fourth : LEMMA FORALL   (s1, s2, s3, s4 : T) :
+   s1 + s2 + s3 + s4  = s4 + s1 + s2 + s3
+
+% @QED times_heading_fifth proved by mauricioayalarincon on Fri, 20 Jan 2023 14:33:30 GMT
+% @QED plus_heading_fifth proved by mauricioayalarincon on Fri, 20 Jan 2023 14:43:42 GMT
+plus_heading_fifth : LEMMA FORALL   (s1, s2, s3, s4, s5 : T) :
+   s1 + s2 + s3 + s4 + s5 = s5 + s1 + s2 + s3 + s4
+
+% @QED times_heading_sixth proved by mauricioayalarincon on Fri, 20 Jan 2023 14:34:36 GMT
+% @QED plus_heading_sixth proved by mauricioayalarincon on Fri, 20 Jan 2023 14:44:40 GMT
+plus_heading_sixth : LEMMA FORALL   (s1, s2, s3, s4, s5, s6 : T) :
+   s1 + s2 + s3 + s4 + s5 + s6 = s6 + s1 + s2 + s3 + s4 + s5  
+
+% @QED times_heading_seventh proved by mauricioayalarincon on Fri, 20 Jan 2023 14:35:29 GMT
+% @QED plus_heading_seventh proved by mauricioayalarincon on Fri, 20 Jan 2023 14:45:31 GMT
+plus_heading_seventh : LEMMA FORALL   (s1, s2, s3, s4, s5, s6, s7 : T) :
+   s1 + s2 + s3 + s4 + s5 + s6 + s7 = s7 + s1 + s2 + s3 + s4 + s5 + s6  
+
+% --//--
+% --//--
+
+% @QED one_sc_times proved by galdino on Thu, 17 Nov 2022 18:09:33 GMT
+one_sc_times:  LEMMA FORALL(q:quat): one * q = q          
+
+% @QED sc_quat proved by thaynaradelima on Wed, 09 Nov 2022 21:26:16 GMT
+sc_quat:        LEMMA (c * u) * (d * v) = (c*d) * (u*v)
+
+ % @QED sc_sqr_i proved by thaynaradelima on Wed, 09 Nov 2022 20:58:21 GMT
+ sc_sqr_i:      LEMMA (c * i) * (d * i) = (c * d) * a_q
+
+ % @QED sc_sqr_j proved by thaynaradelima on Wed, 09 Nov 2022 21:00:56 GMT
+ sc_sqr_j:      LEMMA (c * j) * (d * j) = (c * d) * b_q
+
+ %% @QED sc_ji_prod proved by thaynaradelima on Wed, 09 Nov 2022 21:04:19 GMT
+ sc_ji_prod:    LEMMA (c * j) * (d * i) =  (c * d) * inv(k)
+
+ % @QED inv_charac proved by thaynaradelima on Thu, 10 Nov 2022 13:07:59 GMT
+ inv_charac:    LEMMA inv(q) = inv(one)*q
+
+ 
+ % @QED q_inv_inv proved by galdino on Thu, 17 Nov 2022 18:16:03 GMT
+ q_inv_inv:    LEMMA inv(inv(q)) = q
+
+% @QED quat_negative_times proved by thaynaradelima on Thu, 10 Nov 2022 14:00:17 GMT
+quat_negative_times:        LEMMA (inv(q)) * u = inv(q * u)
+
+% @QED quat_times_negative proved by thaynaradelima on Thu, 10 Nov 2022 14:02:57 GMT
+quat_times_negative:        LEMMA q * (inv(u)) = inv(q * u)
+
+% @QED ji_prod_lem proved by thaynaradelima on Thu, 10 Nov 2022 15:27:37 GMT
+ji_prod_lem:                    LEMMA j * i = inv(i*j)
+
+% @QED kk_prod proved by thaynaradelima on Thu, 10 Nov 2022 14:30:19 GMT
+kk_prod:                    LEMMA k * k = inv(a_q) * b_q
+
+% @QED ki_prod proved by thaynaradelima on Thu, 10 Nov 2022 14:36:19 GMT
+ki_prod:                    LEMMA k * i = inv(a_q) * j
+
+% @QED kj_prod proved by thaynaradelima on Thu, 10 Nov 2022 14:38:50 GMT
+kj_prod:    LEMMA k * j = b_q * i
+
+% @QED ik_prod proved by thaynaradelima on Thu, 10 Nov 2022 14:43:08 GMT
+ik_prod:                    LEMMA i * k = a_q * j
+
+% @QED jk_prod proved by thaynaradelima on Thu, 10 Nov 2022 15:00:09 GMT
+jk_prod:                    LEMMA j * k = inv(b_q) * i
+ 
+% @QED basis_quat proved by thaynaradelima on Tue, 25 Oct 2022 18:57:16 GMT
+basis_quat: LEMMA FORALL (q: quat): q = q`x * one_q + q`y * i + q`z * j + q`t * k
+
+% @QED zero_q_plus proved by thaynaradelima on Wed, 09 Nov 2022 18:33:01 GMT
+zero_q_plus: LEMMA FORALL(q: quat): zero_q + q = q 
+
+% @QED plus_zero_q proved by thaynaradelima on Mon, 24 Oct 2022 22:43:47 GMT
+plus_zero_q: LEMMA FORALL(q: quat): q + zero_q = q 
+
+% @QED q_is_zero_iff_conj proved by thaynaradelima on Thu, 09 Feb 2023 14:29:05 GMT
+q_is_zero_iff_conj: LEMMA
+  q = zero_q IFF conjugate(q) = zero_q
+
+% @QED sc_one_q proved by thaynaradelima on Thu, 10 Nov 2022 18:33:20 GMT
+sc_one_q:   LEMMA c * one_q = (c,zero,zero,zero)
+
+% @QED sc_one_quat proved by thaynaradelima on Thu, 10 Nov 2022 18:16:44 GMT
+sc_one_quat: LEMMA (c * one_q) * u = c * u 
+
+% @QED q_prod_charac proved by thaynaradelima on Thu, 10 Nov 2022 19:33:58 GMT
+q_prod_charac: LEMMA FORALL (u,v:quat): 
+ u * v = (u`x * v`x + u`y * v`y * a + u`z * v`z * b + u`t * v`t * inv(a) * b, 
+          u`x * v`y + u`y * v`x + (inv(b)) *  u`z * v`t + b* u`t * v`z,
+          u`x * v`z + u`z * v`x +a * u`y * v`t + inv(a) * u`t * v`y,
+          u`x * v`t + u`y * v`z + inv(u`z * v`y) + u`t * v`x ); %quaternion product
+
+% @QED zero_q_times proved by thaynaradelima on Tue, 31 Jan 2023 18:50:46 GMT
+zero_q_times: LEMMA FORALL(q: quat): zero_q * q = zero_q 
+
+% @QED times_zero_q proved by thaynaradelima on Tue, 31 Jan 2023 18:51:15 GMT
+times_zero_q: LEMMA FORALL(q: quat): q * zero_q = zero_q 
+ 
+% @QED quat_is_ring_w_one proved by galdino on Thu, 24 Nov 2022 03:41:59 GMT
+quat_is_ring_w_one: LEMMA ring_with_one?[quat,+,*,zero_q,one_q](fullset[quat])
+
+% @QED quat_x_pure_part_commutes proved by ayala on Thu, 26 Jan 2023 20:16:40 GMT
+quat_x_pure_part_commutes: LEMMA 
+      FORALL (q: quat) :  q * pure_part(q) = pure_part(q) * q
+
+% @QED pure_quat_charac proved by galdino on Wed, 23 Nov 2022 13:55:01 GMT
+pure_quat_charac: LEMMA FORALL (q: quat): charac(fullset[T]) /= 2 IMPLIES
+                              ( (q /= zero_q AND member(q, pure_quat)) IFF
+                               (NOT member(q, scalar_F) AND member(q * q, scalar_F)) )
+
+
+ % @QED red_trace_charac proved by galdino on Thu, 24 Nov 2022 17:59:21 GMT
+ red_trace_charac: LEMMA FORALL (q: quat): red_trace(q) = (q`x + q`x, zero, zero, zero)
+
+ % @QED red_norm_charac proved by galdino on Fri, 25 Nov 2022 13:37:43 GMT
+ red_norm_charac: LEMMA FORALL (q: quat): %Pag. 15, item 1
+     red_norm(q) = (q`x * q`x + inv(a) * (q`y * q`y) + inv(b) * (q`z * q`z) + (a * b) * (q`t * q`t), zero, zero, zero)
+
+% @QED red_norm_is_scalar proved by ayala on Thu, 26 Jan 2023 19:10:52 GMT
+red_norm_is_scalar:  LEMMA  FORALL (q : quat) : scalar_F(red_norm(q))
+         
+% @QED conj_conj_quat proved by mauricioayalarincon on Thu, 01 Dec 2022 18:58:29 GMT
+conj_conj_quat : LEMMA FORALL(q : quat) : %Pag. 15, item 3
+ conjugate(conjugate(q)) = q 
+
+% @QED conj_product_quat proved by fparadas on Thu, 15 Dec 2022 16:21:01 GMT
+conj_product_quat : LEMMA FORALL(q, u : quat) :   %Pag. 15, item 2
+     conjugate(q * u) = conjugate(u) * conjugate(q)
+
+% @QED q_x_cq_commutes proved by mauricioayalarincon on Thu, 01 Dec 2022 18:56:59 GMT
+q_x_cq_commutes : LEMMA FORALL (q : quat) :  %Pag. 15, item 4
+         q * conjugate(q) = conjugate(q) * q
+
+% @QED red_norm_conj proved by ayala on Thu, 26 Jan 2023 18:43:38 GMT
+red_norm_conj: LEMMA FORALL(q:quat):
+    red_norm(conjugate(q)) = red_norm(q)
+
+% @QED sc_F_commutes proved by thaynaradelima on Thu, 05 Jan 2023 19:35:25 GMT
+sc_F_commutes: LEMMA FORALL (s: (scalar_F), q: quat):
+    s * q  = q * s
+
+% @QED sc_F_product_charac proved by galdino on Fri, 10 Feb 2023 17:18:54 GMT
+sc_F_product_charac: LEMMA FORALL (s,c: (scalar_F)):
+    s * c  = (s`x * c`x, zero, zero, zero)
+
+% @QED q_x_v_cq proved by ayala on Wed, 18 Jan 2023 00:37:25 GMT
+q_x_v_cq : LEMMA FORALL (q:quat, v:(pure_quat)) : %Felipe
+    pure_quat(q * v * conjugate(q))  
+
+%%-------------------
+T_q(q: quat)(v:(pure_quat)): (pure_quat) = q * v * conjugate(q)
+
+% @QED T_q_is_linear proved by thaynaradelima on Thu, 05 Jan 2023 20:04:05 GMT
+T_q_is_linear: LEMMA FORALL (c,d: T, q: quat, v,w: (pure_quat)):
+    T_q(q)(c * v + d * w) = c * T_q(q)(v) + d *  T_q(q)(w)
+
+% @QED red_norm_prod proved by ayala on Thu, 26 Jan 2023 19:20:26 GMT
+red_norm_prod: LEMMA FORALL (q, v: quat): %Pag. 15, item 6
+    red_norm(q * v) = red_norm(q) * red_norm(v)
+
+% @QED T_q_red_norm_invariant proved by thaynaradelima on Thu, 12 Jan 2023 19:25:18 GMT
+T_q_red_norm_invariant: LEMMA FORALL (q: quat, v:(pure_quat)):
+    red_norm(q) = one_q IMPLIES red_norm(T_q(q)(v)) = red_norm(v)
+
+% @QED T_q_invariant_red_norm proved by ayala on Thu, 26 Jan 2023 20:23:39 GMT
+T_q_invariant_red_norm: LEMMA FORALL (c: T, q: quat):
+    red_norm(q) = one_q IMPLIES T_q(q)(c * pure_part(q)) = c * pure_part(q) 
+
+%%----------------------------------------------------------------------------
+%% The next set of lemmas provide sufficient and necessary conditions that ensure 
+%% Ring of Quaternions as a Division Ring
+%%----------------------------------------------------------------------------
+
+IMPORTING division_ring_def
+
+% @QED nz_red_norm_inv_exist proved by galdino on Fri, 10 Feb 2023 16:34:47 GMT
+nz_red_norm_inv_exist: LEMMA
+  (FORALL (q:(remove(zero_q, fullset[quat]))):
+   red_norm(q) /= zero_q) IMPLIES   
+   inv_exists?[quat,*,one_q](remove(zero_q, fullset[quat]))
+
+% @QED div_ring_iff_nz_rednorm proved by galdino on Fri, 10 Feb 2023 17:41:34 GMT
+div_ring_iff_nz_rednorm: LEMMA
+  division_ring?[quat,+,*,zero_q,one_q](fullset[quat]) IFF
+  (FORALL(q: (remove(zero_q, fullset[quat]))): red_norm(q) /= zero_q)
+
+% @QED quat_div_ring_aux1 proved by thaynaradelima on Mon, 13 Feb 2023 19:54:17 GMT
+quat_div_ring_aux1: LEMMA
+ (FORALL (x,y:T): a*(x*x) + b*(y*y) /= one) IMPLIES
+ FORALL (t:T): t*t + inv[T,+,zero](a) /= zero 
+
+% @QED quat_div_ring_aux2 proved by galdino on Thu, 16 Feb 2023 18:13:45 GMT
+quat_div_ring_aux2: LEMMA
+(charac(fullset[T]) /= 2 AND (FORALL (x,y:T): a*(x*x) + b*(y*y) /= one)) IMPLIES
+ FORALL (t:T): a*(t*t) + b /= zero 
+
+quat_div_ring_charac: CONJECTURE
+(charac(fullset[T]) /= 2 AND 
+(FORALL (x,y:T): a*(x*x) + b*(y*y) /= one)) IFF
+division_ring?[quat,+,*,zero_q,one_q](fullset[quat])
+
+
+
+% red_norm_has_mult_inv: CONJECTURE
+% FORALL (q: quat): ((charac(fullset[T]) /= 2) AND q/= zero_q) IMPLIES
+%  LET v: quat = (inv[T,*,one](red_norm(q)`x),zero,zero,zero) IN
+%  red_norm(q) * v = v * red_norm(q) = one_q
+
+% quat_mult_inv: CONJECTURE
+% FORALL (q: quat): ((charac(fullset[T]) /= 2) AND q/= zero_q) IMPLIES
+%  EXISTS (v: quat): q * v = v * q = one_q 
+
+% quat_mult_group: CONJECTURE
+%  (charac(fullset[T]) /= 2) IMPLIES 
+%     group?[quat,*,one_q](remove(zero_q, fullset[quat]))
+ 
+
+
+
+
+
+%-------------
+
+
+
+
+
+END quaternions

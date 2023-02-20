@@ -1,0 +1,190 @@
+%%
+%% Authors:	
+%% 		Thaynara Arielly de Lima
+%% 		Universidade Federal de Goiás - Brasil
+%%
+%%              Andréia Borges Avelar da Silva
+%%		Universidade de Brasília - Brasil
+%%			
+%%		André Luiz Galdino
+%%		Universidade Federal de Catalão - Brasil
+%%
+%%		Mauricio Ayala-Rincón
+%%		Universidade de Brasília - Brasil
+%%
+%%----------------------------------------------------------------------------
+%%
+%%	
+%%	Last version: May 06, 2022
+%%
+%%----------------------------------------------------------------------------
+
+
+ring_euclidean_algorithm[T:Type+, +,*:[T,T->T], zero, one:T]: THEORY
+
+BEGIN
+
+    ASSUMING IMPORTING ring_with_one_def[T,+,*,zero,one]
+    
+	 fullset_is_ring_with_one: ASSUMPTION ring_with_one?(fullset[T])
+
+    ENDASSUMING
+
+    IMPORTING euclidean_domain[T,+,*,zero,one],
+              ring_gcd_def[T,+,*,zero]
+              
+euclidean_gcd_algorithm(R : (euclidean_domain?[T,+,*,zero,one]), 
+                        (phi: [(difference(R, singleton(zero))) -> nat] | euclidean_pair?(R, phi)),
+                        (f_phi: [(R) , (remove(zero,R)) -> [(R),(R)]] | euclidean_f_phi?(R,phi)(f_phi)))
+                        ( a: (R), b: (remove(zero,R)) ) : RECURSIVE (remove(zero,R)) =
+  IF  a = zero THEN b 
+  ELSIF  phi(a) >= phi(b) THEN 
+      LET rem = (f_phi(a,b))`2 IN 
+        IF rem = zero THEN b 
+        ELSE euclidean_gcd_algorithm(R,phi,f_phi)(b,rem)
+        ENDIF             
+  ELSE  euclidean_gcd_algorithm(R,phi,f_phi)(b,a)
+  ENDIF
+MEASURE lex2(phi(b), IF a = zero THEN 0 ELSE phi(a) ENDIF)
+
+% @QED Euclid_theorem proved by thaynaradelima on Fri, 22 Apr 2022 19:28:51 GMT
+Euclid_theorem : LEMMA
+  FORALL(R:(euclidean_domain?[T,+,*,zero,one]), 
+        (phi: [(difference(R, singleton(zero))) -> nat] | euclidean_pair?(R, phi)),
+        (f_phi: [(R) , (remove(zero,R)) -> [(R),(R)]] | euclidean_f_phi?(R,phi)(f_phi)),
+                         a: (R), b: (remove(zero,R)), g : (remove(zero,R))) :
+           gcd?(R)({x : (R) | x = a OR x = b}, g) IFF 
+           gcd?(R)({x : (R) | x = (f_phi(a,b))`2 OR x = b}, g) 
+
+% @QED euclidean_gcd_alg_correctness proved by thaynaradelima on Tue, 19 Apr 2022 21:55:06 GMT
+euclidean_gcd_alg_correctness : THEOREM 
+  FORALL(R:(euclidean_domain?[T,+,*,zero,one]), 
+         (phi: [(difference(R, singleton(zero))) -> nat] | euclidean_pair?(R, phi)),
+         (f_phi: [(R) , (remove(zero,R)) -> [(R),(R)]] | euclidean_f_phi?(R,phi)(f_phi)),
+                         a: (R), b: (remove(zero,R)) ) :
+      gcd?(R)({x : (R) | x = a OR x = b}, euclidean_gcd_algorithm(R,phi,f_phi)(a,b))
+  
+END ring_euclidean_algorithm
+
+
+
+
+ring_euclidean_gcd_algorithm_Z : THEORY
+%% Correctness of euclidean algorithm for integers, Z.
+
+
+BEGIN
+
+
+IMPORTING ring_euclidean_algorithm
+
+ Z : (euclidean_domain?[int,+,*,0,1]) = fullset[int]
+
+ phi_Z(i : int | i /= 0) : posnat =  abs(i)
+ 
+ f_phi_Z(i : int, (j : int | j /= 0)) : [int, below[abs(j)]] = 
+ ((IF j > 0 THEN ndiv(i,j) ELSE -ndiv(i,-j) ENDIF), rem(abs(j))(i)) 
+
+
+% @QED phi_Z_and_f_phi_Z_ok proved by ayala on Thu, 05 May 2022 02:40:10 GMT
+phi_Z_and_f_phi_Z_ok  : LEMMA euclidean_f_phi?[int,+,*,0](Z,phi_Z)(f_phi_Z)
+
+
+% @QED euclidean_gcd_alg_in_Z proved by ayala on Mon, 25 Apr 2022 16:08:45 GMT
+euclidean_gcd_alg_correctness_in_Z  : COROLLARY
+  FORALL(i: int, (j: int | j /= 0)  ) :
+    gcd?[int,+,*,0](Z)({x : (Z) | x = i OR x = j}, euclidean_gcd_algorithm[int,+,*,0,1](Z, phi_Z,f_phi_Z)(i,j))
+                              
+END ring_euclidean_gcd_algorithm_Z
+
+
+
+
+
+
+
+
+
+ring_euclidean_gcd_algorithm_Zi : THEORY
+%% Correctness of euclidean algorithm for the Gaussian integers, Z[i]
+
+
+BEGIN
+
+IMPORTING complex@top, ring_euclidean_algorithm
+
+ Zi: set[complex] = {z : complex | EXISTS (a,b:int): a = Re(z) AND b = Im(z)}
+
+
+ % @QED Zi_is_ring proved by galdino on Fri, 06 May 2022 00:52:48 GMT
+ Zi_is_ring: LEMMA ring?[complex,+,*,0](Zi)
+
+
+ % @QED Zi_is_integral_domain_w_one proved by galdino on Fri, 06 May 2022 00:53:15 GMT
+ Zi_is_integral_domain_w_one: LEMMA integral_domain_w_one?[complex,+,*,0,1](Zi)
+
+
+ % @QED sq_abs_Re_Im_integer_rational_pred proved by galdino on Fri, 06 May 2022 00:53:54 GMT
+ sq_abs_Re_Im_integer_rational_pred: LEMMA
+  FORALL(x: (Zi)): rational_pred(Re(x)) AND integer_pred(Re(x)) AND
+                   rational_pred(Im(x)) AND integer_pred(Im(x)) AND
+                   rational_pred(x * conjugate(x)) AND integer_pred(x * conjugate(x))
+
+
+ % @QED times_conjugate_is_Zi proved by galdino on Fri, 06 May 2022 00:54:28 GMT
+ times_conjugate_is_Zi: LEMMA FORALL(x,y: (Zi)): Zi(x * conjugate(y))
+
+
+% % % % % —————————–—————————–—————————–—————————–—————————–—————————–—————————–————————— % % % % %
+
+
+ phi_Zi(x:(Zi) | x /= 0): nat = x * conjugate(x)
+
+
+ % @QED phi_Zi_is_multiplicative proved by galdino on Fri, 06 May 2022 00:53:34 GMT
+ phi_Zi_is_multiplicative: LEMMA
+   FORALL((x: (Zi) | x /= 0), (y: (Zi) | y /= 0)): phi_Zi(x * y) = phi_Zi(x) * phi_Zi(y)
+
+
+% % % % % —————————–—————————–—————————–—————————–—————————–—————————–—————————–————————— % % % % %
+
+
+
+ % Hungefort's div_rem by smallest remainder approximation:   a = q * b + r  such that |r| <= |b|/2. 
+ div_rem_appx(a: int, (b: int | b /= 0)) : [int, int] =
+  LET r = rem(abs(b))(a), 
+      q = IF b > 0 THEN ndiv(a,b) ELSE -ndiv(a,-b) ENDIF  IN
+   IF r <= abs(b)/2 THEN (q,r) ELSE (IF b > 0 THEN (q+1, r - abs(b)) ELSE (q-1, r - abs(b)) ENDIF) ENDIF 
+
+
+ % @QED div_rev_appx_correctness proved by ayala on Tue, 26 Apr 2022 19:59:32 GMT
+ div_rev_appx_correctness : LEMMA 
+   FORALL (a: int, (b: int | b /= 0)) : 
+      abs(div_rem_appx(a,b)`2) <= abs(b)/2 AND 
+      a = b * div_rem_appx(a,b)`1 +  div_rem_appx(a,b)`2
+
+
+% % % % % —————————–—————————–—————————–—————————–—————————–—————————–—————————–————————— % % % % %
+
+
+
+ f_phi_Zi(y: (Zi), (x: (Zi) | x /= 0)): [(Zi),(Zi)] =
+  LET q = div_rem_appx(Re(y * conjugate(x)), x * conjugate(x))`1 + div_rem_appx(Im(y * conjugate(x)), x * conjugate(x))`1 * i,
+      r = y - q * x IN (q,r)
+
+
+ % @QED phi_Zi_and_f_phi_Zi_ok proved by galdino on Fri, 06 May 2022 00:57:27 GMT
+ phi_Zi_and_f_phi_Zi_ok: LEMMA euclidean_f_phi?[complex,+,*,0](Zi,phi_Zi)(f_phi_Zi)
+
+
+
+% % % % % —————————–—————————–—————————–—————————–—————————–—————————–—————————–————————— % % % % %
+
+
+
+ % @QED euclidean_gcd_alg_in_Zi proved by galdino on Fri, 06 May 2022 00:57:53 GMT
+ euclidean_gcd_alg_in_Zi: COROLLARY
+  FORALL(x: (Zi), (y: (Zi) | y /= 0)  ) :
+      gcd?[complex,+,*,0](Zi)({z :(Zi) | z = x OR z = y}, euclidean_gcd_algorithm[complex,+,*,0,1](Zi, phi_Zi,f_phi_Zi)(x,y))
+                        
+END ring_euclidean_gcd_algorithm_Zi

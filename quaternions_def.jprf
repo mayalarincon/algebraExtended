@@ -1,0 +1,330 @@
+{
+ "quaternions_def.basis_quat": [
+  {
+   "info": {
+    "theory": "quaternions_def",
+    "formula": "basis_quat",
+    "status": "unfinished",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "c776279a140650114e1531a77855e85dfdadce8e55b66e5d57d09079cdbe6e36"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "basis_quat",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand* *)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand* +)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"one_q\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(decompose-equality)",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": []
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "quaternions_def.sqr_i": [
+  {
+   "info": {
+    "theory": "quaternions_def",
+    "formula": "sqr_i",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "a5d41a6f24f69e3ae547f9ef8d26151843bfd427ca7c012eea42907664fe7bc8"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "sqr_i",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(lemma ax_sqr_i)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(inst -1 \"one\" \"one\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(rewrite \"one_sc_times\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(rewrite \"one_times\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(rewrite \"one_sc_times\")",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "quaternions_def.one_sc": [
+  {
+   "info": {
+    "theory": "quaternions_def",
+    "formula": "one_sc",
+    "status": "unfinished",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "7271ee873270a7e773ce2ace30c16c9fd0f092c71086463298723ff78e0099c8"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "one_sc",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand *)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(grind)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(decompose-equality)",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(grind)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(grind)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(grind)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(grind)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(grind)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(lemma one_times)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "quaternions_def.sqr_j": [
+  {
+   "info": {
+    "theory": "quaternions_def",
+    "formula": "sqr_j",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "7453abf80ceea8b0ebe6fac9f679c2126a3ae45d0a4a00d7ce61a920207c1ced"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "sqr_j",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(lemma ax_sqr_j)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(inst -1 \"one\" \" one\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(rewrite \"one_times\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(rewrite \"one_sc_times\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(rewrite \"one_sc_times\")",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "quaternions_def.ji_prod": [
+  {
+   "info": {
+    "theory": "quaternions_def",
+    "formula": "ji_prod",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "d61b555abdf01b7451b83766a8761dd0b5a965e4966eb033dd3aeb742b017c29"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "ji_prod",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(lemma \"ax_ji_prod\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(inst -1 \"one\" \"one\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(rewrite \"one_times\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(rewrite \"one_sc_times\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(rewrite \"one_sc_times\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(rewrite \"one_sc_times\")",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "quaternions_def.IMP_group_TCC1": [
+  {
+   "info": {
+    "theory": "quaternions_def",
+    "formula": "IMP_group_TCC1",
+    "status": "untried",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "dc82739e0965e30b813397e3889f9cfdd5f9f24ee8599708537871ab65d1958c"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "IMP_group_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(assuming-tcc)",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": []
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,204 @@
+{
+ "ring_def.ring?_TCC1": [
+  {
+   "info": {
+    "theory": "ring_def",
+    "formula": "ring?_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "57eee454b9bfc83fd92fd1cbe07278d636a151cbc235f8ee304ddfad9d147ac1"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "ring?_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skosimp*)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"star_closed?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"member\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(inst - \"x1!1`1\" \"x1!1`2\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "ring_def.ring?_TCC2": [
+  {
+   "info": {
+    "theory": "ring_def",
+    "formula": "ring?_TCC2",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "57eee454b9bfc83fd92fd1cbe07278d636a151cbc235f8ee304ddfad9d147ac1"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "ring?_TCC2",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(expand \"abelian_group?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"group?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"monoid?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"monad?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"star_closed?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"member\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skosimp*)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "ring_def.commutative_ring?_TCC1": [
+  {
+   "info": {
+    "theory": "ring_def",
+    "formula": "commutative_ring?_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "57eee454b9bfc83fd92fd1cbe07278d636a151cbc235f8ee304ddfad9d147ac1"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "commutative_ring?_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(expand \"ring?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"star_closed?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"member\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skosimp*)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "ring_def.finite_commutative_ring?_TCC1": [
+  {
+   "info": {
+    "theory": "ring_def",
+    "formula": "finite_commutative_ring?_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "57eee454b9bfc83fd92fd1cbe07278d636a151cbc235f8ee304ddfad9d147ac1"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "finite_commutative_ring?_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(expand \"finite_ring?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"ring?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"star_closed?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"member\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skosimp*)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ]
+}

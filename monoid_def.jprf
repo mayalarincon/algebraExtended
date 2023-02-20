@@ -1,0 +1,199 @@
+{
+ "monoid_def.power_TCC1": [
+  {
+   "info": {
+    "theory": "monoid_def",
+    "formula": "power_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "076f256e6ce9a1bc27041d910094435fbb837457bdaf4c84e7f11807dc5f0b78"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "power_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(grind)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "monoid_def.power_TCC2": [
+  {
+   "info": {
+    "theory": "monoid_def",
+    "formula": "power_TCC2",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "076f256e6ce9a1bc27041d910094435fbb837457bdaf4c84e7f11807dc5f0b78"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "power_TCC2",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(grind)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "monoid_def.monoid?_TCC1": [
+  {
+   "info": {
+    "theory": "monoid_def",
+    "formula": "monoid?_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "076f256e6ce9a1bc27041d910094435fbb837457bdaf4c84e7f11807dc5f0b78"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "monoid?_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(expand \"monad?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"star_closed?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"member\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skosimp*)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "monoid_def.commutative_monoid?_TCC1": [
+  {
+   "info": {
+    "theory": "monoid_def",
+    "formula": "commutative_monoid?_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "076f256e6ce9a1bc27041d910094435fbb837457bdaf4c84e7f11807dc5f0b78"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "commutative_monoid?_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(expand \"monoid?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"monad?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"star_closed?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"member\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skosimp*)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "monoid_def.finite_commutative_monoid?_TCC1": [
+  {
+   "info": {
+    "theory": "monoid_def",
+    "formula": "finite_commutative_monoid?_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "076f256e6ce9a1bc27041d910094435fbb837457bdaf4c84e7f11807dc5f0b78"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "finite_commutative_monoid?_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(expand \"finite_monoid?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"monoid?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"monad?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"star_closed?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"member\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skosimp*)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ]
+}

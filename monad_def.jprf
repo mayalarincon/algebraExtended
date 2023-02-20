@@ -1,0 +1,162 @@
+{
+ "monad_def.monad?_TCC1": [
+  {
+   "info": {
+    "theory": "monad_def",
+    "formula": "monad?_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "7dbfe2e566ca34f499ab7cfcfc2173578109ea19c293c9825818d1da1198a366"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "monad?_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(expand \"member\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skosimp)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "monad_def.monad?_TCC2": [
+  {
+   "info": {
+    "theory": "monad_def",
+    "formula": "monad?_TCC2",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "7dbfe2e566ca34f499ab7cfcfc2173578109ea19c293c9825818d1da1198a366"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "monad?_TCC2",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(expand \"star_closed?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"member\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skosimp*)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "monad_def.commutative_monad?_TCC1": [
+  {
+   "info": {
+    "theory": "monad_def",
+    "formula": "commutative_monad?_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "7dbfe2e566ca34f499ab7cfcfc2173578109ea19c293c9825818d1da1198a366"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "commutative_monad?_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(expand \"monad?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"star_closed?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"member\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skosimp*)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "monad_def.finite_commutative_monad?_TCC1": [
+  {
+   "info": {
+    "theory": "monad_def",
+    "formula": "finite_commutative_monad?_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "7dbfe2e566ca34f499ab7cfcfc2173578109ea19c293c9825818d1da1198a366"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "finite_commutative_monad?_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(expand \"finite_monad?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"monad?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"star_closed?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"member\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skosimp*)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ]
+}

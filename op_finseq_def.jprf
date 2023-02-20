@@ -1,0 +1,77 @@
+{
+ "op_finseq_def.op_fseq_TCC1": [
+  {
+   "info": {
+    "theory": "op_finseq_def",
+    "formula": "op_fseq_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "ac84166a661a93586f6cf9a4c3a530c4cad2e3b25e4522b435b97e69198275f8"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "op_fseq_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "op_finseq_def.op_fseq_TCC2": [
+  {
+   "info": {
+    "theory": "op_finseq_def",
+    "formula": "op_fseq_TCC2",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "ac84166a661a93586f6cf9a4c3a530c4cad2e3b25e4522b435b97e69198275f8"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "op_fseq_TCC2",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "op_finseq_def.op_fseq_TCC3": [
+  {
+   "info": {
+    "theory": "op_finseq_def",
+    "formula": "op_fseq_TCC3",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "ac84166a661a93586f6cf9a4c3a530c4cad2e3b25e4522b435b97e69198275f8"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "op_fseq_TCC3",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(termination-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ]
+}
