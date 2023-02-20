@@ -1,0 +1,118 @@
+{
+ "group_def.abelian_group?_TCC1": [
+  {
+   "info": {
+    "theory": "group_def",
+    "formula": "abelian_group?_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "1ecf9707dc41e09e55abd53e6800980c2472eb35e18560f6b7476362772c913c"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "abelian_group?_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(expand \"group?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"monoid?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"monad?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"star_closed?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"member\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skosimp*)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "group_def.finite_abelian_group?_TCC1": [
+  {
+   "info": {
+    "theory": "group_def",
+    "formula": "finite_abelian_group?_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "1ecf9707dc41e09e55abd53e6800980c2472eb35e18560f6b7476362772c913c"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "finite_abelian_group?_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(expand \"finite_group?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"group?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"monoid?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"monad?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"star_closed?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"member\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skosimp*)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ]
+}

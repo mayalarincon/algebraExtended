@@ -1,0 +1,504 @@
+{
+ "field.IMP_division_ring_TCC1": [
+  {
+   "info": {
+    "theory": "field",
+    "formula": "IMP_division_ring_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "584633f1cb35713930f2fe6aa666b41cee0bcf9e862e86a490be0a2b297f1617"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "IMP_division_ring_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(lemma \"fullset_is_field\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"field?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(flatten)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "field.IMP_integral_domain_TCC1": [
+  {
+   "info": {
+    "theory": "field",
+    "formula": "IMP_integral_domain_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "584633f1cb35713930f2fe6aa666b41cee0bcf9e862e86a490be0a2b297f1617"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "IMP_integral_domain_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(lemma \"fullset_is_field\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"field?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"division_ring?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"ring_with_one?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"integral_domain?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"commutative_ring?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(flatten)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(hide-all-but (-3 1))",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"group?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"monoid?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"monad?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"star_closed?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"nz_closed?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"star_closed?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(flatten)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "field.field_TCC1": [
+  {
+   "info": {
+    "theory": "field",
+    "formula": "field_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "584633f1cb35713930f2fe6aa666b41cee0bcf9e862e86a490be0a2b297f1617"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "field_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(lemma \"fullset_is_field\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(propax)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "field.nz_star_TCC1": [
+  {
+   "info": {
+    "theory": "field",
+    "formula": "nz_star_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "584633f1cb35713930f2fe6aa666b41cee0bcf9e862e86a490be0a2b297f1617"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "nz_star_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(grind)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"x1!1`1\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"x1!1`2\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lemma \"nz_T_times_nz_T_is_nz_T\" (\"nzx\" \"x1!1`1\" \"nzy\" \"x1!1`2\"))",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "field.field_is_division_ring": [
+  {
+   "info": {
+    "theory": "field",
+    "formula": "field_is_division_ring",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "584633f1cb35713930f2fe6aa666b41cee0bcf9e862e86a490be0a2b297f1617"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "field_is_division_ring",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(judgement-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "field.field_is_integral_domain": [
+  {
+   "info": {
+    "theory": "field",
+    "formula": "field_is_integral_domain",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "584633f1cb35713930f2fe6aa666b41cee0bcf9e862e86a490be0a2b297f1617"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "field_is_integral_domain",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skosimp)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"x!1\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"field?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"integral_domain?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"commutative_ring?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"nz_closed?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"division_ring?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"ring_with_one?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(flatten)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"group?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(hide -2)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(hide -1 -3)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"monoid?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"monad?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(propax)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "field.field_is_abelian_group_TCC1": [
+  {
+   "info": {
+    "theory": "field",
+    "formula": "field_is_abelian_group_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "584633f1cb35713930f2fe6aa666b41cee0bcf9e862e86a490be0a2b297f1617"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "field_is_abelian_group_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(inst 1 \"one\")",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "field.field_is_abelian_group_TCC2": [
+  {
+   "info": {
+    "theory": "field",
+    "formula": "field_is_abelian_group_TCC2",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "584633f1cb35713930f2fe6aa666b41cee0bcf9e862e86a490be0a2b297f1617"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "field_is_abelian_group_TCC2",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(lemma \"one_ne_zero\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(propax)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "field.mult_div_TCC1": [
+  {
+   "info": {
+    "theory": "field",
+    "formula": "mult_div_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "584633f1cb35713930f2fe6aa666b41cee0bcf9e862e86a490be0a2b297f1617"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "mult_div_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skosimp)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lemma \"nz_T_times_nz_T_is_not_zero\" (\"nzx\" \"x1!1`1\" \"nzy\" \"x1!1`2\"))",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "field.div_times_TCC1": [
+  {
+   "info": {
+    "theory": "field",
+    "formula": "div_times_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "584633f1cb35713930f2fe6aa666b41cee0bcf9e862e86a490be0a2b297f1617"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "div_times_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skosimp)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lemma \"nz_T_times_nz_T_is_nz_T\" (\"nzx\" \"n0x!1\" \"nzy\" \"n0y!1\"))",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ]
+}

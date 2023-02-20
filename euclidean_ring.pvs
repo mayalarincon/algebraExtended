@@ -1,0 +1,54 @@
+%%----------------------------------------------------------------------------
+%%
+%% Authors:	
+%% 		Thaynara Arielly de Lima
+%% 		Universidade Federal de Goiás - Brasil
+%%
+%%  	Andréia Borges Avelar da Silva
+%%		Universidade de Brasília - Brasil
+%%			
+%%		André Luiz Galdino
+%%		Universidade Federal de Catalão - Brasil
+%%
+%%		Mauricio Ayala-Rincón
+%%		Universidade de Brasília - Brasil
+%%
+%%----------------------------------------------------------------------------
+%%
+%%  Definition of a Euclidean Ring 
+%%
+%%	Last version: March 22, 2022
+%%
+%%----------------------------------------------------------------------------
+
+euclidean_ring[T:TYPE+, +:[T,T -> T] , *:[T,T -> T], zero:T]: THEORY
+
+  BEGIN
+ 
+    ASSUMING IMPORTING ring_def[T,+,*,zero]
+    
+	    fullset_is_ring: ASSUMPTION ring?(fullset[T])
+
+    ENDASSUMING
+
+    IMPORTING euclidean_ring_def[T,+,*,zero],
+              ring_principal_ideal[T,+,*,zero],
+              orders@bounded_nats
+
+     R, I: VAR set[T]
+
+  
+% @QED euclidean_ring_ideal_is_gen proved by thaynaradelima on Sun, 10 Apr 2022 20:04:51 GMT
+euclidean_ring_ideal_is_gen: LEMMA
+     FORALL(R: (euclidean_ring?)): ideal?(I,R) IMPLIES EXISTS(a:(I)): I = +[T,*](a,R)
+
+ % @QED euclidean_ring_is_principal_ideal proved by thaynaradelima on Tue, 05 Apr 2022 13:03:14 GMT
+euclidean_ring_is_principal_ideal: LEMMA
+        FORALL(R: (euclidean_ring?)): principal_ideal_ring?(R)
+
+% @QED euclidean_ring_has_one proved by thaynaradelima on Sun, 10 Apr 2022 20:21:46 GMT
+euclidean_ring_has_one: LEMMA
+        FORALL(R: (euclidean_ring?)): (EXISTS(e:(R)): FORALL (x:(R)): e * x = x * e = x)
+
+  
+  END euclidean_ring

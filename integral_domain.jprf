@@ -1,0 +1,95 @@
+{
+ "integral_domain.IMP_commutative_ring_TCC1": [
+  {
+   "info": {
+    "theory": "integral_domain",
+    "formula": "IMP_commutative_ring_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "54be8cebef96dde836b82b9de0f4a706ada3746952c2ddaf36c06eeb0d58d692"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "IMP_commutative_ring_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(lemma \"fullset_is_integral_domain\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"integral_domain?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(flatten)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "integral_domain.integral_domain_TCC1": [
+  {
+   "info": {
+    "theory": "integral_domain",
+    "formula": "integral_domain_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "54be8cebef96dde836b82b9de0f4a706ada3746952c2ddaf36c06eeb0d58d692"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "integral_domain_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(lemma \"fullset_is_integral_domain\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(propax)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "integral_domain.integral_domain_is_ring": [
+  {
+   "info": {
+    "theory": "integral_domain",
+    "formula": "integral_domain_is_ring",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "54be8cebef96dde836b82b9de0f4a706ada3746952c2ddaf36c06eeb0d58d692"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "integral_domain_is_ring",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(judgement-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ]
+}

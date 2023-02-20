@@ -1,0 +1,27 @@
+{
+ "groupoid.groupoid_TCC1": [
+  {
+   "info": {
+    "theory": "groupoid",
+    "formula": "groupoid_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "ca2a37e91c2100093620d6ff98e63e37cb4c1fcd99e9121906d15924ee60e383"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "groupoid_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(grind)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ]
+}
