@@ -1,0 +1,1196 @@
+(ring_gcd
+ (euclidean_gcd_algorithm_TCC1 0
+  (euclidean_gcd_algorithm_TCC1-1 nil 3858777045
+   ("" (subtype-tcc) nil nil)
+   ((boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (T formal-nonempty-type-decl nil ring_gcd nil)
+    (set type-eq-decl nil sets nil)
+    (+ formal-const-decl "[T, T -> T]" ring_gcd nil)
+    (* formal-const-decl "[T, T -> T]" ring_gcd nil)
+    (zero formal-const-decl "T" ring_gcd nil)
+    (singleton? const-decl "bool" sets nil)
+    (number nonempty-type-decl nil numbers nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (>= const-decl "bool" reals nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (remove const-decl "set" sets nil)
+    (star_closed? const-decl "bool" groupoid_def nil)
+    (one_member formula-decl nil monad nil)
+    (right_identity formula-decl nil monad nil)
+    (restrict const-decl "R" restrict nil)
+    (left_identity formula-decl nil monad nil)
+    (identity? const-decl "bool" operator_defs nil)
+    (monad? const-decl "bool" monad_def nil)
+    (associative? const-decl "bool" operator_defs nil)
+    (monoid? const-decl "bool" monoid_def nil)
+    (inv_exists? const-decl "bool" group_def nil)
+    (group? const-decl "bool" group_def nil)
+    (commutative? const-decl "bool" operator_defs nil)
+    (abelian_group? const-decl "bool" group_def nil)
+    (left_distributive? const-decl "bool" operator_defs_more nil)
+    (right_distributive? const-decl "bool" operator_defs_more nil)
+    (ring? const-decl "bool" ring_def nil)
+    (commutative_ring? const-decl "bool" ring_def nil)
+    (/= const-decl "boolean" notequal nil)
+    (member const-decl "bool" sets nil)
+    (singleton const-decl "(singleton?)" sets nil)
+    (difference const-decl "set" sets nil))
+   nil
+   (euclidean_gcd_algorithm subtype "ring_gcd.b"
+    "(sets[ring_gcd.T].difference(ring_gcd.R, sets[ring_gcd.T].singleton(ring_gcd.zero)))")))
+ (euclidean_gcd_algorithm_TCC2 0
+  (euclidean_gcd_algorithm_TCC2-1 nil 3858777045
+   ("" (subtype-tcc) nil nil)
+   ((boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (T formal-nonempty-type-decl nil ring_gcd nil)
+    (set type-eq-decl nil sets nil)
+    (+ formal-const-decl "[T, T -> T]" ring_gcd nil)
+    (* formal-const-decl "[T, T -> T]" ring_gcd nil)
+    (zero formal-const-decl "T" ring_gcd nil)
+    (singleton? const-decl "bool" sets nil)
+    (number nonempty-type-decl nil numbers nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (>= const-decl "bool" reals nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (remove const-decl "set" sets nil)
+    (member const-decl "bool" sets nil)
+    (singleton const-decl "(singleton?)" sets nil)
+    (difference const-decl "set" sets nil))
+   nil
+   (euclidean_gcd_algorithm subtype "ring_gcd.a"
+    "(sets[ring_gcd.T].difference(ring_gcd.R, sets[ring_gcd.T].singleton(ring_gcd.zero)))")))
+ (euclidean_gcd_algorithm_TCC3 0
+  (euclidean_gcd_algorithm_TCC3-1 nil 3858777045
+   ("" (skeep)
+    (("" (expand "difference")
+      (("" (expand "member")
+        (("" (typepred "z`2")
+          (("" (expand "remove")
+            (("" (flatten)
+              (("" (assert)
+                (("" (expand "singleton") (("" (assert) nil nil)) nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((difference const-decl "set" sets nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (>= const-decl "bool" reals nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number nonempty-type-decl nil numbers nil)
+    (singleton const-decl "(singleton?)" sets nil)
+    (singleton? const-decl "bool" sets nil)
+    (* formal-const-decl "[T, T -> T]" ring_gcd nil)
+    (+ formal-const-decl "[T, T -> T]" ring_gcd nil)
+    (zero formal-const-decl "T" ring_gcd nil)
+    (remove const-decl "set" sets nil) (set type-eq-decl nil sets nil)
+    (T formal-nonempty-type-decl nil ring_gcd nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (member const-decl "bool" sets nil))
+   nil
+   (euclidean_gcd_algorithm subtype "ring_gcd.z`2"
+    "(sets[ring_gcd.T].difference(d1`1, sets[ring_gcd.T].singleton(ring_gcd.zero)))")))
+ (euclidean_gcd_algorithm_TCC4 0
+  (euclidean_gcd_algorithm_TCC4-1 nil 3858777045
+   ("" (subtype-tcc) nil nil)
+   ((member const-decl "bool" sets nil)
+    (singleton const-decl "(singleton?)" sets nil)
+    (difference const-decl "set" sets nil))
+   nil
+   (euclidean_gcd_algorithm subtype "ring_gcd.z`1"
+    "(sets[ring_gcd.T].difference(d1`1, sets[ring_gcd.T].singleton(ring_gcd.zero)))")))
+ (euclidean_gcd_algorithm_TCC5 0
+  (euclidean_gcd_algorithm_TCC5-1 nil 3858777045
+   ("" (subtype-tcc) nil nil)
+   ((boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (T formal-nonempty-type-decl nil ring_gcd nil)
+    (set type-eq-decl nil sets nil)
+    (+ formal-const-decl "[T, T -> T]" ring_gcd nil)
+    (* formal-const-decl "[T, T -> T]" ring_gcd nil)
+    (zero formal-const-decl "T" ring_gcd nil)
+    (remove const-decl "set" sets nil)
+    (star_closed? const-decl "bool" groupoid_def nil)
+    (one_member formula-decl nil monad nil)
+    (right_identity formula-decl nil monad nil)
+    (restrict const-decl "R" restrict nil)
+    (left_identity formula-decl nil monad nil)
+    (identity? const-decl "bool" operator_defs nil)
+    (monad? const-decl "bool" monad_def nil)
+    (associative? const-decl "bool" operator_defs nil)
+    (monoid? const-decl "bool" monoid_def nil)
+    (inv_exists? const-decl "bool" group_def nil)
+    (group? const-decl "bool" group_def nil)
+    (commutative? const-decl "bool" operator_defs nil)
+    (abelian_group? const-decl "bool" group_def nil)
+    (left_distributive? const-decl "bool" operator_defs_more nil)
+    (right_distributive? const-decl "bool" operator_defs_more nil)
+    (ring? const-decl "bool" ring_def nil)
+    (commutative_ring? const-decl "bool" ring_def nil)
+    (/= const-decl "boolean" notequal nil)
+    (member const-decl "bool" sets nil)
+    (singleton const-decl "(singleton?)" sets nil)
+    (difference const-decl "set" sets nil))
+   nil
+   (euclidean_gcd_algorithm subtype "ring_gcd.b"
+    "(sets[ring_gcd.T].difference(ring_gcd.R, sets[ring_gcd.T].singleton(ring_gcd.zero)))")))
+ (euclidean_gcd_algorithm_TCC6 0
+  (euclidean_gcd_algorithm_TCC6-1 nil 3858777045
+   ("" (subtype-tcc) nil nil)
+   ((boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (T formal-nonempty-type-decl nil ring_gcd nil)
+    (set type-eq-decl nil sets nil)
+    (+ formal-const-decl "[T, T -> T]" ring_gcd nil)
+    (* formal-const-decl "[T, T -> T]" ring_gcd nil)
+    (zero formal-const-decl "T" ring_gcd nil)
+    (member const-decl "bool" sets nil)
+    (singleton const-decl "(singleton?)" sets nil)
+    (difference const-decl "set" sets nil))
+   nil
+   (euclidean_gcd_algorithm subtype "ring_gcd.a"
+    "(sets[ring_gcd.T].difference(ring_gcd.R, sets[ring_gcd.T].singleton(ring_gcd.zero)))")))
+ (euclidean_gcd_algorithm_TCC7 0
+  (euclidean_gcd_algorithm_TCC8-1 nil 3858777045
+   ("" (skeep)
+    (("" (skeep)
+      (("" (typepred "b")
+        (("" (expand "remove")
+          (("" (expand "member") (("" (assert) nil nil)) nil)) nil))
+        nil))
+      nil))
+    nil)
+   ((real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (member const-decl "bool" sets nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (T formal-nonempty-type-decl nil ring_gcd nil)
+    (set type-eq-decl nil sets nil) (remove const-decl "set" sets nil)
+    (zero formal-const-decl "T" ring_gcd nil)
+    (+ formal-const-decl "[T, T -> T]" ring_gcd nil)
+    (* formal-const-decl "[T, T -> T]" ring_gcd nil)
+    (one formal-const-decl "T" ring_gcd nil)
+    (euclidean_domain? const-decl "bool" euclidean_domain_def nil))
+   nil (euclidean_gcd_algorithm subtype "ring_gcd.b" "(ring_gcd.R)")))
+ (euclidean_gcd_algorithm_TCC8 0
+  (euclidean_gcd_algorithm_TCC8-1 nil 3859382122
+   ("" (subtype-tcc) nil nil) nil nil
+   (euclidean_gcd_algorithm subtype "ring_gcd.rem"
+    "(sets[ring_gcd.T].remove(ring_gcd.zero, ring_gcd.R))")))
+ (euclidean_gcd_algorithm_TCC9 0
+  (euclidean_gcd_algorithm_TCC7-1 nil 3858777045
+   ("" (skeep)
+    (("" (lift-if)
+      (("" (prop)
+        (("1" (assert)
+          (("1" (typepred "phi")
+            (("1" (expand "euclidean_pair?")
+              (("1" (expand "lex2")
+                (("1" (lift-if)
+                  (("1" (prop)
+                    (("1" (lift-if) (("1" (postpone) nil nil)) nil)
+                     ("2" (postpone) nil nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil)
+         ("2" (postpone) nil nil))
+        nil))
+      nil))
+    nil)
+   nil nil
+   (euclidean_gcd_algorithm termination
+    "ring_gcd.euclidean_gcd_algorithm(ring_gcd.R, ring_gcd.phi, ring_gcd.f_phi)(ring_gcd.b, ring_gcd.rem)"
+    "nil")))
+ (euclidean_gcd_algorithm_TCC10 0
+  (euclidean_gcd_algorithm_TCC10-1 nil 3859382122
+   ("" (subtype-tcc) nil nil) nil nil
+   (euclidean_gcd_algorithm subtype "ring_gcd.b" "(ring_gcd.R)")))
+ (euclidean_gcd_algorithm_TCC11 0
+  (euclidean_gcd_algorithm_TCC9-1 nil 3858777045
+   ("" (skeep*)
+    (("" (expand "remove")
+      (("" (expand "member") (("" (assert) nil nil)) nil)) nil))
+    nil)
+   ((remove const-decl "set" sets nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (member const-decl "bool" sets nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (TRUE const-decl "bool" booleans nil))
+   nil
+   (euclidean_gcd_algorithm subtype "ring_gcd.a"
+    "(sets[ring_gcd.T].remove(ring_gcd.zero, ring_gcd.R))")))
+ (euclidean_gcd_algorithm_TCC12 0
+  (euclidean_gcd_algorithm_TCC10-1 nil 3858777045
+   ("" (skeep*) (("" (grind) nil nil)) nil)
+   ((real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (lex2 const-decl "ordinal" lex2 nil)
+    (< def-decl "bool" ordinals nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (TRUE const-decl "bool" booleans nil))
+   nil
+   (euclidean_gcd_algorithm termination
+    "ring_gcd.euclidean_gcd_algorithm(ring_gcd.R, ring_gcd.phi, ring_gcd.f_phi)(ring_gcd.b, ring_gcd.a)"
+    "nil")))
+ (Euclid_theorem_TCC1 0
+  (Euclid_theorem_TCC1-1 nil 3858880316
+   ("" (skeep)
+    (("" (split)
+      (("1" (expand "empty?")
+        (("1" (inst -1 "a")
+          (("1" (expand "member")
+            (("1" (expand "extend") (("1" (propax) nil nil)) nil))
+            nil))
+          nil))
+        nil)
+       ("2" (expand "subset?")
+        (("2" (skeep)
+          (("2" (expand "member")
+            (("2" (expand "extend") (("2" (prop) nil nil)) nil)) nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((T formal-nonempty-type-decl nil ring_gcd nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (set type-eq-decl nil sets nil)
+    (+ formal-const-decl "[T, T -> T]" ring_gcd nil)
+    (* formal-const-decl "[T, T -> T]" ring_gcd nil)
+    (zero formal-const-decl "T" ring_gcd nil)
+    (one formal-const-decl "T" ring_gcd nil)
+    (euclidean_domain? const-decl "bool" euclidean_domain_def nil)
+    (extend const-decl "R" extend nil)
+    (member const-decl "bool" sets nil)
+    (empty? const-decl "bool" sets nil)
+    (subset? const-decl "bool" sets nil))
+   nil
+   (Euclid_theorem subtype
+    "extend[ring_gcd.T, (ring_gcd.R), booleans.bool, booleans.FALSE].extend({x: (ring_gcd.R) | booleans.OR(x = ring_gcd.a, x = ring_gcd.b)})"
+    "{X | booleans.AND((booleans.NOT)(sets[ring_gcd.T].empty?(X)), sets[ring_gcd.T].subset?(X, ring_gcd.R))}")))
+ (Euclid_theorem_TCC2 0
+  (Euclid_theorem_TCC3-1 nil 3858880316
+   ("" (skeep)
+    (("" (split)
+      (("1" (expand "empty?")
+        (("1" (inst -1 "b")
+          (("1" (expand "member")
+            (("1" (grind)
+              (("1" (typepred "b")
+                (("1" (expand "remove")
+                  (("1" (expand "member") (("1" (propax) nil nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil)
+       ("2" (expand "subset?")
+        (("2" (skeep)
+          (("2" (expand "member") (("2" (grind) nil nil)) nil)) nil))
+        nil))
+      nil))
+    nil)
+   ((T formal-nonempty-type-decl nil ring_gcd nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (set type-eq-decl nil sets nil) (remove const-decl "set" sets nil)
+    (zero formal-const-decl "T" ring_gcd nil)
+    (+ formal-const-decl "[T, T -> T]" ring_gcd nil)
+    (* formal-const-decl "[T, T -> T]" ring_gcd nil)
+    (one formal-const-decl "T" ring_gcd nil)
+    (euclidean_domain? const-decl "bool" euclidean_domain_def nil)
+    (extend const-decl "R" extend nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (member const-decl "bool" sets nil)
+    (empty? const-decl "bool" sets nil)
+    (subset? const-decl "bool" sets nil))
+   nil
+   (Euclid_theorem subtype
+    "extend[ring_gcd.T, (ring_gcd.R), booleans.bool, booleans.FALSE].extend({x: (ring_gcd.R) | booleans.OR(x = (ring_gcd.f_phi(ring_gcd.a, ring_gcd.b))`2, x = ring_gcd.b)})"
+    "{X | booleans.AND((booleans.NOT)(sets[ring_gcd.T].empty?(X)), sets[ring_gcd.T].subset?(X, ring_gcd.R))}")))
+ (Euclid_theorem 0
+  (Euclid_theorem-1 nil 3859394178
+   ("" (skeep)
+    (("" (prop)
+      (("1" (expand "gcd?" 1)
+        (("1" (prop)
+          (("1" (skeep)
+            (("1" (expand "member")
+              (("1" (expand "extend")
+                (("1" (prop)
+                  (("1" (expand "gcd?")
+                    (("1" (flatten)
+                      (("1" (hide -4)
+                        (("1" (copy -3)
+                          (("1" (inst -4 "a")
+                            (("1" (inst -1 "b")
+                              (("1"
+                                (prop)
+                                (("1"
+                                  (typepred "f_phi")
+                                  (("1"
+                                    (expand "euclidean_f_phi?")
+                                    (("1"
+                                      (inst -1 "a" "b")
+                                      (("1"
+                                        (prop)
+                                        (("1"
+                                          (expand "divides?" 1)
+                                          (("1"
+                                            (inst 1 "zero")
+                                            (("1" (assert) nil nil)
+                                             ("2" (assert) nil nil))
+                                            nil))
+                                          nil)
+                                         ("2"
+                                          (expand "divides?" 2)
+                                          (("2"
+                                            (inst 2 "zero")
+                                            (("1" (assert) nil nil)
+                                             ("2" (assert) nil nil))
+                                            nil))
+                                          nil)
+                                         ("3"
+                                          (expand "divides?")
+                                          (("3"
+                                            (skeep)
+                                            (("3"
+                                              (skeep)
+                                              (("3"
+                                                (inst
+                                                 3
+                                                 "x + inv(f_phi(a, b)`1 * x!1)")
+                                                (("1"
+                                                  (typepred "R")
+                                                  (("1"
+                                                    (expand
+                                                     "euclidean_domain?")
+                                                    (("1"
+                                                      (expand
+                                                       "euclidean_ring?")
+                                                      (("1"
+                                                        (expand
+                                                         "commutative_ring?")
+                                                        (("1"
+                                                          (expand
+                                                           "ring?")
+                                                          (("1"
+                                                            (expand
+                                                             "commutative?")
+                                                            (("1"
+                                                              (expand
+                                                               "restrict")
+                                                              (("1"
+                                                                (expand
+                                                                 "abelian_group?")
+                                                                (("1"
+                                                                  (expand
+                                                                   "group?")
+                                                                  (("1"
+                                                                    (expand
+                                                                     "inv_exists?")
+                                                                    (("1"
+                                                                      (assert)
+                                                                      (("1"
+                                                                        (postpone)
+                                                                        nil
+                                                                        nil))
+                                                                      nil))
+                                                                    nil))
+                                                                  nil))
+                                                                nil))
+                                                              nil))
+                                                            nil))
+                                                          nil))
+                                                        nil))
+                                                      nil))
+                                                    nil))
+                                                  nil)
+                                                 ("2"
+                                                  (postpone)
+                                                  nil
+                                                  nil))
+                                                nil))
+                                              nil))
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil)
+                                 ("2"
+                                  (hide-all-but 1)
+                                  (("2" (grind) nil nil))
+                                  nil)
+                                 ("3"
+                                  (hide-all-but 1)
+                                  (("3"
+                                    (grind)
+                                    (("3"
+                                      (typepred "b")
+                                      (("3"
+                                        (expand "remove")
+                                        (("3"
+                                          (expand "member")
+                                          (("3" (propax) nil nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil)
+                                 ("4"
+                                  (hide-all-but 1)
+                                  (("4" (grind) nil nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil)
+                   ("2" (replaces -1)
+                    (("2" (expand "gcd?")
+                      (("2" (prop)
+                        (("2" (hide -3)
+                          (("2" (inst -2 "b")
+                            (("2" (prop)
+                              (("2"
+                                (hide-all-but 1)
+                                (("2"
+                                  (grind)
+                                  (("2"
+                                    (typepred "b")
+                                    (("2" (grind) nil nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil)
+           ("2" (expand "gcd?")
+            (("2" (prop)
+              (("2" (hide -1)
+                (("2" (skeep)
+                  (("2" (inst -2 "c")
+                    (("2" (assert)
+                      (("2" (skeep)
+                        (("2" (hide 1)
+                          (("2" (expand "extend")
+                            (("2" (prop)
+                              (("1"
+                                (replaces -1)
+                                (("1"
+                                  (copy -2)
+                                  (("1"
+                                    (inst -1 "(f_phi(a, b))`2 ")
+                                    (("1"
+                                      (prop)
+                                      (("1"
+                                        (inst -3 "b")
+                                        (("1"
+                                          (prop)
+                                          (("1"
+                                            (expand "divides?")
+                                            (("1"
+                                              (skeep)
+                                              (("1"
+                                                (skeep)
+                                                (("1"
+                                                  (typepred "f_phi")
+                                                  (("1"
+                                                    (expand
+                                                     "euclidean_f_phi?")
+                                                    (("1"
+                                                      (inst -1 "a" "b")
+                                                      (("1"
+                                                        (prop)
+                                                        (("1"
+                                                          (inst
+                                                           1
+                                                           "zero")
+                                                          (("1"
+                                                            (assert)
+                                                            nil
+                                                            nil)
+                                                           ("2"
+                                                            (assert)
+                                                            nil
+                                                            nil))
+                                                          nil)
+                                                         ("2"
+                                                          (replaces -1)
+                                                          (("2"
+                                                            (assert)
+                                                            (("2"
+                                                              (inst
+                                                               2
+                                                               "(f_phi(a, b))`1 * x")
+                                                              (("1"
+                                                                (typepred
+                                                                 "R")
+                                                                (("1"
+                                                                  (expand
+                                                                   "euclidean_domain?")
+                                                                  (("1"
+                                                                    (expand
+                                                                     "euclidean_ring?")
+                                                                    (("1"
+                                                                      (prop)
+                                                                      (("1"
+                                                                        (hide
+                                                                         -2)
+                                                                        (("1"
+                                                                          (copy
+                                                                           -1)
+                                                                          (("1"
+                                                                            (expand
+                                                                             "commutative_ring?")
+                                                                            (("1"
+                                                                              (prop)
+                                                                              (("1"
+                                                                                (expand
+                                                                                 "restrict")
+                                                                                (("1"
+                                                                                  (expand
+                                                                                   "commutative?")
+                                                                                  (("1"
+                                                                                    (expand
+                                                                                     "ring?")
+                                                                                    (("1"
+                                                                                      (prop)
+                                                                                      (("1"
+                                                                                        (copy
+                                                                                         -3)
+                                                                                        (("1"
+                                                                                          (expand
+                                                                                           "restrict")
+                                                                                          (("1"
+                                                                                            (expand
+                                                                                             "associative?")
+                                                                                            (("1"
+                                                                                              (inst
+                                                                                               -7
+                                                                                               "c"
+                                                                                               "((f_phi(a, b))`1 * x)")
+                                                                                              (("1"
+                                                                                                (replace
+                                                                                                 -7
+                                                                                                 2)
+                                                                                                (("1"
+                                                                                                  (inst
+                                                                                                   -1
+                                                                                                   "(f_phi(a, b))`1"
+                                                                                                   "x"
+                                                                                                   "c")
+                                                                                                  (("1"
+                                                                                                    (replace
+                                                                                                     -1
+                                                                                                     2)
+                                                                                                    (("1"
+                                                                                                      (inst
+                                                                                                       -13
+                                                                                                       "x"
+                                                                                                       "c")
+                                                                                                      (("1"
+                                                                                                        (assert)
+                                                                                                        nil
+                                                                                                        nil)
+                                                                                                       ("2"
+                                                                                                        (hide-all-but
+                                                                                                         1)
+                                                                                                        (("2"
+                                                                                                          (typepred
+                                                                                                           "c")
+                                                                                                          (("2"
+                                                                                                            (grind)
+                                                                                                            nil
+                                                                                                            nil))
+                                                                                                          nil))
+                                                                                                        nil))
+                                                                                                      nil))
+                                                                                                    nil)
+                                                                                                   ("2"
+                                                                                                    (hide-all-but
+                                                                                                     1)
+                                                                                                    (("2"
+                                                                                                      (typepred
+                                                                                                       "c")
+                                                                                                      (("2"
+                                                                                                        (grind)
+                                                                                                        nil
+                                                                                                        nil))
+                                                                                                      nil))
+                                                                                                    nil))
+                                                                                                  nil))
+                                                                                                nil)
+                                                                                               ("2"
+                                                                                                (hide-all-but
+                                                                                                 1)
+                                                                                                (("2"
+                                                                                                  (typepred
+                                                                                                   "(f_phi(a,b))`1")
+                                                                                                  (("2"
+                                                                                                    (typepred
+                                                                                                     "R")
+                                                                                                    (("2"
+                                                                                                      (expand
+                                                                                                       "euclidean_domain?")
+                                                                                                      (("2"
+                                                                                                        (expand
+                                                                                                         "euclidean_ring?")
+                                                                                                        (("2"
+                                                                                                          (expand
+                                                                                                           "commutative_ring?")
+                                                                                                          (("2"
+                                                                                                            (flatten)
+                                                                                                            (("2"
+                                                                                                              (postpone)
+                                                                                                              nil
+                                                                                                              nil))
+                                                                                                            nil))
+                                                                                                          nil))
+                                                                                                        nil))
+                                                                                                      nil))
+                                                                                                    nil))
+                                                                                                  nil))
+                                                                                                nil)
+                                                                                               ("3"
+                                                                                                (postpone)
+                                                                                                nil
+                                                                                                nil))
+                                                                                              nil))
+                                                                                            nil))
+                                                                                          nil))
+                                                                                        nil))
+                                                                                      nil))
+                                                                                    nil))
+                                                                                  nil))
+                                                                                nil))
+                                                                              nil))
+                                                                            nil))
+                                                                          nil))
+                                                                        nil))
+                                                                      nil))
+                                                                    nil))
+                                                                  nil))
+                                                                nil)
+                                                               ("2"
+                                                                (postpone)
+                                                                nil
+                                                                nil))
+                                                              nil))
+                                                            nil))
+                                                          nil)
+                                                         ("3"
+                                                          (postpone)
+                                                          nil
+                                                          nil))
+                                                        nil))
+                                                      nil))
+                                                    nil))
+                                                  nil))
+                                                nil))
+                                              nil))
+                                            nil)
+                                           ("2" (postpone) nil nil))
+                                          nil))
+                                        nil)
+                                       ("2" (postpone) nil nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil)
+                               ("2" (postpone) nil nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil)
+       ("2" (postpone) nil nil))
+      nil))
+    nil)
+   nil shostak))
+ (euclidean_gcd_alg_correctness_TCC1 0
+  (euclidean_gcd_alg_correctness_TCC1-1 nil 3858880378
+   ("" (skeep) (("" (grind) nil nil)) nil)
+   ((T formal-nonempty-type-decl nil ring_gcd nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (set type-eq-decl nil sets nil)
+    (+ formal-const-decl "[T, T -> T]" ring_gcd nil)
+    (* formal-const-decl "[T, T -> T]" ring_gcd nil)
+    (zero formal-const-decl "T" ring_gcd nil)
+    (one formal-const-decl "T" ring_gcd nil)
+    (euclidean_domain? const-decl "bool" euclidean_domain_def nil)
+    (extend const-decl "R" extend nil)
+    (member const-decl "bool" sets nil)
+    (empty? const-decl "bool" sets nil)
+    (subset? const-decl "bool" sets nil)
+    (subset_is_partial_order name-judgement "(partial_order?[set[T]])"
+     sets_lemmas nil))
+   nil
+   (euclidean_gcd_alg_correctness subtype
+    "extend[ring_gcd.T, (ring_gcd.R), booleans.bool, booleans.FALSE].extend({x: (ring_gcd.R) | booleans.OR(x = ring_gcd.a, x = ring_gcd.b)})"
+    "{X | booleans.AND((booleans.NOT)(sets[ring_gcd.T].empty?(X)), sets[ring_gcd.T].subset?(X, ring_gcd.R))}")))
+ (euclidean_gcd_alg_correctness 0
+  (euclidean_gcd_alg_correctness-1 nil 3858881145
+   ("" (skolem * ("R" "phi" "f_phi" "_" "_"))
+    ((""
+      (measure-induct+
+       "lex2(phi(b), IF a = zero THEN 0 ELSE phi(a) ENDIF)" ("a" "b"))
+      (("1" (expand "euclidean_gcd_algorithm" 1)
+        (("1" (lift-if)
+          (("1" (prop)
+            (("1" (hide -2)
+              (("1" (replaces -1)
+                (("1" (expand "gcd?")
+                  (("1" (prop)
+                    (("1" (skeep)
+                      (("1" (expand "member")
+                        (("1" (expand "extend")
+                          (("1" (prop)
+                            (("1" (expand "divides?")
+                              (("1"
+                                (inst 1 "zero")
+                                (("1" (assert) nil nil)
+                                 ("2" (assert) nil nil))
+                                nil))
+                              nil)
+                             ("2" (expand "divides?")
+                              (("2"
+                                (inst 1 "one")
+                                (("1" (assert) nil nil)
+                                 ("2"
+                                  (typepred "R")
+                                  (("2"
+                                    (expand "euclidean_domain?")
+                                    (("2"
+                                      (expand "integral_domain_w_one?")
+                                      (("2"
+                                        (expand "monad?")
+                                        (("2"
+                                          (expand "member")
+                                          (("2"
+                                            (expand "remove")
+                                            (("2"
+                                              (expand "member")
+                                              (("2" (assert) nil nil))
+                                              nil))
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil)
+                     ("2" (skeep)
+                      (("2" (inst -1 "x!2")
+                        (("2" (expand "member")
+                          (("2" (expand "extend")
+                            (("2" (assert)
+                              (("2"
+                                (hide 2)
+                                (("2"
+                                  (prop)
+                                  (("2"
+                                    (typepred "x!2")
+                                    (("2"
+                                      (expand "remove")
+                                      (("2"
+                                        (expand "member")
+                                        (("2" (assert) nil nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil)
+             ("2" (hide -3)
+              (("2" (expand "gcd?")
+                (("2" (prop)
+                  (("1" (skeep)
+                    (("1" (expand "member")
+                      (("1" (expand "extend")
+                        (("1" (prop)
+                          (("1" (replaces -1)
+                            (("1" (expand "divides?")
+                              (("1"
+                                (inst 1 "(f_phi(x!1, x!2))`1")
+                                (("1"
+                                  (typepred "f_phi")
+                                  (("1"
+                                    (expand "euclidean_f_phi?")
+                                    (("1"
+                                      (inst -1 "x!1" "x!2")
+                                      (("1"
+                                        (assert)
+                                        (("1"
+                                          (grind)
+                                          (("1"
+                                            (typepred "R")
+                                            (("1"
+                                              (expand
+                                               "euclidean_domain?")
+                                              (("1"
+                                                (expand
+                                                 "euclidean_ring?")
+                                                (("1"
+                                                  (expand
+                                                   "commutative_ring?")
+                                                  (("1"
+                                                    (expand
+                                                     "commutative?")
+                                                    (("1"
+                                                      (flatten)
+                                                      (("1"
+                                                        (inst
+                                                         -2
+                                                         "x!2"
+                                                         "(f_phi(x!1, x!2))`1")
+                                                        (("1"
+                                                          (assert)
+                                                          nil
+                                                          nil)
+                                                         ("2"
+                                                          (typepred
+                                                           "x!2")
+                                                          (("2"
+                                                            (expand
+                                                             "remove")
+                                                            (("2"
+                                                              (expand
+                                                               "member")
+                                                              (("2"
+                                                                (assert)
+                                                                nil
+                                                                nil))
+                                                              nil))
+                                                            nil))
+                                                          nil))
+                                                        nil))
+                                                      nil))
+                                                    nil))
+                                                  nil))
+                                                nil))
+                                              nil))
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil)
+                           ("2" (expand "divides?")
+                            (("2" (inst 1 "one")
+                              (("1" (assert) nil nil)
+                               ("2"
+                                (typepred "R")
+                                (("2"
+                                  (expand "euclidean_domain?")
+                                  (("2"
+                                    (expand "integral_domain_w_one?")
+                                    (("2"
+                                      (expand "monad?")
+                                      (("2"
+                                        (expand "member")
+                                        (("2"
+                                          (expand "remove")
+                                          (("2"
+                                            (expand "member")
+                                            (("2" (assert) nil nil))
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil)
+                   ("2" (skeep)
+                    (("2" (inst -1 "x!2")
+                      (("2" (expand "member")
+                        (("2" (expand "extend")
+                          (("2" (prop)
+                            (("2" (hide-all-but 1)
+                              (("2"
+                                (typepred "x!2")
+                                (("2"
+                                  (expand "remove")
+                                  (("2"
+                                    (expand "member")
+                                    (("2" (assert) nil nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil)
+             ("3" (inst -2 "x!2" "(f_phi(x!1, x!2))`2")
+              (("3" (prop)
+                (("1" (lemma "Euclid_theorem")
+                  (("1" (inst?)
+                    (("1"
+                      (inst -1
+                       "euclidean_gcd_algorithm(R, phi, f_phi)(x!2, (f_phi(x!1, x!2))`2)")
+                      (("1"
+                        (case "extend[T, (R), bool, FALSE]
+                ({x: (R) | x = (f_phi(x!1, x!2))`2 OR x = x!2}) = extend[T, (R), bool, FALSE]
+                ({x: (R) | x = x!2 OR x = (f_phi(x!1, x!2))`2})")
+                        (("1" (assert) nil nil)
+                         ("2" (hide-all-but 1)
+                          (("2" (decompose-equality)
+                            (("2" (grind) nil nil)) nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil)
+                 ("2" (hide 3)
+                  (("2" (typepred "f_phi")
+                    (("2" (expand "euclidean_f_phi?")
+                      (("2" (inst -1 "x!1" "x!2")
+                        (("2" (assert)
+                          (("2" (prop) (("2" (grind) nil nil)) nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil)
+             ("4" (inst -1 "x!2" "x!1")
+              (("4" (prop)
+                (("1"
+                  (case "extend[T, (R), bool, FALSE]({x: (R) | x = x!2 OR x = x!1}) = extend[T, (R), bool, FALSE]({x: (R) | x = x!1 OR x = x!2})")
+                  (("1" (assert) nil nil)
+                   ("2" (hide-all-but 1)
+                    (("2" (decompose-equality) (("2" (grind) nil nil))
+                      nil))
+                    nil))
+                  nil)
+                 ("2" (hide-all-but (1 2)) (("2" (grind) nil nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil)
+       ("2" (hide-all-but 1)
+        (("2" (prop)
+          (("1" (expand "empty?")
+            (("1" (inst -1 "y!1") (("1" (grind) nil nil)) nil)) nil)
+           ("2" (grind) nil nil))
+          nil))
+        nil)
+       ("3" (hide 3)
+        (("3" (expand "difference") (("3" (grind) nil nil)) nil)) nil)
+       ("4" (hide 2)
+        (("4" (typepred "x!2") (("4" (grind) nil nil)) nil)) nil)
+       ("5" (hide 3) (("5" (grind) nil nil)) nil)
+       ("6" (hide 2)
+        (("6" (typepred "y!2") (("6" (grind) nil nil)) nil)) nil)
+       ("7" (hide-all-but 1)
+        (("7" (prop)
+          (("1" (expand "empty?")
+            (("1" (inst -1 "x!1`1") (("1" (grind) nil nil)) nil)) nil)
+           ("2" (grind) nil nil))
+          nil))
+        nil)
+       ("8" (hide -1 2)
+        (("8" (prop) (("1" (grind) nil nil) ("2" (grind) nil nil))
+          nil))
+        nil)
+       ("9" (hide 3) (("9" (grind) nil nil)) nil)
+       ("10" (hide 2)
+        (("10" (typepred "x!1`2") (("10" (grind) nil nil)) nil)) nil)
+       ("11" (hide 3) (("11" (grind) nil nil)) nil)
+       ("12" (hide 2)
+        (("12" (typepred "y!1`2") (("12" (grind) nil nil)) nil)) nil)
+       ("13" (hide 2)
+        (("13" (prop)
+          (("1" (expand "empty?")
+            (("1" (inst -1 "a!1") (("1" (grind) nil nil)) nil)) nil)
+           ("2" (grind) nil nil))
+          nil))
+        nil)
+       ("14" (hide 3) (("14" (grind) nil nil)) nil)
+       ("15" (hide 2)
+        (("15" (typepred "b!1") (("15" (grind) nil nil)) nil)) nil))
+      nil))
+    nil)
+   ((pred type-eq-decl nil defined_types nil)
+    (well_founded? const-decl "bool" orders nil)
+    (IMPLIES const-decl "[bool, bool -> bool]" booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (measure_induction formula-decl nil measure_induction nil)
+    (T formal-nonempty-type-decl nil ring_gcd nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (set type-eq-decl nil sets nil)
+    (+ formal-const-decl "[T, T -> T]" ring_gcd nil)
+    (* formal-const-decl "[T, T -> T]" ring_gcd nil)
+    (zero formal-const-decl "T" ring_gcd nil)
+    (one formal-const-decl "T" ring_gcd nil)
+    (euclidean_domain? const-decl "bool" euclidean_domain_def nil)
+    (remove const-decl "set" sets nil)
+    (ordstruct type-decl nil ordstruct_adt nil)
+    (ordinal? def-decl "bool" ordinals nil)
+    (ordinal nonempty-type-eq-decl nil ordinals nil)
+    (number nonempty-type-decl nil numbers nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (>= const-decl "bool" reals nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (lex2 const-decl "ordinal" lex2 nil)
+    (difference const-decl "set" sets nil)
+    (singleton? const-decl "bool" sets nil)
+    (singleton const-decl "(singleton?)" sets nil)
+    (euclidean_ring? const-decl "bool" euclidean_ring_def nil)
+    (euclidean_pair? const-decl "bool" euclidean_ring_def nil)
+    (IF const-decl "[boolean, T, T -> T]" if_def nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (< def-decl "bool" ordinals nil)
+    (well_founded_le formula-decl nil ordinals nil)
+    (R skolem-const-decl "(euclidean_domain?[T, +, *, zero, one])"
+     ring_gcd nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (empty? const-decl "bool" sets nil)
+    (FALSE const-decl "bool" booleans nil)
+    (extend const-decl "R" extend nil)
+    (OR const-decl "[bool, bool -> bool]" booleans nil)
+    (subset? const-decl "bool" sets nil)
+    (commutative_ring? const-decl "bool" ring_def nil)
+    (gcd? const-decl "bool" ring_gcd_def nil)
+    (euclidean_f_phi? const-decl "bool" euclidean_ring_def nil)
+    (euclidean_gcd_algorithm def-decl "(remove(zero, R))" ring_gcd nil)
+    (Euclid_theorem formula-decl nil ring_gcd nil)
+    (plus_zero formula-decl nil ring nil)
+    (left_identity formula-decl nil monad nil)
+    (integral_domain? const-decl "bool" integral_domain_def nil)
+    (nz_closed? const-decl "bool" ring_nz_closed_def nil)
+    (/= const-decl "boolean" notequal nil)
+    (star_closed? const-decl "bool" groupoid_def nil)
+    (restrict const-decl "R" restrict nil)
+    (zero_plus formula-decl nil ring nil)
+    (identity? const-decl "bool" operator_defs nil)
+    (associative? const-decl "bool" operator_defs nil)
+    (monoid? const-decl "bool" monoid_def nil)
+    (inv_exists? const-decl "bool" group_def nil)
+    (group? const-decl "bool" group_def nil)
+    (abelian_group? const-decl "bool" group_def nil)
+    (left_distributive? const-decl "bool" operator_defs_more nil)
+    (right_distributive? const-decl "bool" operator_defs_more nil)
+    (ring? const-decl "bool" ring_def nil)
+    (x!2 skolem-const-decl "(remove(zero, R))" ring_gcd nil)
+    (commutative? const-decl "bool" operator_defs nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (integral_domain_w_one? const-decl "bool"
+     integral_domain_with_one_def nil)
+    (monad? const-decl "bool" monad_def nil)
+    (right_identity formula-decl nil monad nil)
+    (divides? const-decl "bool" ring_divides_def nil)
+    (times_zero formula-decl nil ring nil)
+    (member const-decl "bool" sets nil)
+    (TRUE const-decl "bool" booleans nil)
+    (subset_is_partial_order name-judgement "(partial_order?[set[T]])"
+     sets_lemmas nil)
+    (nonempty_singleton_finite application-judgement
+     "non_empty_finite_set[T]" ring_gcd nil))
+   shostak)))
+

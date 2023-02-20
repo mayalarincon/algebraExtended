@@ -1,0 +1,88 @@
+%%----------------------------------------------------------------------------
+%%
+%% Authors:	
+%% 		Thaynara Arielly de Lima
+%% 		Universidade Federal de Goiás - Brasil
+%%
+%%  		Andréia Borges Avelar da Silva
+%%		Universidade de Brasília - Brasil
+%%			
+%%		André Luiz Galdino
+%%		Universidade Federal de Catalão - Brasil
+%%
+%%		Mauricio Ayala-Rincón
+%%		Universidade de Brasília - Brasil
+%%
+%%----------------------------------------------------------------------------
+%%
+%%	Formalization of a characterization of maximal ideals and
+%%	other results
+%%
+%%	Last version: June 25, 2020
+%%
+%%----------------------------------------------------------------------------
+
+ring_with_one_maximal_ideal
+  [T:TYPE+, +:[T,T -> T] , *:[T,T -> T], zero:T,one:T] :THEORY
+
+
+BEGIN
+
+
+   ASSUMING IMPORTING ring_with_one_def[T,+,*,zero,one]
+
+          fullset_is_ring_with_one: ASSUMPTION ring_with_one?(fullset[T])
+
+   ENDASSUMING
+
+
+  IMPORTING ring_with_one_basic_properties,
+            ring_with_one_prime_ideal[T,+,*,zero,one],
+	          ring_maximal_ideal[T,+,*,zero],
+            field_def,
+	          ring_with_id_one_generator[T,+,*,zero,one]
+	    
+
+
+ R: VAR ring_with_one
+ M,I: VAR set[T]
+
+%%----------------------------------------------------------------------------
+
+
+ ring_one_maximal_prime_ideal: LEMMA
+ commutative_ring?(R) AND maximal_ideal?(M,R) IMPLIES prime_ideal?(M,R) 
+
+ maximal_ideal_quot_field: LEMMA
+    FORALL(M: maximal_ideal(R)):
+    commutative_ring?(R) IMPLIES
+    field?[coset[T,+](R,M),add[T,+](R,M),product(R,M),M,+[T,+](one,M)]
+          (/[T,+](R,M))
+
+ quot_div_ring_maximal_ideal: LEMMA
+    FORALL(M:ideal(R)): 
+    division_ring?[coset[T,+](R,M),add[T,+](R,M),product(R,M),M,+[T,+](one,M)]
+                  (/[T,+](R,M))
+    IMPLIES maximal_ideal?(M,R)
+  
+ maximal_ideal_charac: LEMMA
+     (commutative_ring?(R) AND ideal?(M,R))
+   IMPLIES
+     (maximal_ideal?(M,R) IFF
+      division_ring?[coset[T,+](R,M),add[T,+](R,M),product(R,M),M,+[T,+](one,M)]
+                    (/[T,+](R,M)))
+
+
+
+% @QED nonzero_ring_exists_maximal_ideal proved by thaynaradelima on Thu, 10 Feb 2022 20:24:58 GMT
+% @QED nonzero_ring_exists_maximal_ideal_aux proved by thaynaradelima on Fri, 18 Feb 2022 19:03:52 GMT
+nonzero_ring_exists_maximal_ideal_aux: LEMMA
+      FORALL(R: ring_with_one): (ideal?(I,R) AND I/=R) IMPLIES 
+       EXISTS(M: maximal_ideal(R)): subset?(I,M)
+
+% @QED nonzero_ring_exists_maximal_ideal_teste proved by thaynaradelima on Thu, 17 Feb 2022 21:18:21 GMT
+nonzero_ring_exists_maximal_ideal: LEMMA
+ FORALL(R: ring_with_one | R /= singleton(zero)): EXISTS (M: ideal(R)):maximal_ideal?(M,R)
+
+
+ END ring_with_one_maximal_ideal

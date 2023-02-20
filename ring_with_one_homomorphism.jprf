@@ -1,0 +1,3832 @@
+{
+ "ring_with_one_homomorphism.ring_w_one_isomorphic_groupoid": [
+  {
+   "info": {
+    "theory": "ring_with_one_homomorphism",
+    "formula": "ring_w_one_isomorphic_groupoid",
+    "status": "unfinished",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "dc1137a248fc6fe20d4eab52a9b68bc89516185602d689ba64eded06a94db76c"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "ring_w_one_isomorphic_groupoid",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skosimp)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lemma \"bijective_inverse_exists[(R!1),(S!1)]\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skosimp)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(case \"bijective?[(R!1), (S!1)](phi!1)\")",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(inst -2 \"phi!1\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(expand \"exists1\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(flatten)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(skosimp)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(inst 1 \"x!1(zero2)\" \"x!1(one2)\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "1.1",
+            "name": "(1.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.1",
+              "name": "(expand \"ring_with_one?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(postpone)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "1.2",
+            "name": "(1.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.2",
+              "name": "(postpone)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "1.3",
+            "name": "(1.3)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.3",
+              "name": "(postpone)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(postpone)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "ring_with_one_homomorphism_extras.ring_w_one_isomorphic_groupoid": [
+  {
+   "info": {
+    "theory": "ring_with_one_homomorphism_extras",
+    "formula": "ring_w_one_isomorphic_groupoid",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "04ebf6b8eb6f1b216a6f6f945a8553eecbe813d42e9c7a8b05a4a93a59355f81"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "ring_w_one_isomorphic_groupoid",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skosimp)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skosimp)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lemma \"bijective_inverse_exists[(R!1),(S!1)]\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(case \"bijective?[(R!1), (S!1)](phi!1)\")",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(inst -2 \"phi!1\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(expand \"exists1\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(flatten)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(skosimp)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(lemma \"R_isomorphic_groupoid_is_ring[T1,s1,p1,x!1(zero2),T2,s2,p2,zero2]\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "1.1",
+            "name": "(1.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.1",
+              "name": "(inst -1 \"S!1\" \"R!1\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(prop)",
+              "type": "proof-command",
+              "rules": [
+               {
+                "branch": "1.1.1",
+                "name": "(1.1.1)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "1.1.1",
+                  "name": "(skosimp)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.1.1",
+                  "name": "(inst 1 \"zeroS!1\" \"x!1(one2)\")",
+                  "type": "proof-command",
+                  "rules": [
+                   {
+                    "branch": "1.1.1.1",
+                    "name": "(1.1.1.1)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(expand \"ring_with_one?\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(assert)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(expand \"monoid?\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(expand \"monad?\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(expand \"ring?\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(flatten)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(assert)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(typepred S!1)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(expand \"ring_with_one?\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(expand \"monoid?\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(expand \"monad?\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(flatten)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(hide-all-but (1 -16 -14 -11 -10 -4 -3 -2))",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(expand \"isomorphism?\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(expand \"monomorphism?\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(flatten)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(hide -9)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(expand \"homomorphism?\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(expand \"identity?\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(skosimp)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(expand \"restrict\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(copy -8)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(inst -9 \"x!2\" \"x!1(one2)\")",
+                      "type": "proof-command",
+                      "rules": [
+                       {
+                        "branch": "1.1.1.1.1",
+                        "name": "(1.1.1.1.1)",
+                        "type": "proof-branch",
+                        "rules": [
+                         {
+                          "branch": "1.1.1.1.1",
+                          "name": "(inst -1 \"x!1(one2)\" \"x!2\")",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.1.1.1.1",
+                          "name": "(lemma \"comp_inverse_right_alt[(R!1),(S!1)]\")",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.1.1.1.1",
+                          "name": "(inst -1 \"one2\" \"phi!1\" \"x!1\")",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.1.1.1.1",
+                          "name": "(replace -1 -2)",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.1.1.1.1",
+                          "name": "(replaces -1 -10)",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.1.1.1.1",
+                          "name": "(inst -4 \"phi!1(x!2)\")",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.1.1.1.1",
+                          "name": "(flatten)",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.1.1.1.1",
+                          "name": "(replaces -5 -1)",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.1.1.1.1",
+                          "name": "(replaces -4 -9)",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.1.1.1.1",
+                          "name": "(expand \"bijective?\")",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.1.1.1.1",
+                          "name": "(flatten)",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.1.1.1.1",
+                          "name": "(expand \"injective?\")",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.1.1.1.1",
+                          "name": "(inst -4 \"p1(x!2, x!1(one2))\" \"x!2\")",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.1.1.1.1",
+                          "name": "(inst -8 \"p1(x!1(one2),x!2)\" \"x!2\")",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.1.1.1.1",
+                          "name": "(assert)",
+                          "type": "proof-command",
+                          "rules": []
+                         }
+                        ]
+                       },
+                       {
+                        "branch": "1.1.1.1.2",
+                        "name": "(1.1.1.1.2)",
+                        "type": "proof-branch",
+                        "rules": [
+                         {
+                          "branch": "1.1.1.1.2",
+                          "name": "(expand \"member\")",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.1.1.1.2",
+                          "name": "(propax)",
+                          "type": "proof-command",
+                          "rules": []
+                         }
+                        ]
+                       }
+                      ]
+                     }
+                    ]
+                   },
+                   {
+                    "branch": "1.1.1.2",
+                    "name": "(1.1.1.2)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "1.1.1.2",
+                      "name": "(typepred S!1)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.2",
+                      "name": "(expand \"ring_with_one?\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.2",
+                      "name": "(expand \"monoid?\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.2",
+                      "name": "(expand \"monad?\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.2",
+                      "name": "(expand \"member\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.2",
+                      "name": "(flatten)",
+                      "type": "proof-command",
+                      "rules": []
+                     }
+                    ]
+                   }
+                  ]
+                 }
+                ]
+               },
+               {
+                "branch": "1.1.2",
+                "name": "(1.1.2)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "1.1.2",
+                  "name": "(inst 1 \"phi!1\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.1.2",
+                  "name": "(assert)",
+                  "type": "proof-command",
+                  "rules": []
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "branch": "1.2",
+            "name": "(1.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.2",
+              "name": "(lemma \"fullsetT2_is_ring_w_one\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(expand \"ring_with_one?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(flatten)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "1.3",
+            "name": "(1.3)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.3",
+              "name": "(lemma \"fullsetT1_is_ring_w_one\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.3",
+              "name": "(expand \"ring_with_one?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.3",
+              "name": "(expand \"ring?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.3",
+              "name": "(expand \"abelian_group?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.3",
+              "name": "(expand \"group?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.3",
+              "name": "(expand \"inv_exists?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.3",
+              "name": "(expand \"monoid?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.3",
+              "name": "(expand \"monad?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.3",
+              "name": "(flatten)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.3",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.3",
+              "name": "(hide-all-but (1 -20 -18 -16 -15 -5 -3 -2))",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.3",
+              "name": "(typepred \"S!1\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.3",
+              "name": "(expand \"ring_with_one?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.3",
+              "name": "(expand \"ring?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.3",
+              "name": "(expand \"abelian_group?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.3",
+              "name": "(expand \"group?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.3",
+              "name": "(expand \"inv_exists?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.3",
+              "name": "(expand \"monoid?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.3",
+              "name": "(expand \"monad?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.3",
+              "name": "(flatten)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.3",
+              "name": "(hide (-4 -6 -7 -8 -9 -10 -11 -12 -13 -14))",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.3",
+              "name": "(expand \"identity?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.3",
+              "name": "(case \"nonempty?[T2](S!1)\")",
+              "type": "proof-command",
+              "rules": [
+               {
+                "branch": "1.3.1",
+                "name": "(1.3.1)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "1.3.1",
+                  "name": "(expand \"nonempty?\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.3.1",
+                  "name": "(expand \"empty?\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.3.1",
+                  "name": "(skosimp)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.3.1",
+                  "name": "(inst -4 \"x!2\")",
+                  "type": "proof-command",
+                  "rules": [
+                   {
+                    "branch": "1.3.1.1",
+                    "name": "(1.3.1.1)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "1.3.1.1",
+                      "name": "(expand \"restrict\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.3.1.1",
+                      "name": "(expand \"homomorphism?\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.3.1.1",
+                      "name": "(inst -12 \"x!1(x!2)\" \"x!1(zero2)\")",
+                      "type": "proof-command",
+                      "rules": [
+                       {
+                        "branch": "1.3.1.1.1",
+                        "name": "(1.3.1.1.1)",
+                        "type": "proof-branch",
+                        "rules": [
+                         {
+                          "branch": "1.3.1.1.1",
+                          "name": "(lemma \"comp_inverse_right_alt[(R!1),(S!1)]\")",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.3.1.1.1",
+                          "name": "(copy -1)",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.3.1.1.1",
+                          "name": "(inst -1 \"x!2\" \"phi!1\" \"x!1\")",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.3.1.1.1",
+                          "name": "(inst -2 \"zero2\" \"phi!1\" \"x!1\")",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.3.1.1.1",
+                          "name": "(replaces -1 -14)",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.3.1.1.1",
+                          "name": "(replaces -1 -13)",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.3.1.1.1",
+                          "name": "(flatten)",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.3.1.1.1",
+                          "name": "(replaces -4 -13)",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.3.1.1.1",
+                          "name": "(case \"x!1(phi!1(s1(x!1(x!2), x!1(zero2)))) = x!1(x!2)\")",
+                          "type": "proof-command",
+                          "rules": [
+                           {
+                            "branch": "1.3.1.1.1.1",
+                            "name": "(1.3.1.1.1.1)",
+                            "type": "proof-branch",
+                            "rules": [
+                             {
+                              "branch": "1.3.1.1.1.1",
+                              "name": "(lemma \"comp_inverse_left_alt[(R!1),(S!1)]\")",
+                              "type": "proof-command",
+                              "rules": []
+                             },
+                             {
+                              "branch": "1.3.1.1.1.1",
+                              "name": "(inst -1 \"s1(x!1(x!2), x!1(zero2))\" \"phi!1 \" \"x!1\")",
+                              "type": "proof-command",
+                              "rules": []
+                             },
+                             {
+                              "branch": "1.3.1.1.1.1",
+                              "name": "(replaces -1 -2)",
+                              "type": "proof-command",
+                              "rules": []
+                             },
+                             {
+                              "branch": "1.3.1.1.1.1",
+                              "name": "(inst -8 \"x!1(x!2)\")",
+                              "type": "proof-command",
+                              "rules": [
+                               {
+                                "branch": "1.3.1.1.1.1.1",
+                                "name": "(1.3.1.1.1.1.1)",
+                                "type": "proof-branch",
+                                "rules": [
+                                 {
+                                  "branch": "1.3.1.1.1.1.1",
+                                  "name": "(flatten)",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "1.3.1.1.1.1.1",
+                                  "name": "(name-replace \"X1X2\" \"x!1(x!2)\")",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "1.3.1.1.1.1.1",
+                                  "name": "(expand \"X1X2\" -1 1)",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "1.3.1.1.1.1.1",
+                                  "name": "(replace -8 -1 rl)",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "1.3.1.1.1.1.1",
+                                  "name": "(expand \"X1X2\")",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "1.3.1.1.1.1.1",
+                                  "name": "(lemma \"cancel_left_plus[T1,s1,p1,zero1]\")",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "1.3.1.1.1.1.1",
+                                  "name": "(inst -1 \"x!1(zero2)\" \"zero1\" \"x!1(x!2)\")",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "1.3.1.1.1.1.1",
+                                  "name": "(assert)",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "1.3.1.1.1.1.1",
+                                  "name": "(reveal -3)",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "1.3.1.1.1.1.1",
+                                  "name": "(replaces -2 1)",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "1.3.1.1.1.1.1",
+                                  "name": "(split)",
+                                  "type": "proof-command",
+                                  "rules": [
+                                   {
+                                    "branch": "1.3.1.1.1.1.1.1",
+                                    "name": "(1.3.1.1.1.1.1.1)",
+                                    "type": "proof-branch",
+                                    "rules": [
+                                     {
+                                      "branch": "1.3.1.1.1.1.1.1",
+                                      "name": "(propax)",
+                                      "type": "proof-command",
+                                      "rules": []
+                                     }
+                                    ]
+                                   },
+                                   {
+                                    "branch": "1.3.1.1.1.1.1.2",
+                                    "name": "(1.3.1.1.1.1.1.2)",
+                                    "type": "proof-branch",
+                                    "rules": [
+                                     {
+                                      "branch": "1.3.1.1.1.1.1.2",
+                                      "name": "(propax)",
+                                      "type": "proof-command",
+                                      "rules": []
+                                     }
+                                    ]
+                                   }
+                                  ]
+                                 }
+                                ]
+                               },
+                               {
+                                "branch": "1.3.1.1.1.1.2",
+                                "name": "(1.3.1.1.1.1.2)",
+                                "type": "proof-branch",
+                                "rules": [
+                                 {
+                                  "branch": "1.3.1.1.1.1.2",
+                                  "name": "(expand \"fullset\")",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "1.3.1.1.1.1.2",
+                                  "name": "(propax)",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 }
+                                ]
+                               }
+                              ]
+                             }
+                            ]
+                           },
+                           {
+                            "branch": "1.3.1.1.1.2",
+                            "name": "(1.3.1.1.1.2)",
+                            "type": "proof-branch",
+                            "rules": [
+                             {
+                              "branch": "1.3.1.1.1.2",
+                              "name": "(replaces -12 1)",
+                              "type": "proof-command",
+                              "rules": []
+                             }
+                            ]
+                           }
+                          ]
+                         }
+                        ]
+                       },
+                       {
+                        "branch": "1.3.1.1.2",
+                        "name": "(1.3.1.1.2)",
+                        "type": "proof-branch",
+                        "rules": [
+                         {
+                          "branch": "1.3.1.1.2",
+                          "name": "(expand \"member\")",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.3.1.1.2",
+                          "name": "(propax)",
+                          "type": "proof-command",
+                          "rules": []
+                         }
+                        ]
+                       },
+                       {
+                        "branch": "1.3.1.1.3",
+                        "name": "(1.3.1.1.3)",
+                        "type": "proof-branch",
+                        "rules": [
+                         {
+                          "branch": "1.3.1.1.3",
+                          "name": "(expand \"member\")",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.3.1.1.3",
+                          "name": "(propax)",
+                          "type": "proof-command",
+                          "rules": []
+                         }
+                        ]
+                       }
+                      ]
+                     }
+                    ]
+                   },
+                   {
+                    "branch": "1.3.1.2",
+                    "name": "(1.3.1.2)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "1.3.1.2",
+                      "name": "(expand \"member\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.3.1.2",
+                      "name": "(propax)",
+                      "type": "proof-command",
+                      "rules": []
+                     }
+                    ]
+                   }
+                  ]
+                 }
+                ]
+               },
+               {
+                "branch": "1.3.2",
+                "name": "(1.3.2)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "1.3.2",
+                  "name": "(expand \"nonempty?\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.3.2",
+                  "name": "(expand \"empty?\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.3.2",
+                  "name": "(inst -1 \"zero2\")",
+                  "type": "proof-command",
+                  "rules": []
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "branch": "1.4",
+            "name": "(1.4)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.4",
+              "name": "(hide-all-but 1)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.4",
+              "name": "(typepred \"S!1\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.4",
+              "name": "(expand \"ring_with_one?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.4",
+              "name": "(expand \"ring?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.4",
+              "name": "(expand \"abelian_group?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.4",
+              "name": "(expand \"group?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.4",
+              "name": "(expand \"monoid?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.4",
+              "name": "(expand \"monad?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.4",
+              "name": "(expand \"member\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.4",
+              "name": "(flatten)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(expand \"isomorphism?\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(expand \"monomorphism?\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(expand \"epimorphism?\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(flatten)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(expand \"bijective?\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "ring_with_one_homomorphism.epi_maps_ones": [
+  {
+   "info": {
+    "theory": "ring_with_one_homomorphism",
+    "formula": "epi_maps_ones",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "dc1137a248fc6fe20d4eab52a9b68bc89516185602d689ba64eded06a94db76c"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "epi_maps_ones",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep*)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"phi\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"R_epimorphism?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(flatten)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"surjective?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(inst -1 \"one2\")",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(skeep)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(rewrite \"R_homo_equiv\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(inst -2 \"x\" \"one1\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(flatten)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(hide -2)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(case-replace \"phi(p1(x, one1)) = phi(x)\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "1.1",
+            "name": "(1.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.1",
+              "name": "(replaces -2)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(rewrite \"one_times[T2,s2,p2,zero2,one2]\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "1.2",
+            "name": "(1.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.2",
+              "name": "(hide-all-but 1)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(rewrite \"times_one[T1,s1,p1,zero1,one1]\")",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(typepred \"S\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(expand \"ring_with_one?\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(expand \"monoid?\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(expand \"monad?\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(expand \"member\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "ring_with_one_homomorphism.isomorphic_fields": [
+  {
+   "info": {
+    "theory": "ring_with_one_homomorphism",
+    "formula": "isomorphic_fields",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "dc1137a248fc6fe20d4eab52a9b68bc89516185602d689ba64eded06a94db76c"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "isomorphic_fields",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"field?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"division_ring?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"R_isomorphic?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"R_isomorphism?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(flatten)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"R_epimorphism?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(flatten)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(rewrite \"R_homo_equiv\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"group?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"monoid?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"monad?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"member\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(flatten)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(split)",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(expand \"star_closed?\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(skeep)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(expand \"member\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(expand \"remove\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(typepred \"x\" \"y\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(expand \"remove\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(flatten)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(hide-all-but (-1 -2 -3 -4 -5 -6 1 2 3 4))",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(expand \"member\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(expand \"surjective?\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(copy -4)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(inst -1 \"x\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(inst -5 \"y\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(skeep*)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(inst -6 \"x_1\" \"x!1\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(flatten)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "1",
+          "name": "(inst -8 \"x_1\" \"x!1\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "1.1",
+            "name": "(1.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.1",
+              "name": "(flatten)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(hide -8)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(replaces -1)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(replaces -4)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(case-replace \"p2(x,y) = zero2\")",
+              "type": "proof-command",
+              "rules": [
+               {
+                "branch": "1.1.1",
+                "name": "(1.1.1)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "1.1.1",
+                  "name": "(case \"member(p1(x_1, x!1), R_kernel(R,S)(phi))\")",
+                  "type": "proof-command",
+                  "rules": [
+                   {
+                    "branch": "1.1.1.1",
+                    "name": "(1.1.1.1)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(expand \"member\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(rewrite \"monomorphism_charac\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(decompose-equality -5)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(inst -1 \"p1(x_1, x!1)\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(expand \"singleton\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(iff -1)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.1",
+                      "name": "(prop)",
+                      "type": "proof-command",
+                      "rules": [
+                       {
+                        "branch": "1.1.1.1.1",
+                        "name": "(1.1.1.1.1)",
+                        "type": "proof-branch",
+                        "rules": [
+                         {
+                          "branch": "1.1.1.1.1",
+                          "name": "(assert)",
+                          "type": "proof-command",
+                          "rules": []
+                         }
+                        ]
+                       },
+                       {
+                        "branch": "1.1.1.1.2",
+                        "name": "(1.1.1.1.2)",
+                        "type": "proof-branch",
+                        "rules": [
+                         {
+                          "branch": "1.1.1.1.2",
+                          "name": "(hide-all-but 1)",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.1.1.1.2",
+                          "name": "(lemma \"zero_is_member_R[T2,s2,p2,zero2]\")",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.1.1.1.2",
+                          "name": "(inst -1 \"S\")",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.1.1.1.2",
+                          "name": "(assert)",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.1.1.1.2",
+                          "name": "(expand \"member\")",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "1.1.1.1.2",
+                          "name": "(propax)",
+                          "type": "proof-command",
+                          "rules": []
+                         }
+                        ]
+                       }
+                      ]
+                     }
+                    ]
+                   },
+                   {
+                    "branch": "1.1.1.2",
+                    "name": "(1.1.1.2)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "1.1.1.2",
+                      "name": "(hide -1 -2 -3 4 5)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.2",
+                      "name": "(expand \"member\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.2",
+                      "name": "(expand \"R_kernel\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.2",
+                      "name": "(assert)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.2",
+                      "name": "(typepred \"x_1\" \"x!1\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.2",
+                      "name": "(lemma \"R_prod_star_closed[T1,s1,p1,zero1]\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.2",
+                      "name": "(inst -1 \"R\" \"x_1\" \"x!1\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.2",
+                      "name": "(assert)",
+                      "type": "proof-command",
+                      "rules": []
+                     }
+                    ]
+                   },
+                   {
+                    "branch": "1.1.1.3",
+                    "name": "(1.1.1.3)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "1.1.1.3",
+                      "name": "(expand \"R_monomorphism?\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "1.1.1.3",
+                      "name": "(assert)",
+                      "type": "proof-command",
+                      "rules": []
+                     }
+                    ]
+                   }
+                  ]
+                 }
+                ]
+               },
+               {
+                "branch": "1.1.2",
+                "name": "(1.1.2)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "1.1.2",
+                  "name": "(assert)",
+                  "type": "proof-command",
+                  "rules": []
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "branch": "1.2",
+            "name": "(1.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.2",
+              "name": "(expand \"remove\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(lemma \"zero_to_zero\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.2",
+              "name": "(inst -1 \"R\" \"S\" \"phi\")",
+              "type": "proof-command",
+              "rules": [
+               {
+                "branch": "1.2.1",
+                "name": "(1.2.1)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "1.2.1",
+                  "name": "(hide-all-but (-1 -2 -5 1 2))",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.2.1",
+                  "name": "(assert)",
+                  "type": "proof-command",
+                  "rules": []
+                 }
+                ]
+               },
+               {
+                "branch": "1.2.2",
+                "name": "(1.2.2)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "1.2.2",
+                  "name": "(expand \"R_monomorphism?\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.2.2",
+                  "name": "(assert)",
+                  "type": "proof-command",
+                  "rules": []
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "branch": "1.3",
+            "name": "(1.3)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.3",
+              "name": "(lemma \"zero_to_zero\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.3",
+              "name": "(expand \"remove\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.3",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.3",
+              "name": "(inst -1 \"R\" \"S\" \"phi\")",
+              "type": "proof-command",
+              "rules": [
+               {
+                "branch": "1.3.1",
+                "name": "(1.3.1)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "1.3.1",
+                  "name": "(assert)",
+                  "type": "proof-command",
+                  "rules": []
+                 }
+                ]
+               },
+               {
+                "branch": "1.3.2",
+                "name": "(1.3.2)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "1.3.2",
+                  "name": "(expand \"R_monomorphism?\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "1.3.2",
+                  "name": "(assert)",
+                  "type": "proof-command",
+                  "rules": []
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(expand \"remove\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(hide -4 -6 -7 -8 -9)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(expand \"member\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(typepred \"S\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(expand \"ring_with_one?\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(expand \"monoid?\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(expand \"monad?\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(expand \"member\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(flatten)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(assert)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(expand \"R_monomorphism?\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(expand \"injective?\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(flatten)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "2",
+          "name": "(inst -7 \"one1\" \"zero1\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "2.1",
+            "name": "(2.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "2.1",
+              "name": "(hide-all-but (-1 -6 -7 -8 -9 -10 1))",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(lemma \"zero_to_zero\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(inst -1 \"R\" \"S\" \"phi\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(lemma \"epi_maps_ones\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(inst -1 \"R\" \"S\" \"phi\")",
+              "type": "proof-command",
+              "rules": [
+               {
+                "branch": "2.1.1",
+                "name": "(2.1.1)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "2.1.1",
+                  "name": "(case \"R_epimorphism?(R, S)(phi)\")",
+                  "type": "proof-command",
+                  "rules": [
+                   {
+                    "branch": "2.1.1.1",
+                    "name": "(2.1.1.1)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "2.1.1.1",
+                      "name": "(assert)",
+                      "type": "proof-command",
+                      "rules": []
+                     }
+                    ]
+                   },
+                   {
+                    "branch": "2.1.1.2",
+                    "name": "(2.1.1.2)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "2.1.1.2",
+                      "name": "(hide-all-but (-7 -8 1))",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "2.1.1.2",
+                      "name": "(expand \"R_epimorphism?\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "2.1.1.2",
+                      "name": "(rewrite \"R_homo_equiv\")",
+                      "type": "proof-command",
+                      "rules": []
+                     }
+                    ]
+                   }
+                  ]
+                 }
+                ]
+               },
+               {
+                "branch": "2.1.2",
+                "name": "(2.1.2)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "2.1.2",
+                  "name": "(expand \"R_epimorphism?\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "2.1.2",
+                  "name": "(propax)",
+                  "type": "proof-command",
+                  "rules": []
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "branch": "2.2",
+            "name": "(2.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "2.2",
+              "name": "(hide-all-but 1)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.2",
+              "name": "(typepred \"R\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.2",
+              "name": "(expand \"ring_with_one?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.2",
+              "name": "(flatten)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.2",
+              "name": "(lemma \"zero_is_member_R[T1,s1,p1,zero1]\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.2",
+              "name": "(inst?)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.2",
+              "name": "(expand \"member\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.2",
+              "name": "(propax)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "3",
+        "name": "(3)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "3",
+          "name": "(expand \"identity?\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "3",
+          "name": "(skeep)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "3",
+          "name": "(expand \"restrict\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "3",
+          "name": "(hide-all-but 1)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "3",
+          "name": "(rewrite \"times_one[T2,s2,p2,zero2,one2]\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "3",
+          "name": "(rewrite \"one_times[T2,s2,p2,zero2,one2]\")",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "4",
+        "name": "(4)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "4",
+          "name": "(hide -)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "4",
+          "name": "(expand \"associative?\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "4",
+          "name": "(skeep)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "4",
+          "name": "(expand \"restrict\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "4",
+          "name": "(typepred \"S\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "4",
+          "name": "(expand \"ring_with_one?\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "4",
+          "name": "(expand \"ring?\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "4",
+          "name": "(flatten)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "4",
+          "name": "(hide-all-but (-3 1))",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "4",
+          "name": "(expand \"associative?\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "4",
+          "name": "(inst -1 \"x\" \"y\" \"z\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "4.1",
+            "name": "(4.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "4.1",
+              "name": "(expand \"restrict\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "4.1",
+              "name": "(propax)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "4.2",
+            "name": "(4.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "4.2",
+              "name": "(typepred \"z\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "4.2",
+              "name": "(expand \"remove\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "4.2",
+              "name": "(expand \"member\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "4.2",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "4.3",
+            "name": "(4.3)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "4.3",
+              "name": "(typepred \"y\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "4.3",
+              "name": "(expand \"remove\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "4.3",
+              "name": "(expand \"member\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "4.3",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "4.4",
+            "name": "(4.4)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "4.4",
+              "name": "(typepred \"x\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "4.4",
+              "name": "(expand \"remove\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "4.4",
+              "name": "(expand \"member\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "4.4",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "5",
+        "name": "(5)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "5",
+          "name": "(hide-all-but (-1 -2 -3 -5 -8 1))",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "5",
+          "name": "(expand \"inv_exists?\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "5",
+          "name": "(skeep)",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "5",
+          "name": "(lemma \"epi_maps_ones\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "5",
+          "name": "(inst -1 \"R\" \"S\" \"phi\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "5.1",
+            "name": "(5.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "5.1",
+              "name": "(copy -3)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "5.1",
+              "name": "(expand \"surjective?\" -4)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "5.1",
+              "name": "(inst -4 \"x\")",
+              "type": "proof-command",
+              "rules": [
+               {
+                "branch": "5.1.1",
+                "name": "(5.1.1)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "5.1.1",
+                  "name": "(skeep)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "5.1.1",
+                  "name": "(inst -7 \"x_1\")",
+                  "type": "proof-command",
+                  "rules": [
+                   {
+                    "branch": "5.1.1.1",
+                    "name": "(5.1.1.1)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "5.1.1.1",
+                      "name": "(skeep)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "5.1.1.1",
+                      "name": "(copy -5)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "5.1.1.1",
+                      "name": "(inst -6 \"x_1\" \"y\")",
+                      "type": "proof-command",
+                      "rules": [
+                       {
+                        "branch": "5.1.1.1.1",
+                        "name": "(5.1.1.1.1)",
+                        "type": "proof-branch",
+                        "rules": [
+                         {
+                          "branch": "5.1.1.1.1",
+                          "name": "(flatten)",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "5.1.1.1.1",
+                          "name": "(hide -6)",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "5.1.1.1.1",
+                          "name": "(replaces -5)",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "5.1.1.1.1",
+                          "name": "(inst 1 \"phi(y)\")",
+                          "type": "proof-command",
+                          "rules": [
+                           {
+                            "branch": "5.1.1.1.1.1",
+                            "name": "(5.1.1.1.1.1)",
+                            "type": "proof-branch",
+                            "rules": [
+                             {
+                              "branch": "5.1.1.1.1.1",
+                              "name": "(assert)",
+                              "type": "proof-command",
+                              "rules": []
+                             },
+                             {
+                              "branch": "5.1.1.1.1.1",
+                              "name": "(lemma \"epi_commutative\")",
+                              "type": "proof-command",
+                              "rules": []
+                             },
+                             {
+                              "branch": "5.1.1.1.1.1",
+                              "name": "(inst -1 \"R\" \"S\" \"phi\")",
+                              "type": "proof-command",
+                              "rules": [
+                               {
+                                "branch": "5.1.1.1.1.1.1",
+                                "name": "(5.1.1.1.1.1.1)",
+                                "type": "proof-branch",
+                                "rules": [
+                                 {
+                                  "branch": "5.1.1.1.1.1.1",
+                                  "name": "(reveal -11)",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "5.1.1.1.1.1.1",
+                                  "name": "(expand \"commutative_ring?\")",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "5.1.1.1.1.1.1",
+                                  "name": "(assert)",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "5.1.1.1.1.1.1",
+                                  "name": "(typepred \"R\" \"S\")",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "5.1.1.1.1.1.1",
+                                  "name": "(expand \"ring_with_one?\")",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "5.1.1.1.1.1.1",
+                                  "name": "(flatten)",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "5.1.1.1.1.1.1",
+                                  "name": "(assert)",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "5.1.1.1.1.1.1",
+                                  "name": "(hide -1 -2 -3 -4 -5)",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "5.1.1.1.1.1.1",
+                                  "name": "(expand \"commutative?\")",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "5.1.1.1.1.1.1",
+                                  "name": "(inst -1 \"x\" \"phi(y)\")",
+                                  "type": "proof-command",
+                                  "rules": [
+                                   {
+                                    "branch": "5.1.1.1.1.1.1.1",
+                                    "name": "(5.1.1.1.1.1.1.1)",
+                                    "type": "proof-branch",
+                                    "rules": [
+                                     {
+                                      "branch": "5.1.1.1.1.1.1.1",
+                                      "name": "(expand \"restrict\")",
+                                      "type": "proof-command",
+                                      "rules": []
+                                     },
+                                     {
+                                      "branch": "5.1.1.1.1.1.1.1",
+                                      "name": "(assert)",
+                                      "type": "proof-command",
+                                      "rules": []
+                                     }
+                                    ]
+                                   },
+                                   {
+                                    "branch": "5.1.1.1.1.1.1.2",
+                                    "name": "(5.1.1.1.1.1.1.2)",
+                                    "type": "proof-branch",
+                                    "rules": [
+                                     {
+                                      "branch": "5.1.1.1.1.1.1.2",
+                                      "name": "(typepred \"x\")",
+                                      "type": "proof-command",
+                                      "rules": []
+                                     },
+                                     {
+                                      "branch": "5.1.1.1.1.1.1.2",
+                                      "name": "(expand \"remove\")",
+                                      "type": "proof-command",
+                                      "rules": []
+                                     },
+                                     {
+                                      "branch": "5.1.1.1.1.1.1.2",
+                                      "name": "(expand \"member\")",
+                                      "type": "proof-command",
+                                      "rules": []
+                                     },
+                                     {
+                                      "branch": "5.1.1.1.1.1.1.2",
+                                      "name": "(assert)",
+                                      "type": "proof-command",
+                                      "rules": []
+                                     }
+                                    ]
+                                   }
+                                  ]
+                                 }
+                                ]
+                               },
+                               {
+                                "branch": "5.1.1.1.1.1.2",
+                                "name": "(5.1.1.1.1.1.2)",
+                                "type": "proof-branch",
+                                "rules": [
+                                 {
+                                  "branch": "5.1.1.1.1.1.2",
+                                  "name": "(hide-all-but (-1 -2 -4 1))",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "5.1.1.1.1.1.2",
+                                  "name": "(expand \"R_monomorphism?\")",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "5.1.1.1.1.1.2",
+                                  "name": "(flatten)",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "5.1.1.1.1.1.2",
+                                  "name": "(expand \"R_epimorphism?\")",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "5.1.1.1.1.1.2",
+                                  "name": "(propax)",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 }
+                                ]
+                               }
+                              ]
+                             }
+                            ]
+                           },
+                           {
+                            "branch": "5.1.1.1.1.2",
+                            "name": "(5.1.1.1.1.2)",
+                            "type": "proof-branch",
+                            "rules": [
+                             {
+                              "branch": "5.1.1.1.1.2",
+                              "name": "(expand \"remove\")",
+                              "type": "proof-command",
+                              "rules": []
+                             },
+                             {
+                              "branch": "5.1.1.1.1.2",
+                              "name": "(expand \"member\")",
+                              "type": "proof-command",
+                              "rules": []
+                             },
+                             {
+                              "branch": "5.1.1.1.1.2",
+                              "name": "(lemma \"zero_to_zero\")",
+                              "type": "proof-command",
+                              "rules": []
+                             },
+                             {
+                              "branch": "5.1.1.1.1.2",
+                              "name": "(inst -1 \"R\" \"S\" \"phi\")",
+                              "type": "proof-command",
+                              "rules": [
+                               {
+                                "branch": "5.1.1.1.1.2.1",
+                                "name": "(5.1.1.1.1.2.1)",
+                                "type": "proof-branch",
+                                "rules": [
+                                 {
+                                  "branch": "5.1.1.1.1.2.1",
+                                  "name": "(case \"phi(y) = zero2\")",
+                                  "type": "proof-command",
+                                  "rules": [
+                                   {
+                                    "branch": "5.1.1.1.1.2.1.1",
+                                    "name": "(5.1.1.1.1.2.1.1)",
+                                    "type": "proof-branch",
+                                    "rules": [
+                                     {
+                                      "branch": "5.1.1.1.1.2.1.1",
+                                      "name": "(hide -3 -4)",
+                                      "type": "proof-command",
+                                      "rules": []
+                                     },
+                                     {
+                                      "branch": "5.1.1.1.1.2.1.1",
+                                      "name": "(replace -1 -5)",
+                                      "type": "proof-command",
+                                      "rules": []
+                                     },
+                                     {
+                                      "branch": "5.1.1.1.1.2.1.1",
+                                      "name": "(rewrite \"times_zero[T2,s2,p2,zero2]\")",
+                                      "type": "proof-command",
+                                      "rules": []
+                                     },
+                                     {
+                                      "branch": "5.1.1.1.1.2.1.1",
+                                      "name": "(hide-all-but (-2 -4 -5 -7))",
+                                      "type": "proof-command",
+                                      "rules": []
+                                     },
+                                     {
+                                      "branch": "5.1.1.1.1.2.1.1",
+                                      "name": "(expand \"R_monomorphism?\")",
+                                      "type": "proof-command",
+                                      "rules": []
+                                     },
+                                     {
+                                      "branch": "5.1.1.1.1.2.1.1",
+                                      "name": "(flatten)",
+                                      "type": "proof-command",
+                                      "rules": []
+                                     },
+                                     {
+                                      "branch": "5.1.1.1.1.2.1.1",
+                                      "name": "(expand \"injective?\")",
+                                      "type": "proof-command",
+                                      "rules": []
+                                     },
+                                     {
+                                      "branch": "5.1.1.1.1.2.1.1",
+                                      "name": "(inst -2 \"zero1\" \"one1\")",
+                                      "type": "proof-command",
+                                      "rules": [
+                                       {
+                                        "branch": "5.1.1.1.1.2.1.1.1",
+                                        "name": "(5.1.1.1.1.2.1.1.1)",
+                                        "type": "proof-branch",
+                                        "rules": [
+                                         {
+                                          "branch": "5.1.1.1.1.2.1.1.1",
+                                          "name": "(assert)",
+                                          "type": "proof-command",
+                                          "rules": []
+                                         },
+                                         {
+                                          "branch": "5.1.1.1.1.2.1.1.1",
+                                          "name": "(reveal -4)",
+                                          "type": "proof-command",
+                                          "rules": []
+                                         },
+                                         {
+                                          "branch": "5.1.1.1.1.2.1.1.1",
+                                          "name": "(assert)",
+                                          "type": "proof-command",
+                                          "rules": []
+                                         }
+                                        ]
+                                       },
+                                       {
+                                        "branch": "5.1.1.1.1.2.1.1.2",
+                                        "name": "(5.1.1.1.1.2.1.1.2)",
+                                        "type": "proof-branch",
+                                        "rules": [
+                                         {
+                                          "branch": "5.1.1.1.1.2.1.1.2",
+                                          "name": "(hide -)",
+                                          "type": "proof-command",
+                                          "rules": []
+                                         },
+                                         {
+                                          "branch": "5.1.1.1.1.2.1.1.2",
+                                          "name": "(typepred \"R\")",
+                                          "type": "proof-command",
+                                          "rules": []
+                                         },
+                                         {
+                                          "branch": "5.1.1.1.1.2.1.1.2",
+                                          "name": "(expand \"ring_with_one?\")",
+                                          "type": "proof-command",
+                                          "rules": []
+                                         },
+                                         {
+                                          "branch": "5.1.1.1.1.2.1.1.2",
+                                          "name": "(expand \"monoid?\")",
+                                          "type": "proof-command",
+                                          "rules": []
+                                         },
+                                         {
+                                          "branch": "5.1.1.1.1.2.1.1.2",
+                                          "name": "(expand \"monad?\")",
+                                          "type": "proof-command",
+                                          "rules": []
+                                         },
+                                         {
+                                          "branch": "5.1.1.1.1.2.1.1.2",
+                                          "name": "(expand \"member\")",
+                                          "type": "proof-command",
+                                          "rules": []
+                                         },
+                                         {
+                                          "branch": "5.1.1.1.1.2.1.1.2",
+                                          "name": "(assert)",
+                                          "type": "proof-command",
+                                          "rules": []
+                                         }
+                                        ]
+                                       }
+                                      ]
+                                     }
+                                    ]
+                                   },
+                                   {
+                                    "branch": "5.1.1.1.1.2.1.2",
+                                    "name": "(5.1.1.1.1.2.1.2)",
+                                    "type": "proof-branch",
+                                    "rules": [
+                                     {
+                                      "branch": "5.1.1.1.1.2.1.2",
+                                      "name": "(assert)",
+                                      "type": "proof-command",
+                                      "rules": []
+                                     }
+                                    ]
+                                   }
+                                  ]
+                                 }
+                                ]
+                               },
+                               {
+                                "branch": "5.1.1.1.1.2.2",
+                                "name": "(5.1.1.1.1.2.2)",
+                                "type": "proof-branch",
+                                "rules": [
+                                 {
+                                  "branch": "5.1.1.1.1.2.2",
+                                  "name": "(expand \"R_monomorphism?\")",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 },
+                                 {
+                                  "branch": "5.1.1.1.1.2.2",
+                                  "name": "(assert)",
+                                  "type": "proof-command",
+                                  "rules": []
+                                 }
+                                ]
+                               }
+                              ]
+                             }
+                            ]
+                           }
+                          ]
+                         }
+                        ]
+                       },
+                       {
+                        "branch": "5.1.1.1.2",
+                        "name": "(5.1.1.1.2)",
+                        "type": "proof-branch",
+                        "rules": [
+                         {
+                          "branch": "5.1.1.1.2",
+                          "name": "(typepred \"y\")",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "5.1.1.1.2",
+                          "name": "(expand \"remove\")",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "5.1.1.1.2",
+                          "name": "(expand \"member\")",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "5.1.1.1.2",
+                          "name": "(assert)",
+                          "type": "proof-command",
+                          "rules": []
+                         }
+                        ]
+                       }
+                      ]
+                     }
+                    ]
+                   },
+                   {
+                    "branch": "5.1.1.2",
+                    "name": "(5.1.1.2)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "5.1.1.2",
+                      "name": "(typepred \"x\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "5.1.1.2",
+                      "name": "(expand \"remove\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "5.1.1.2",
+                      "name": "(expand \"member\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "5.1.1.2",
+                      "name": "(hide -2 -3 -6 2)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "5.1.1.2",
+                      "name": "(expand \"R_monomorphism?\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "5.1.1.2",
+                      "name": "(lemma \"zero_to_zero\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "5.1.1.2",
+                      "name": "(inst -1 \"R\" \"S\" \"phi\")",
+                      "type": "proof-command",
+                      "rules": [
+                       {
+                        "branch": "5.1.1.2.1",
+                        "name": "(5.1.1.2.1)",
+                        "type": "proof-branch",
+                        "rules": [
+                         {
+                          "branch": "5.1.1.2.1",
+                          "name": "(flatten)",
+                          "type": "proof-command",
+                          "rules": []
+                         },
+                         {
+                          "branch": "5.1.1.2.1",
+                          "name": "(assert)",
+                          "type": "proof-command",
+                          "rules": []
+                         }
+                        ]
+                       },
+                       {
+                        "branch": "5.1.1.2.2",
+                        "name": "(5.1.1.2.2)",
+                        "type": "proof-branch",
+                        "rules": [
+                         {
+                          "branch": "5.1.1.2.2",
+                          "name": "(assert)",
+                          "type": "proof-command",
+                          "rules": []
+                         }
+                        ]
+                       }
+                      ]
+                     }
+                    ]
+                   }
+                  ]
+                 }
+                ]
+               },
+               {
+                "branch": "5.1.2",
+                "name": "(5.1.2)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "5.1.2",
+                  "name": "(typepred \"x\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "5.1.2",
+                  "name": "(expand \"remove\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "5.1.2",
+                  "name": "(expand \"member\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "5.1.2",
+                  "name": "(assert)",
+                  "type": "proof-command",
+                  "rules": []
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "branch": "5.2",
+            "name": "(5.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "5.2",
+              "name": "(hide-all-but (-2 -3 1))",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "5.2",
+              "name": "(expand \"R_epimorphism?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "5.2",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "5.2",
+              "name": "(rewrite \"R_homo_equiv\")",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "6",
+        "name": "(6)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "6",
+          "name": "(hide-all-but (-2 -3 -9 1))",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "6",
+          "name": "(lemma \"epi_commutative\")",
+          "type": "proof-command",
+          "rules": []
+         },
+         {
+          "branch": "6",
+          "name": "(inst -1 \"R\" \"S\" \"phi\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "6.1",
+            "name": "(6.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "6.1",
+              "name": "(expand \"commutative_ring?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "6.1",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "6.1",
+              "name": "(typepred \"R\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "6.1",
+              "name": "(expand \"ring_with_one?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "6.1",
+              "name": "(propax)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "6.2",
+            "name": "(6.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "6.2",
+              "name": "(hide-all-but (-1 -2 -3 1))",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "6.2",
+              "name": "(expand \"R_epimorphism?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "6.2",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "6.2",
+              "name": "(rewrite \"R_homo_equiv\")",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "ring_with_one_homomorphism.IMP_ring_homomorphism_lemmas_TCC1": [
+  {
+   "info": {
+    "theory": "ring_with_one_homomorphism",
+    "formula": "IMP_ring_homomorphism_lemmas_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "dc1137a248fc6fe20d4eab52a9b68bc89516185602d689ba64eded06a94db76c"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "IMP_ring_homomorphism_lemmas_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(lemma \"fullset_is_ring[T1,s1,p1,zero1]\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(propax)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "ring_with_one_homomorphism.IMP_ring_homomorphism_lemmas_TCC2": [
+  {
+   "info": {
+    "theory": "ring_with_one_homomorphism",
+    "formula": "IMP_ring_homomorphism_lemmas_TCC2",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "dc1137a248fc6fe20d4eab52a9b68bc89516185602d689ba64eded06a94db76c"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "IMP_ring_homomorphism_lemmas_TCC2",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(lemma \"fullset_is_ring[T2,s2,p2,zero2]\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(propax)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "ring_with_one_homomorphism.R_TCC1": [
+  {
+   "info": {
+    "theory": "ring_with_one_homomorphism",
+    "formula": "R_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "dc1137a248fc6fe20d4eab52a9b68bc89516185602d689ba64eded06a94db76c"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "R_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(rewrite \"fullsetT1_is_ring_w_one\")",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "ring_with_one_homomorphism.S_TCC1": [
+  {
+   "info": {
+    "theory": "ring_with_one_homomorphism",
+    "formula": "S_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "dc1137a248fc6fe20d4eab52a9b68bc89516185602d689ba64eded06a94db76c"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "S_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(rewrite \"fullsetT2_is_ring_w_one\")",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "ring_with_one_homomorphism.epi_maps_ones_TCC1": [
+  {
+   "info": {
+    "theory": "ring_with_one_homomorphism",
+    "formula": "epi_maps_ones_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "dc1137a248fc6fe20d4eab52a9b68bc89516185602d689ba64eded06a94db76c"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "epi_maps_ones_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(subtype-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "ring_with_one_homomorphism_extras.isomorphic_fields_charac": [
+  {
+   "info": {
+    "theory": "ring_with_one_homomorphism_extras",
+    "formula": "isomorphic_fields_charac",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "04ebf6b8eb6f1b216a6f6f945a8553eecbe813d42e9c7a8b05a4a93a59355f81"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "isomorphic_fields_charac",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skeep)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(prop)",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(lemma \"isomorphic_fields[T1,s1,p1,zero1,one1,T2,s2,p2,zero2,one2]\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "1.1",
+            "name": "(1.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.1",
+              "name": "(inst -1 \"R\" \"S\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "1.1",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "1.2",
+            "name": "(1.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.2",
+              "name": "(rewrite \"fullsetT2_is_ring_w_one\")",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "1.3",
+            "name": "(1.3)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "1.3",
+              "name": "(rewrite \"fullsetT1_is_ring_w_one\")",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(lemma \"isomorphic_fields[T2,s2,p2,zero2,one2,T1,s1,p1,zero1,one1]\")",
+          "type": "proof-command",
+          "rules": [
+           {
+            "branch": "2.1",
+            "name": "(2.1)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "2.1",
+              "name": "(inst -1 \"S\" \"R\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(assert)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(hide -1 2)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(expand \"R_isomorphic?\")",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(skeep)",
+              "type": "proof-command",
+              "rules": []
+             },
+             {
+              "branch": "2.1",
+              "name": "(inst 1 \"inverse[(R),(S)](phi)\")",
+              "type": "proof-command",
+              "rules": [
+               {
+                "branch": "2.1.1",
+                "name": "(2.1.1)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "2.1.1",
+                  "name": "(rewrite \"inv_iso_is_iso[T1,s1,p1,zero1,T2,s2,p2,zero2]\")",
+                  "type": "proof-command",
+                  "rules": [
+                   {
+                    "branch": "2.1.1.1",
+                    "name": "(2.1.1.1)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "2.1.1.1",
+                      "name": "(lemma \" fullsetT2_is_ring_w_one\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "2.1.1.1",
+                      "name": "(expand \"ring_with_one?\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "2.1.1.1",
+                      "name": "(propax)",
+                      "type": "proof-command",
+                      "rules": []
+                     }
+                    ]
+                   },
+                   {
+                    "branch": "2.1.1.2",
+                    "name": "(2.1.1.2)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "2.1.1.2",
+                      "name": "(lemma \" fullsetT1_is_ring_w_one\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "2.1.1.2",
+                      "name": "(expand \"ring_with_one?\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "2.1.1.2",
+                      "name": "(propax)",
+                      "type": "proof-command",
+                      "rules": []
+                     }
+                    ]
+                   }
+                  ]
+                 }
+                ]
+               },
+               {
+                "branch": "2.1.2",
+                "name": "(2.1.2)",
+                "type": "proof-branch",
+                "rules": [
+                 {
+                  "branch": "2.1.2",
+                  "name": "(inst 1 \"zero1\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "2.1.2",
+                  "name": "(typepred \"R\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "2.1.2",
+                  "name": "(expand \"ring_with_one?\")",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "2.1.2",
+                  "name": "(flatten)",
+                  "type": "proof-command",
+                  "rules": []
+                 },
+                 {
+                  "branch": "2.1.2",
+                  "name": "(lemma \"zero_is_member_R[T1,s1,p1,zero1]\")",
+                  "type": "proof-command",
+                  "rules": [
+                   {
+                    "branch": "2.1.2.1",
+                    "name": "(2.1.2.1)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "2.1.2.1",
+                      "name": "(inst?)",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "2.1.2.1",
+                      "name": "(assert)",
+                      "type": "proof-command",
+                      "rules": []
+                     }
+                    ]
+                   },
+                   {
+                    "branch": "2.1.2.2",
+                    "name": "(2.1.2.2)",
+                    "type": "proof-branch",
+                    "rules": [
+                     {
+                      "branch": "2.1.2.2",
+                      "name": "(lemma \" fullsetT1_is_ring_w_one\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "2.1.2.2",
+                      "name": "(expand \"ring_with_one?\")",
+                      "type": "proof-command",
+                      "rules": []
+                     },
+                     {
+                      "branch": "2.1.2.2",
+                      "name": "(assert)",
+                      "type": "proof-command",
+                      "rules": []
+                     }
+                    ]
+                   }
+                  ]
+                 }
+                ]
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "branch": "2.2",
+            "name": "(2.2)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "2.2",
+              "name": "(rewrite \" fullsetT1_is_ring_w_one\")",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           },
+           {
+            "branch": "2.3",
+            "name": "(2.3)",
+            "type": "proof-branch",
+            "rules": [
+             {
+              "branch": "2.3",
+              "name": "(rewrite \" fullsetT2_is_ring_w_one\")",
+              "type": "proof-command",
+              "rules": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "ring_with_one_homomorphism_extras.R_TCC1": [
+  {
+   "info": {
+    "theory": "ring_with_one_homomorphism_extras",
+    "formula": "R_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "04ebf6b8eb6f1b216a6f6f945a8553eecbe813d42e9c7a8b05a4a93a59355f81"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "R_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(rewrite \"fullsetT1_is_ring_w_one\")",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "ring_with_one_homomorphism_extras.S_TCC1": [
+  {
+   "info": {
+    "theory": "ring_with_one_homomorphism_extras",
+    "formula": "S_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "04ebf6b8eb6f1b216a6f6f945a8553eecbe813d42e9c7a8b05a4a93a59355f81"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "S_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(rewrite \"fullsetT2_is_ring_w_one\")",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ]
+}

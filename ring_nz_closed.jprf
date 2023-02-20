@@ -1,0 +1,318 @@
+{
+ "ring_nz_closed.IMP_ring_TCC1": [
+  {
+   "info": {
+    "theory": "ring_nz_closed",
+    "formula": "IMP_ring_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "09f4413415ea413834b51cd802ea618426ed1088de340c8268ec05b5b6f40331"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "IMP_ring_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(lemma \"fullset_is_ring_nz_closed\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"ring_nz_closed?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(flatten)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "ring_nz_closed.ring_nz_closed_TCC1": [
+  {
+   "info": {
+    "theory": "ring_nz_closed",
+    "formula": "ring_nz_closed_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "09f4413415ea413834b51cd802ea618426ed1088de340c8268ec05b5b6f40331"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "ring_nz_closed_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(lemma \"fullset_is_ring_nz_closed\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(propax)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "ring_nz_closed.ring_nz_closed_is_ring": [
+  {
+   "info": {
+    "theory": "ring_nz_closed",
+    "formula": "ring_nz_closed_is_ring",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "09f4413415ea413834b51cd802ea618426ed1088de340c8268ec05b5b6f40331"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "ring_nz_closed_is_ring",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(judgement-tcc)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "ring_nz_closed.nz_T_times_nz_T_is_nz_T": [
+  {
+   "info": {
+    "theory": "ring_nz_closed",
+    "formula": "nz_T_times_nz_T_is_nz_T",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "09f4413415ea413834b51cd802ea618426ed1088de340c8268ec05b5b6f40331"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "nz_T_times_nz_T_is_nz_T",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skosimp*)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"nzx!1\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"nzy!1\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skosimp*)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lemma \"fullset_is_ring_nz_closed\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"ring_nz_closed?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(flatten)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"nz_closed?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(hide -1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(expand \"star_closed?\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(inst - \"nzx!1\" \"nzy!1\")",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(grind)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(grind)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "3",
+        "name": "(3)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "3",
+          "name": "(grind)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "ring_nz_closed.negate_nz_T_is_nz_T": [
+  {
+   "info": {
+    "theory": "ring_nz_closed",
+    "formula": "negate_nz_T_is_nz_T",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "09f4413415ea413834b51cd802ea618426ed1088de340c8268ec05b5b6f40331"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "negate_nz_T_is_nz_T",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(skosimp 1)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lemma \"negate_negate\" (\"x\" \"nzx!1\"))",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(replace -2)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(rewrite \"negate_zero\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(typepred \"nzx!1\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "ring_nz_closed.sq_nz_is_nz": [
+  {
+   "info": {
+    "theory": "ring_nz_closed",
+    "formula": "sq_nz_is_nz",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "09f4413415ea413834b51cd802ea618426ed1088de340c8268ec05b5b6f40331"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "sq_nz_is_nz",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(expand \"sq\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(skosimp)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lemma \"nz_T_times_nz_T_is_not_zero\" (\"nzx\" \"nzx!1\" \"nzy\" \"nzx!1\"))",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ]
+}

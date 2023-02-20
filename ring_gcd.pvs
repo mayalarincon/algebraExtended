@@ -1,0 +1,37 @@
+%%
+%% Authors:	
+%% 		Thaynara Arielly de Lima
+%% 		Universidade Federal de Goiás - Brasil
+%%
+%%      Andréia Borges Avelar da Silva
+%%		Universidade de Brasília - Brasil
+%%			
+%%		André Luiz Galdino
+%%		Universidade Federal de Catalão - Brasil
+%%
+%%		Mauricio Ayala-Rincón
+%%		Universidade de Brasília - Brasil
+%%
+%%----------------------------------------------------------------------------
+%%
+%%	
+%%	Last version: Abril 05, 2022
+%%
+%%----------------------------------------------------------------------------
+
+
+ring_gcd[T:Type+, +,*:[T,T->T], zero: T]: THEORY
+
+BEGIN
+
+ASSUMING IMPORTING ring_def[T,+,*,zero]
+    
+	fullset_is_ring: ASSUMPTION ring?(fullset[T])
+
+    ENDASSUMING
+
+    IMPORTING ring_gcd_def[T,+,*,zero]
+              
+% Results related to gcd
+
+END ring_gcd

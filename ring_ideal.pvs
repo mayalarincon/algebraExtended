@@ -1,0 +1,113 @@
+%%
+%% Authors:	
+%% 		Thaynara Arielly de Lima
+%% 		Universidade Federal de Goiás - Brasil
+%%
+%%  		Andréia Borges Avelar da Silva
+%%		Universidade de Brasília - Brasil
+%%			
+%%		André Luiz Galdino
+%%		Universidade Federal de Catalão - Brasil
+%%
+%%		André Camapum Carvalho de Freitas
+%%		Universidade Federal de Goiás - Brasil
+%%
+%%		Mauricio Ayala-Rincón
+%%		Universidade de Brasília - Brasil
+%%----------------------------------------------------------------------------
+%%
+%%	Formalization of properties about ideals in a ring
+%%
+%%	Last version: June 25, 2020
+%%
+%%----------------------------------------------------------------------------
+ring_ideal [T:TYPE+, +:[T,T -> T] , *:[T,T -> T], zero:T]: THEORY
+	
+
+ BEGIN
+
+   ASSUMING IMPORTING ring_def[T,+,*,zero]
+    
+	fullset_is_ring: ASSUMPTION ring?(fullset[T])
+
+   ENDASSUMING
+
+   IMPORTING ring_basic_properties[T,+,*,zero],
+             ring_ideal_def[T,+,*,zero],
+	     cosets_def
+
+   R: VAR ring
+   H,I: VAR set[T]
+   x: VAR T
+ 
+    
+   left_ideal_equiv: LEMMA	
+         left_ideal?(I,R)
+       IFF
+	 nonempty?(I) AND subset?(I,R) AND
+         FORALL (x,y:(I), r:(R)): member(x + inv(y),I) AND member(r*x,I)
+
+   right_ideal_equiv: LEMMA
+         right_ideal?(I,R)
+       IFF
+         nonempty?(I) AND subset?(I,R) AND
+	 FORALL (x,y:(I), r:(R)): member(x + inv(y) ,I) AND member(x*r,I)
+
+   ideal_equiv: LEMMA
+         ideal?(I,R)
+       IFF
+         (nonempty?(I) AND subset?(I,R) AND
+	 FORALL (x,y:(I), r:(R)): member(x + inv(y),I) AND member(x*r,I)
+	 		  	  AND member(r*x,I))
+
+   self_ideal: LEMMA
+         ideal?(R,R)
+
+   zero_ideal: LEMMA
+          ideal?(singleton(zero),R)
+  
+
+   ideal_transitive: LEMMA
+         subring?(H,R) AND ideal?(I,R) AND subset?(I, H)
+	 IMPLIES ideal?(I,H)
+
+   intersection_subring_ideal: LEMMA
+         subring?(H,R) AND ideal?(I,R)
+         IMPLIES ideal?(intersection(H,I),H)
+
+   r_prod_is_sum_closed : LEMMA
+         FORALL (R: ring, a:(R), (x : (R) | +[T,*](R,a)(x)), (y : (R) | +[T,*](R,a)(y))):
+                 +[T,*](R,a)(x+y)
+
+   l_prod_is_sum_closed : LEMMA
+    	 FORALL (R: ring,a:(R), (x : (R) | +[T,*](a,R)(x)), (y : (R) | +[T,*](a,R)(y))):
+    	         +[T,*](a,R)(x+y)
+
+   inv_is_member_l_prod: LEMMA
+         FORALL (R: ring,a:(R), (x : (R) | +[T,*](a,R)(x))): +[T,*](a,R)(inv(x))
+
+   inv_is_member_r_prod : LEMMA
+         FORALL (R: ring,a:(R), (x : (R) | +[T,*](R,a)(x))): +[T,*](R,a)(inv(x))
+
+   l_prod_is_r_ideal: LEMMA
+         FORALL(R: ring,a:(R)): right_ideal?(+[T,*](a,R),R)
+
+   r_prod_is_l_ideal: LEMMA
+         FORALL(R: ring,a:(R)): left_ideal?(+[T,*](R,a),R)
+
+   % @QED ideal_iunion_ideal proved by thaynaradelima on Thu, 27 Jan 2022 20:15:57 GMT
+   ideal_iunion_ideal: LEMMA
+         FORALL(R: ring, seq:sequence[set[T]]): 
+           ((FORALL(i:nat): ideal?(seq(i),R)) AND 
+            (FORALL(i,j: nat): i<j IMPLIES subset?(seq(i),seq(j)))) IMPLIES 
+             ideal?(IUnion(seq), R)
+
+IMPORTING orders@chain[set[T],subset?[T]]
+
+% @QED chain_ideal_union_ideal proved by thaynaradelima on Fri, 28 Jan 2022 19:25:36 GMT
+chain_ideal_union_ideal: LEMMA
+         FORALL(R: ring, A: chain):
+           (nonempty?(A) AND FORALL(I:(A)): ideal?(I,R)) IMPLIES ideal?(Union(A), R)
+      
+   
+ END ring_ideal

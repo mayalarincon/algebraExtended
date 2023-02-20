@@ -1,0 +1,27 @@
+{
+ "ring_nz_closed_aux.IMP_ring_basic_properties_TCC1": [
+  {
+   "info": {
+    "theory": "ring_nz_closed_aux",
+    "formula": "IMP_ring_basic_properties_TCC1",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "afb00c02dbb6a5b5b8691ef0367a165eb780b3fd73c052d8de9180504f2e9a4a"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "IMP_ring_basic_properties_TCC1",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(rewrite \"fullset_is_ring\")",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ]
+}

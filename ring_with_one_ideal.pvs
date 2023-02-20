@@ -1,0 +1,70 @@
+%% Authors:	
+%% 		Thaynara Arielly de Lima
+%% 		Universidade Federal de Goiás - Brasil
+%%
+%%  		Andréia Borges Avelar da Silva
+%%		Universidade de Brasília - Brasil
+%%			
+%%		André Luiz Galdino
+%%		Universidade Federal de Catalão - Brasil
+%%
+%%		André Camapum Carvalho de Freitas
+%%		Universidade Federal de Goiás - Brasil
+%%
+%%		Mauricio Ayala-Rincón
+%%		Universidade de Brasília - Brasil
+%%----------------------------------------------------------------------------
+%%
+%%	Formalization of properties about ideals of a ring with one
+%%
+%%	Last version: June 25, 2020
+%%
+%%----------------------------------------------------------------------------
+ring_with_one_ideal[T:TYPE+, +:[T,T -> T] , *:[T,T -> T], zero, one:T]: THEORY
+
+  BEGIN
+
+   ASSUMING IMPORTING ring_with_one_def[T,+,*,zero,one]
+
+        fullset_is_ring_with_one: ASSUMPTION ring_with_one?(fullset[T])
+
+   ENDASSUMING
+
+ IMPORTING ring_with_one[T,+,*,zero,one],
+	   ring_nz_closed_def[T,+,*,zero],
+	   ring_ideal [T, +, *, zero]
+
+ R: VAR ring_with_one
+
+  l_ideal_w_one_is_R: LEMMA
+    FORALL (I: left_ideal(R)): I = R IFF I(one)
+
+  r_ideal_w_one_is_R: LEMMA
+    FORALL (I: right_ideal(R)): I = R IFF I(one)
+
+  ideal_w_one_is_R: COROLLARY
+    FORALL (I: ideal(R)): I = R IFF I(one)
+
+  no_prop_l_ideal_nz_closed: LEMMA
+    (FORALL (I: left_ideal(R)): I = singleton(zero) OR I=R) IMPLIES nz_closed?(R)
+
+  no_prop_r_ideal_nz_closed: LEMMA
+    (FORALL (I: right_ideal(R)): I = singleton(zero) OR I=R) IMPLIES nz_closed?(R)
+
+IMPORTING orders@zorn
+
+ % @QED set_of_ideals_bounded_above proved by thaynaradelima on Tue, 08 Feb 2022 19:02:01 GMT
+ set_of_ideals_bounded_above: LEMMA
+ FORALL(R:ring_with_one): 
+     FORALL(I:ideal(R) | I /= R): 
+     LET S = {J:set[T] | ideal?(J,R) AND subset?(I,J) AND J/=R} IN
+      FORALL (ch:chain[(S),(subset?[T])]):
+         bounded_above?[(S)](ch, subset?[T])
+  % @QED set_of_ideals_has_maximal proved by thaynaradelima on Tue, 08 Feb 2022 20:25:05 GMT
+  set_of_ideals_has_maximal: LEMMA
+    FORALL(R:ring_with_one): 
+     FORALL(I:ideal(R) | I /= R): 
+     LET S = {J:set[T] | ideal?(J,R) AND subset?(I,J) AND J/=R} IN
+      has_maximal?(S, subset?[T])
+
+  END ring_with_one_ideal
