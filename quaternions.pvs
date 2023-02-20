@@ -1,13 +1,13 @@
 %%----------------------------------------------------------------------------
 %%
 %% Authors:	
-%% 	Thaynara Arielly de Lima
-%% 	Universidade Federal de Goiás - Brasil
+%% 	       Thaynara Arielly de Lima
+%% 	       Universidade Federal de Goiás - Brasil
 %%			
 %%		André Luiz Galdino
 %%		Universidade Federal de Catalão - Brasil
 %%
-%%  	Andréia Borges Avelar da Silva
+%%  	       Andréia Borges Avelar da Silva
 %%		Universidade de Brasília - Brasil
 %%
 %%		Mauricio Ayala-Rincón
@@ -16,7 +16,7 @@
 %%
 %%	Formalization of some results about Ring of Quaternions
 %%
-%%	Last version: February 09, 2023
+%%	Last version: February 16, 2023
 %%
 %%----------------------------------------------------------------------------
 quaternions[T:Type+,+,*:[T,T->T],zero,one:T,a,b:(remove(zero,fullset[T]))]: THEORY
