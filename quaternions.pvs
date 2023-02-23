@@ -1,13 +1,13 @@
 %%----------------------------------------------------------------------------
 %%
 %% Authors:	
-%% 	       Thaynara Arielly de Lima
-%% 	       Universidade Federal de Goiás - Brasil
+%% 	Thaynara Arielly de Lima
+%% 	Universidade Federal de Goiás - Brasil
 %%			
 %%		André Luiz Galdino
 %%		Universidade Federal de Catalão - Brasil
 %%
-%%  	       Andréia Borges Avelar da Silva
+%%  	Andréia Borges Avelar da Silva
 %%		Universidade de Brasília - Brasil
 %%
 %%		Mauricio Ayala-Rincón
@@ -16,7 +16,7 @@
 %%
 %%	Formalization of some results about Ring of Quaternions
 %%
-%%	Last version: February 16, 2023
+%%	Last version: February 21, 2023
 %%
 %%----------------------------------------------------------------------------
 quaternions[T:Type+,+,*:[T,T->T],zero,one:T,a,b:(remove(zero,fullset[T]))]: THEORY
@@ -270,13 +270,15 @@ quat_div_ring_aux2: LEMMA
 (charac(fullset[T]) /= 2 AND (FORALL (x,y:T): a*(x*x) + b*(y*y) /= one)) IMPLIES
  FORALL (t:T): a*(t*t) + b /= zero 
 
-quat_div_ring_charac: CONJECTURE
-(charac(fullset[T]) /= 2 AND 
-(FORALL (x,y:T): a*(x*x) + b*(y*y) /= one)) IFF
-division_ring?[quat,+,*,zero_q,one_q](fullset[quat])
+% @QED quat_div_ring_char proved by thaynaradelima on Tue, 21 Feb 2023 22:45:44 GMT
+quat_div_ring_char: LEMMA
+charac(fullset[T]) /= 2 IMPLIES
+((FORALL (x,y:T): a*(x*x) + b*(y*y) /= one) IFF
+division_ring?[quat,+,*,zero_q,one_q](fullset[quat]))
 
 
 
+%  
 % red_norm_has_mult_inv: CONJECTURE
 % FORALL (q: quat): ((charac(fullset[T]) /= 2) AND q/= zero_q) IMPLIES
 %  LET v: quat = (inv[T,*,one](red_norm(q)`x),zero,zero,zero) IN
