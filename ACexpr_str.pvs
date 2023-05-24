@@ -1,0 +1,83 @@
+ACexpr_str[T: TYPE+, +, *: [T,T->T], zero, one: T]: THEORY
+BEGIN
+
+  AlgebraExpr: DATATYPE
+  BEGIN
+     sigma(opers: list[T]): sigma?
+     pi(opers: list[T]): pi?
+  END AlgebraExpr
+
+  importing orders@lex2_generic[AlgebraExpr,nat]
+
+  importing AC_list_props_str[AlgebraExpr]
+
+  eval(expr: AlgebraExpr)
+   : T 
+  = CASES expr OF
+      sigma(operands) : IF null?(operands) THEN zero
+      ELSIF null?(cdr(operands)) THEN car(operands)
+      ELSE car(operands) + eval(sigma(cdr(operands))) ENDIF
+      pi(operands) : IF null?(operands) THEN one
+      ELSIF null?(cdr(operands)) THEN car(operands)
+      ELSE car(operands) * eval(pi(cdr(operands))) ENDIF
+ ENDCASES
+  MEASURE CASES expr sigma(operands) : length(operands) 
+                     pi(operands)    : length(operands)
+
+  importing structures@permutations_list[T]
+  importing structures@more_list_props[T]
+
+
+sigma_commutative
+  : THEOREM  ∀(l1,l2: list[T])
+    : permutation?(l1,l2) ⇒ eval(sigma(l1)) = eval(sigma(l2)) 
+
+pi_commutative
+  : THEOREM  ∀(l1,l2: list[T])
+    : permutation?(l1,l2) ⇒ eval(pi(l1)) = eval(pi(l2)) 
+
+
+  % Removes (only) the element in the nth position.
+  remove(l: list[AlgebraExpr], i: below(length(l)))
+  : list[AlgebraExpr]
+  % = IFtake(l,i-1)
+
+  % remove_length
+  % : conjecture%d corollary
+  %   ∀(l: list[AlgebraExpr], i: below(length(l)))
+  %   : length(remove(l,i)) = length(l) - 1 
+  
+  move_to_head
+  : conjecture%d lemma
+    ∀(env: [nat->T], l1: list[AlgebraExpr], i: below(length(l1)))
+    : eval(sigma(l1),env) = eval(sigma(cons(nth(l1,i),remove(l1,i))),env)
+
+  % #TODO check if already exists
+  first_elem_in_permutation
+  : conjecture%d lemma
+    ∀(l1,l2: list[AlgebraExpr])
+    : permutation?(l1,l2) ⇒ ∃(i: below(length(l2))): car(l1) = nth(l2,i)
+
+  % #TODO move to structures@permutations_list
+  count_nth_remove
+  : conjecture%d lemma
+    ∀(l:list[AlgebraExpr],i: below(length(l)))
+    : count(nth(l,i))(remove(l,i)) = count(nth(l,i))(l) - 1
+
+  % #TODO move to structures@permutations_list
+  count_not_nth_remove
+  : conjecture%d lemma
+    ∀(l:list[AlgebraExpr],i: below(length(l)), a: AlgebraExpr)
+    : NOT a = nth(l,i) ⇒ count(a)(remove(l,i)) = count(a)(l)
+
+  sigma_commutative
+  : theorem
+    ∀(env: [nat->T], l1,l2: list[AlgebraExpr])
+    : permutation?(l1,l2) ⇒ eval(sigma(l1),env) = eval(sigma(l2),env)
+
+  % @QED ex1 proved by ayala on Thu, 02 Mar 2023 17:20:08 GMT
+  ex1
+  : lemma
+    ∀(a,b,c,d: T): a+b+c+d = d+c+b+a
+
+END ACexpr_str

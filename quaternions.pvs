@@ -16,14 +16,14 @@
 %%
 %%	Formalization of some results about Ring of Quaternions
 %%
-%%	Last version: February 21, 2023
+%%	Last version: March 19, 2023
 %%
 %%----------------------------------------------------------------------------
 quaternions[T:Type+,+,*:[T,T->T],zero,one:T,a,b:(remove(zero,fullset[T]))]: THEORY
 
 BEGIN
 
-ASSUMING IMPORTING field[T,+,*,zero,one]
+ASSUMING IMPORTING field_def[T,+,*,zero,one]
 
        fullset_is_field: ASSUMPTION field?(fullset[T])
 
@@ -32,67 +32,26 @@ ASSUMING IMPORTING field[T,+,*,zero,one]
 
 IMPORTING quaternions_def[T,+,*,zero,one,a,b],
           ring_characteristic_def[T,+,*,zero],
-          ring_nz_closed_aux [T,+,*,zero],
+          pvs_strategies_lemmas[T,+,*,zero,one],
+          ring_nz_closed_aux[T,+,*,zero],
+          center_def,
+          ring_nz_closed_aux,
+          ring_nz_closed,
           op_finseq,
           field,
           group
 
+
+%------------------------------------------
+
+
 q,u,v: VAR quat
 c, d, x, y : VAR T
+nz_quat: NONEMPTY_TYPE = {q: quat | q /= zero_q} CONTAINING a_q
 
-% --//--
-% Simple lemmas to build strategies to deal with AC operators 
-% --//--
 
-% @QED move_three_times proved by mauricioayalarincon on Fri, 20 Jan 2023 14:19:40 GMT
-% @QED times_heading_third proved by mauricioayalarincon on Fri, 20 Jan 2023 14:30:11 GMT
-times_heading_third : LEMMA FORALL(s1, s2, s3 : T) :
-   s1 * s2 * s3 = s3 * s1 * s2
+%------------------------------------------
 
-% @QED move_four_times proved by mauricioayalarincon on Fri, 20 Jan 2023 14:23:58 GMT
-% @QED times_heading_fourth proved by mauricioayalarincon on Fri, 20 Jan 2023 14:31:35 GMT
-times_heading_fourth : LEMMA FORALL   (s1, s2, s3, s4 : T) :
-   s1 * s2 * s3 * s4  = s4 * s1 * s2 * s3
-
-% @QED times_heading_fifth proved by mauricioayalarincon on Fri, 20 Jan 2023 14:33:30 GMT
-times_heading_fifth : LEMMA FORALL   (s1, s2, s3, s4, s5 : T) :
-   s1 * s2 * s3 * s4 * s5 = s5 * s1 * s2 * s3 * s4
-
-% @QED times_heading_sixth proved by mauricioayalarincon on Fri, 20 Jan 2023 14:34:36 GMT
-times_heading_sixth : LEMMA FORALL   (s1, s2, s3, s4, s5, s6 : T) :
-   s1 * s2 * s3 * s4 * s5 * s6 = s6 * s1 * s2 * s3 * s4 * s5  
-
-% @QED times_heading_seventh proved by mauricioayalarincon on Fri, 20 Jan 2023 14:35:29 GMT
-times_heading_seventh : LEMMA FORALL   (s1, s2, s3, s4, s5, s6, s7 : T) :
-   s1 * s2 * s3 * s4 * s5 * s6 * s7 = s7 * s1 * s2 * s3 * s4 * s5 * s6  
-
-% @QED plus_heading_third proved by mauricioayalarincon on Fri, 20 Jan 2023 14:38:39 GMT
-plus_heading_third : LEMMA FORALL(s1, s2, s3 : T) :
-   s1 + s2 + s3 = s3 + s1 + s2
-
-% @QED move_four_times proved by mauricioayalarincon on Fri, 20 Jan 2023 14:23:58 GMT
-% @QED times_heading_fourth proved by mauricioayalarincon on Fri, 20 Jan 2023 14:31:35 GMT
-% @QED plus_heading_fourth proved by mauricioayalarincon on Fri, 20 Jan 2023 14:42:36 GMT
-plus_heading_fourth : LEMMA FORALL   (s1, s2, s3, s4 : T) :
-   s1 + s2 + s3 + s4  = s4 + s1 + s2 + s3
-
-% @QED times_heading_fifth proved by mauricioayalarincon on Fri, 20 Jan 2023 14:33:30 GMT
-% @QED plus_heading_fifth proved by mauricioayalarincon on Fri, 20 Jan 2023 14:43:42 GMT
-plus_heading_fifth : LEMMA FORALL   (s1, s2, s3, s4, s5 : T) :
-   s1 + s2 + s3 + s4 + s5 = s5 + s1 + s2 + s3 + s4
-
-% @QED times_heading_sixth proved by mauricioayalarincon on Fri, 20 Jan 2023 14:34:36 GMT
-% @QED plus_heading_sixth proved by mauricioayalarincon on Fri, 20 Jan 2023 14:44:40 GMT
-plus_heading_sixth : LEMMA FORALL   (s1, s2, s3, s4, s5, s6 : T) :
-   s1 + s2 + s3 + s4 + s5 + s6 = s6 + s1 + s2 + s3 + s4 + s5  
-
-% @QED times_heading_seventh proved by mauricioayalarincon on Fri, 20 Jan 2023 14:35:29 GMT
-% @QED plus_heading_seventh proved by mauricioayalarincon on Fri, 20 Jan 2023 14:45:31 GMT
-plus_heading_seventh : LEMMA FORALL   (s1, s2, s3, s4, s5, s6, s7 : T) :
-   s1 + s2 + s3 + s4 + s5 + s6 + s7 = s7 + s1 + s2 + s3 + s4 + s5 + s6  
-
-% --//--
-% --//--
 
 % @QED one_sc_times proved by galdino on Thu, 17 Nov 2022 18:09:33 GMT
 one_sc_times:  LEMMA FORALL(q:quat): one * q = q          
@@ -112,7 +71,6 @@ sc_quat:        LEMMA (c * u) * (d * v) = (c*d) * (u*v)
  % @QED inv_charac proved by thaynaradelima on Thu, 10 Nov 2022 13:07:59 GMT
  inv_charac:    LEMMA inv(q) = inv(one)*q
 
- 
  % @QED q_inv_inv proved by galdino on Thu, 17 Nov 2022 18:16:03 GMT
  q_inv_inv:    LEMMA inv(inv(q)) = q
 
@@ -184,17 +142,25 @@ pure_quat_charac: LEMMA FORALL (q: quat): charac(fullset[T]) /= 2 IMPLIES
                               ( (q /= zero_q AND member(q, pure_quat)) IFF
                                (NOT member(q, scalar_F) AND member(q * q, scalar_F)) )
 
-
  % @QED red_trace_charac proved by galdino on Thu, 24 Nov 2022 17:59:21 GMT
- red_trace_charac: LEMMA FORALL (q: quat): red_trace(q) = (q`x + q`x, zero, zero, zero)
+red_trace_charac: LEMMA FORALL (q: quat): red_trace(q) = (q`x + q`x, zero, zero, zero)
+
+% @QED red_trace_plus proved by galdino on Sun, 19 Mar 2023 04:05:21 GMT
+red_trace_plus: LEMMA FORALL (p,q: quat): red_trace(p + q ) = red_trace(p) + red_trace(q)
+
+% @QED red_trace_times_commutes proved by galdino on Sun, 19 Mar 2023 04:12:18 GMT
+red_trace_times_commutes: LEMMA FORALL (p,q: quat): red_trace(p * q ) = red_trace(q * p)
 
  % @QED red_norm_charac proved by galdino on Fri, 25 Nov 2022 13:37:43 GMT
- red_norm_charac: LEMMA FORALL (q: quat): %Pag. 15, item 1
+red_norm_charac: LEMMA FORALL (q: quat): %Pag. 15, item 1
      red_norm(q) = (q`x * q`x + inv(a) * (q`y * q`y) + inv(b) * (q`z * q`z) + (a * b) * (q`t * q`t), zero, zero, zero)
+
+% @QED red_norm_one_q proved by galdino on Sat, 18 Mar 2023 01:47:26 GMT
+red_norm_one_q: LEMMA red_norm(one_q) = one_q
 
 % @QED red_norm_is_scalar proved by ayala on Thu, 26 Jan 2023 19:10:52 GMT
 red_norm_is_scalar:  LEMMA  FORALL (q : quat) : scalar_F(red_norm(q))
-         
+
 % @QED conj_conj_quat proved by mauricioayalarincon on Thu, 01 Dec 2022 18:58:29 GMT
 conj_conj_quat : LEMMA FORALL(q : quat) : %Pag. 15, item 3
  conjugate(conjugate(q)) = q 
@@ -215,6 +181,10 @@ red_norm_conj: LEMMA FORALL(q:quat):
 sc_F_commutes: LEMMA FORALL (s: (scalar_F), q: quat):
     s * q  = q * s
 
+% @QED center_quat_is_sc_F proved by galdino on Sun, 19 Mar 2023 03:46:00 GMT
+center_quat_is_sc_F: LEMMA charac(fullset[T]) /= 2 IMPLIES
+    center[(quat),*](fullset[quat]) = scalar_F
+
 % @QED sc_F_product_charac proved by galdino on Fri, 10 Feb 2023 17:18:54 GMT
 sc_F_product_charac: LEMMA FORALL (s,c: (scalar_F)):
     s * c  = (s`x * c`x, zero, zero, zero)
@@ -224,6 +194,7 @@ q_x_v_cq : LEMMA FORALL (q:quat, v:(pure_quat)) : %Felipe
     pure_quat(q * v * conjugate(q))  
 
 %%-------------------
+
 T_q(q: quat)(v:(pure_quat)): (pure_quat) = q * v * conjugate(q)
 
 % @QED T_q_is_linear proved by thaynaradelima on Thu, 05 Jan 2023 20:04:05 GMT
@@ -249,16 +220,22 @@ T_q_invariant_red_norm: LEMMA FORALL (c: T, q: quat):
 
 IMPORTING division_ring_def
 
-% @QED nz_red_norm_inv_exist proved by galdino on Fri, 10 Feb 2023 16:34:47 GMT
-nz_red_norm_inv_exist: LEMMA
-  (FORALL (q:(remove(zero_q, fullset[quat]))):
-   red_norm(q) /= zero_q) IMPLIES   
+% @QED nz_red_norm_iff_inv_exist proved by galdino on Sat, 18 Mar 2023 02:05:02 GMT
+nz_red_norm_iff_inv_exist: LEMMA
+  (FORALL (q:nz_quat):
+   red_norm(q) /= zero_q) IFF   
    inv_exists?[quat,*,one_q](remove(zero_q, fullset[quat]))
 
 % @QED div_ring_iff_nz_rednorm proved by galdino on Fri, 10 Feb 2023 17:41:34 GMT
 div_ring_iff_nz_rednorm: LEMMA
   division_ring?[quat,+,*,zero_q,one_q](fullset[quat]) IFF
-  (FORALL(q: (remove(zero_q, fullset[quat]))): red_norm(q) /= zero_q)
+  (FORALL(q: nz_quat): red_norm(q) /= zero_q)
+
+% @QED inv_q_prod_charac proved by galdino on Wed, 15 Mar 2023 22:36:42 GMT
+inv_q_prod_charac: LEMMA
+ division_ring?[quat,+,*,zero_q,one_q](fullset[quat]) IMPLIES 
+ (FORALL (q: nz_quat): 
+   inv[nz_quat,*,one_q](q) = conjugate(q) * inv[nz_quat,*,one_q](red_norm(q)))
 
 % @QED quat_div_ring_aux1 proved by thaynaradelima on Mon, 13 Feb 2023 19:54:17 GMT
 quat_div_ring_aux1: LEMMA
@@ -278,29 +255,11 @@ division_ring?[quat,+,*,zero_q,one_q](fullset[quat]))
 
 
 
-%  
-% red_norm_has_mult_inv: CONJECTURE
-% FORALL (q: quat): ((charac(fullset[T]) /= 2) AND q/= zero_q) IMPLIES
-%  LET v: quat = (inv[T,*,one](red_norm(q)`x),zero,zero,zero) IN
-%  red_norm(q) * v = v * red_norm(q) = one_q
-
-% quat_mult_inv: CONJECTURE
-% FORALL (q: quat): ((charac(fullset[T]) /= 2) AND q/= zero_q) IMPLIES
-%  EXISTS (v: quat): q * v = v * q = one_q 
-
-% quat_mult_group: CONJECTURE
-%  (charac(fullset[T]) /= 2) IMPLIES 
-%     group?[quat,*,one_q](remove(zero_q, fullset[quat]))
- 
 
 
+% Formalize Corollary 19 , pg. 16, material André 
+  
 
-
-
-%-------------
-
-
-
-
+%------------------------------------------
 
 END quaternions

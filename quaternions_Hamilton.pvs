@@ -1,0 +1,53 @@
+quaternions_Hamilton: THEORY
+
+BEGIN
+IMPORTING quaternions[real,+,*,0,1,-1,-1],
+          reals,
+          reals@sqrt,
+          trig@trig_types,
+          trig@trig_inverses
+
+
+q: VAR quat
+t: VAR nnreal_quad1_closed
+
+
+ % @QED sc_part_red_norm_nnegreal proved by thaynaradelima on Thu, 09 Mar 2023 20:26:34 GMT
+ sc_part_red_norm_nnegreal : LEMMA
+    red_norm(q)`x >= 0
+
+ QH_norm(q): nnreal = sqrt(red_norm(q)`x) 
+
+ sq_QHnorm(q): nnreal = reals@sq.sq(QH_norm(q))  
+
+ QH_1: set[quat] = {q: quat | QH_norm(q) = 1}
+
+
+ % @QED norm_decomp proved by thaynaradelima on Thu, 09 Mar 2023 19:36:09 GMT
+ norm_decomp: LEMMA
+  sq_QHnorm(q) =  sq_QHnorm(sc_part(q)) + sq_QHnorm(pure_part(q))
+
+% @QED QH_nzquat_nznorm proved by thaynaradelima on Tue, 04 Apr 2023 18:41:00 GMT
+QH_nzquat_nznorm: LEMMA 
+  FORALL(q: nz_quat): red_norm(q) /= zero_q
+
+% @QED QH_inv_red_norm proved by thaynaradelima on Wed, 05 Apr 2023 15:03:58 GMT
+QH_inv_red_norm: LEMMA
+  FORALL(q: nz_quat): inv[nz_quat,*,one_q](red_norm(q)) = 1/(red_norm(q)`x) * one_q
+
+% @QED QH_inv_q_prod_charac proved by thaynaradelima on Wed, 05 Apr 2023 16:08:04 GMT
+QH_inv_q_prod_charac: LEMMA
+  FORALL (q: nz_quat): 
+   inv[nz_quat,*,one_q](q) = (1/(red_norm(q)`x)) * conjugate(q) 
+
+
+exists_arc: CONJECTURE
+FORALL (x,y:({x: nnreal | x <= 1})): reals@sq.sq(x) + reals@sq.sq(y) = 1 IMPLIES 
+exists1!(t: nnreal_quad1_closed): (sin(t) = x AND cos(t) = y)
+
+
+
+% T_pres_norm: CONJECTURE FORALL(q:quat)(v:(pure_quat)):
+%      red_norm(q)`x = 1 IMPLIES red_norm(T(q)(v))`x = red_norm(v)`x
+%    %define standard norm over R (or verify it other libraries) and re-specify the conjec. 
+END quaternions_Hamilton

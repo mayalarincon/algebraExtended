@@ -50,10 +50,11 @@ b_q: quat = (b, zero, zero, zero)
 
 
 % %  ----------- Scalar and Pure Quaternion --------------------------------------
-
+  nzquat: set[quat] = remove(zero_q,fullset[quat])
   scalar_F: set[quat] = {u: quat | u`y = zero AND u`z = zero AND u`t = zero}
   pure_quat: set[quat] = {u: quat | u`x = zero}
   pure_part(q: quat): quat = (zero, q`y, q`z, q`t)
+  sc_part(q: quat): quat = (q`x, zero, zero, zero)
 
 % %  ----------- Quaternion Operations -------------------------------------------
 

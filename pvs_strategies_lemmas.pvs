@@ -1,0 +1,90 @@
+%%----------------------------------------------------------------------------
+%%
+%% Authors:	
+%% 	Thaynara Arielly de Lima
+%% 	Universidade Federal de Goiás - Brasil
+%%			
+%%		André Luiz Galdino
+%%		Universidade Federal de Catalão - Brasil
+%%
+%%  	Andréia Borges Avelar da Silva
+%%		Universidade de Brasília - Brasil
+%%
+%%		Mauricio Ayala-Rincón
+%%		Universidade de Brasília - Brasil
+%%----------------------------------------------------------------------------
+%%
+%%	Formalization of some results about Ring of Quaternions
+%%
+%%	Last version: February 21, 2023
+%%
+%%----------------------------------------------------------------------------
+pvs_strategies_lemmas[T:Type+,+,*:[T,T->T],zero,one:T]: THEORY
+
+BEGIN
+
+ASSUMING IMPORTING field[T,+,*,zero,one]
+
+       fullset_is_field: ASSUMPTION field?(fullset[T])
+
+   ENDASSUMING
+
+
+IMPORTING field[T,+,*,zero,one]
+
+% --//--
+% Simple lemmas to build strategies to deal with AC operators 
+% --//--
+
+% @QED move_three_times proved by mauricioayalarincon on Fri, 20 Jan 2023 14:19:40 GMT
+% @QED times_heading_third proved by mauricioayalarincon on Fri, 20 Jan 2023 14:30:11 GMT
+times_heading_third : LEMMA FORALL(s1, s2, s3 : T) :
+   s1 * s2 * s3 = s3 * s1 * s2
+
+% @QED move_four_times proved by mauricioayalarincon on Fri, 20 Jan 2023 14:23:58 GMT
+% @QED times_heading_fourth proved by mauricioayalarincon on Fri, 20 Jan 2023 14:31:35 GMT
+times_heading_fourth : LEMMA FORALL   (s1, s2, s3, s4 : T) :
+   s1 * s2 * s3 * s4  = s4 * s1 * s2 * s3
+
+% @QED times_heading_fifth proved by mauricioayalarincon on Fri, 20 Jan 2023 14:33:30 GMT
+times_heading_fifth : LEMMA FORALL   (s1, s2, s3, s4, s5 : T) :
+   s1 * s2 * s3 * s4 * s5 = s5 * s1 * s2 * s3 * s4
+
+% @QED times_heading_sixth proved by mauricioayalarincon on Fri, 20 Jan 2023 14:34:36 GMT
+times_heading_sixth : LEMMA FORALL   (s1, s2, s3, s4, s5, s6 : T) :
+   s1 * s2 * s3 * s4 * s5 * s6 = s6 * s1 * s2 * s3 * s4 * s5  
+
+% @QED times_heading_seventh proved by mauricioayalarincon on Fri, 20 Jan 2023 14:35:29 GMT
+times_heading_seventh : LEMMA FORALL   (s1, s2, s3, s4, s5, s6, s7 : T) :
+   s1 * s2 * s3 * s4 * s5 * s6 * s7 = s7 * s1 * s2 * s3 * s4 * s5 * s6  
+
+% @QED plus_heading_third proved by mauricioayalarincon on Fri, 20 Jan 2023 14:38:39 GMT
+plus_heading_third : LEMMA FORALL(s1, s2, s3 : T) :
+   s1 + s2 + s3 = s3 + s1 + s2
+
+% @QED move_four_times proved by mauricioayalarincon on Fri, 20 Jan 2023 14:23:58 GMT
+% @QED times_heading_fourth proved by mauricioayalarincon on Fri, 20 Jan 2023 14:31:35 GMT
+% @QED plus_heading_fourth proved by mauricioayalarincon on Fri, 20 Jan 2023 14:42:36 GMT
+plus_heading_fourth : LEMMA FORALL   (s1, s2, s3, s4 : T) :
+   s1 + s2 + s3 + s4  = s4 + s1 + s2 + s3
+
+% @QED times_heading_fifth proved by mauricioayalarincon on Fri, 20 Jan 2023 14:33:30 GMT
+% @QED plus_heading_fifth proved by mauricioayalarincon on Fri, 20 Jan 2023 14:43:42 GMT
+plus_heading_fifth : LEMMA FORALL   (s1, s2, s3, s4, s5 : T) :
+   s1 + s2 + s3 + s4 + s5 = s5 + s1 + s2 + s3 + s4
+
+% @QED times_heading_sixth proved by mauricioayalarincon on Fri, 20 Jan 2023 14:34:36 GMT
+% @QED plus_heading_sixth proved by mauricioayalarincon on Fri, 20 Jan 2023 14:44:40 GMT
+plus_heading_sixth : LEMMA FORALL   (s1, s2, s3, s4, s5, s6 : T) :
+   s1 + s2 + s3 + s4 + s5 + s6 = s6 + s1 + s2 + s3 + s4 + s5  
+
+% @QED times_heading_seventh proved by mauricioayalarincon on Fri, 20 Jan 2023 14:35:29 GMT
+% @QED plus_heading_seventh proved by mauricioayalarincon on Fri, 20 Jan 2023 14:45:31 GMT
+plus_heading_seventh : LEMMA FORALL   (s1, s2, s3, s4, s5, s6, s7 : T) :
+   s1 + s2 + s3 + s4 + s5 + s6 + s7 = s7 + s1 + s2 + s3 + s4 + s5 + s6  
+
+
+%-------------
+
+
+END pvs_strategies_lemmas
