@@ -1,0 +1,1830 @@
+(quaternions_Hamilton
+ (IMP_quaternions_TCC1 0
+  (IMP_quaternions_TCC1-1 nil 3886750424 ("" (grind) nil nil)
+   ((fullset const-decl "set" sets nil)
+    (member const-decl "bool" sets nil)
+    (remove const-decl "set" sets nil)
+    (minus_odd_is_odd application-judgement "odd_int" integers nil))
+   nil
+   (IMP_quaternions subtype "(number_fields.-)(1)"
+    "(sets[real].remove(0, sets[real].fullset))")))
+ (sc_part_red_norm_nnegreal 0
+  (sc_part_red_norm_nnegreal-1 nil 3887381143
+   ("" (skeep)
+    (("" (lemma "red_norm_charac")
+      (("" (inst?)
+        (("" (decompose-equality)
+          (("" (replaces -2)
+            (("" (hide -)
+              (("" (case-replace "inv(-1) = 1")
+                (("1" (typepred "1")
+                  (("1" (rewrite "identity_mult")
+                    (("1" (rewrite "identity_mult")
+                      (("1" (typepred "q`t * q`t")
+                        (("1" (typepred "(q`y * q`y) + (q`z * q`z) ")
+                          (("1" (lemma "nnreal_plus_nnreal_is_nnreal")
+                            (("1" (inst -1 "q`y * q`y" "q`z * q`z")
+                              (("1"
+                                (name-replace
+                                 "a"
+                                 "q`y * q`y + q`z * q`z")
+                                (("1"
+                                  (lemma
+                                   "nnreal_plus_nnreal_is_nnreal")
+                                  (("1"
+                                    (inst -1 "a" "q`t * q`t")
+                                    (("1"
+                                      (name-replace
+                                       "b"
+                                       "a + q`t * q`t")
+                                      (("1"
+                                        (lemma
+                                         "nnreal_plus_nnreal_is_nnreal")
+                                        (("1"
+                                          (inst -1 "b" "q`x*q`x")
+                                          nil
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil)
+                 ("2" (hide 2) (("2" (grind) nil nil)) nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((- const-decl "[numfield -> numfield]" number_fields nil)
+    (* const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (restrict const-decl "R" restrict nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (red_norm_charac formula-decl nil quaternions nil)
+    (real_plus_real_is_real application-judgement "real" reals nil)
+    (real_times_real_is_real application-judgement "real" reals nil)
+    (minus_odd_is_odd application-judgement "odd_int" integers nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (red_norm const-decl "quat" quaternions_def nil)
+    (inv const-decl "{y | x * y = one AND y * x = one}" group nil)
+    (odd_times_odd_is_odd application-judgement "odd_int" integers nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (> const-decl "bool" reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (odd? const-decl "bool" integers nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (>= const-decl "bool" reals nil)
+    (nnreal_plus_nnreal_is_nnreal judgement-tcc nil real_types nil)
+    (identity_mult formula-decl nil number_fields nil)
+    (TRUE const-decl "bool" booleans nil)
+    (quat type-eq-decl nil quaternions_def nil))
+   shostak))
+ (QH_norm_TCC1 0
+  (QH_norm_TCC1-1 nil 3886772922
+   ("" (skeep)
+    (("" (lemma "red_norm_charac")
+      (("" (inst?)
+        (("" (decompose-equality)
+          (("" (replaces -2)
+            (("" (hide -)
+              (("" (case-replace "inv(-1) = 1")
+                (("1"
+                  (case "1 * (q`y * q`y) = (q`y * q`y) AND 1 * (q`z * q`z) = (q`z * q`z)")
+                  (("1" (flatten)
+                    (("1" (replaces -1)
+                      (("1" (replaces -1)
+                        (("1" (hide -1)
+                          (("1" (typepred "q`y")
+                            (("1" (typepred "q`x")
+                              (("1"
+                                (typepred "q`z")
+                                (("1"
+                                  (typepred "q`t")
+                                  (("1"
+                                    (hide -)
+                                    (("1"
+                                      (lemma
+                                       "nnreal_plus_nnreal_is_nnreal")
+                                      (("1"
+                                        (inst
+                                         -1
+                                         "(q`y * q`y)"
+                                         "(q`z * q`z)")
+                                        (("1"
+                                          (lemma
+                                           "nnreal_plus_nnreal_is_nnreal")
+                                          (("1" (postpone) nil nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil)
+                   ("2" (postpone) nil nil))
+                  nil)
+                 ("2" (postpone) nil nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   nil nil
+   (QH_norm subtype
+    "quaternions_def[real, restrict[[numfield, numfield], [real, real], numfield].restrict(number_fields.+), restrict[[numfield, numfield], [real, real], numfield].restrict(number_fields.*), 0, 1, (number_fields.-)(1), (number_fields.-)(1)].red_norm(quaternions_Hamilton.q)`x"
+    "nonneg_real")))
+ (norm_decomp 0
+  (norm_decomp-1 nil 3886772993
+   ("" (skeep)
+    (("" (expand "sq_QHnorm")
+      (("" (expand "QH_norm")
+        (("" (rewrite* "sq_sqrt")
+          (("1" (lemma "red_norm_charac")
+            (("1" (inst-cp -1 "q")
+              (("1" (inst-cp -1 "pure_part(q)")
+                (("1" (inst -1 "sc_part(q)")
+                  (("1" (decompose-equality)
+                    (("1" (decompose-equality)
+                      (("1" (decompose-equality)
+                        (("1" (replaces -2)
+                          (("1" (replaces -9)
+                            (("1" (replaces -5)
+                              (("1"
+                                (hide -)
+                                (("1"
+                                  (expand "pure_part")
+                                  (("1"
+                                    (expand "sc_part")
+                                    (("1" (propax) nil nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil)
+           ("2" (hide 2) (("2" (rewrite "QH_norm_TCC1") nil nil)) nil)
+           ("3" (hide 2) (("3" (rewrite "QH_norm_TCC1") nil nil)) nil)
+           ("4" (hide 2) (("4" (rewrite "QH_norm_TCC1") nil nil)) nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((sq_QHnorm const-decl "nnreal" quaternions_Hamilton nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (nnreal_plus_nnreal_is_nnreal application-judgement "nnreal"
+     real_types nil)
+    (real_minus_real_is_real application-judgement "real" reals nil)
+    (red_norm const-decl "quat" quaternions_def nil)
+    (quat type-eq-decl nil quaternions_def nil)
+    (- const-decl "[numfield -> numfield]" number_fields nil)
+    (* const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (restrict const-decl "R" restrict nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (sq_sqrt formula-decl nil sqrt reals)
+    (minus_odd_is_odd application-judgement "odd_int" integers nil)
+    (real_times_real_is_real application-judgement "real" reals nil)
+    (real_plus_real_is_real application-judgement "real" reals nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (TRUE const-decl "bool" booleans nil)
+    (pure_part const-decl "quat" quaternions_def nil)
+    (sc_part const-decl "quat" quaternions_def nil)
+    (odd_times_odd_is_odd application-judgement "odd_int" integers nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (inv const-decl "{y | x * y = one AND y * x = one}" group nil)
+    (red_norm_charac formula-decl nil quaternions nil)
+    (QH_norm_TCC1 subtype-tcc nil quaternions_Hamilton nil)
+    (QH_norm const-decl "nnreal" quaternions_Hamilton nil))
+   shostak))
+ (QH_nzquat_nznorm 0
+  (QH_nzquat_nznorm-1 nil 3889616286
+   ("" (skeep)
+    (("" (lemma "red_norm_charac")
+      (("" (inst -1 "q")
+        (("" (replaces -1)
+          (("" (expand "zero_q")
+            (("" (case-replace "inv(-1) = 1")
+              (("1" (case-replace "1 * (q`y * q`y) = (q`y * q`y)")
+                (("1" (case-replace "1 * (q`z * q`z) = (q`z * q`z)")
+                  (("1" (lemma "sq_plus_pos")
+                    (("1" (inst-cp -1 "q`y" "q`z")
+                      (("1" (expand "sq" -2)
+                        (("1"
+                          (name-replace "A" " q`y * q`y + q`z * q`z")
+                          (("1" (lemma "associative_add")
+                            (("1" (inst?)
+                              (("1"
+                                (replace -1 -7 rl)
+                                (("1"
+                                  (hide -1)
+                                  (("1"
+                                    (inst -1 "q`t" "q`x")
+                                    (("1"
+                                      (expand "sq")
+                                      (("1"
+                                        (name-replace
+                                         "B"
+                                         "q`t * q`t + q`x * q`x")
+                                        (("1"
+                                          (hide -3 -4 -5)
+                                          (("1"
+                                            (lemma
+                                             "nonneg_real_add_closed")
+                                            (("1"
+                                              (inst -1 "A" "B")
+                                              (("1"
+                                                (expand ">=")
+                                                (("1"
+                                                  (expand "<=")
+                                                  (("1"
+                                                    (split -1)
+                                                    (("1"
+                                                      (hide -2 -3)
+                                                      (("1"
+                                                        (name-replace
+                                                         "C"
+                                                         "A+B")
+                                                        (("1"
+                                                          (assert)
+                                                          nil
+                                                          nil))
+                                                        nil))
+                                                      nil)
+                                                     ("2"
+                                                      (prop)
+                                                      (("1"
+                                                        (hide -3)
+                                                        (("1"
+                                                          (lemma
+                                                           "posreal_add_closed")
+                                                          (("1"
+                                                            (inst
+                                                             -1
+                                                             "A"
+                                                             "B")
+                                                            (("1"
+                                                              (prop)
+                                                              (("1"
+                                                                (name-replace
+                                                                 "C"
+                                                                 "A+B")
+                                                                (("1"
+                                                                  (assert)
+                                                                  nil
+                                                                  nil))
+                                                                nil)
+                                                               ("2"
+                                                                (assert)
+                                                                nil
+                                                                nil)
+                                                               ("3"
+                                                                (assert)
+                                                                nil
+                                                                nil))
+                                                              nil))
+                                                            nil))
+                                                          nil))
+                                                        nil)
+                                                       ("2"
+                                                        (replace
+                                                         -1
+                                                         -4
+                                                         rl)
+                                                        (("2"
+                                                          (hide -1 -3)
+                                                          (("2"
+                                                            (assert)
+                                                            nil
+                                                            nil))
+                                                          nil))
+                                                        nil)
+                                                       ("3"
+                                                        (replace
+                                                         -2
+                                                         -4
+                                                         rl)
+                                                        (("3"
+                                                          (hide -2 -3)
+                                                          (("3"
+                                                            (assert)
+                                                            nil
+                                                            nil))
+                                                          nil))
+                                                        nil)
+                                                       ("4"
+                                                        (expand "A" -1)
+                                                        (("4"
+                                                          (hide -3 -4)
+                                                          (("4"
+                                                            (typepred
+                                                             "q")
+                                                            (("4"
+                                                              (expand
+                                                               "zero_q")
+                                                              (("4"
+                                                                (case
+                                                                 "q`y /=0")
+                                                                (("1"
+                                                                  (lemma
+                                                                   "sq_eq_0")
+                                                                  (("1"
+                                                                    (inst
+                                                                     -1
+                                                                     "q`y")
+                                                                    (("1"
+                                                                      (prop)
+                                                                      (("1"
+                                                                        (expand
+                                                                         "sq")
+                                                                        (("1"
+                                                                          (lemma
+                                                                           "sq_pos")
+                                                                          (("1"
+                                                                            (inst-cp
+                                                                             -1
+                                                                             "q`z")
+                                                                            (("1"
+                                                                              (inst
+                                                                               -1
+                                                                               "q`y")
+                                                                              (("1"
+                                                                                (expand
+                                                                                 "sq")
+                                                                                (("1"
+                                                                                  (expand
+                                                                                   ">=")
+                                                                                  (("1"
+                                                                                    (expand
+                                                                                     "<=")
+                                                                                    (("1"
+                                                                                      (prop)
+                                                                                      (("1"
+                                                                                        (hide-all-but
+                                                                                         (-1
+                                                                                          -2
+                                                                                          -3))
+                                                                                        (("1"
+                                                                                          (lemma
+                                                                                           "posreal_add_closed")
+                                                                                          (("1"
+                                                                                            (inst
+                                                                                             -1
+                                                                                             "q`y * q`y"
+                                                                                             "q`z * q`z")
+                                                                                            (("1"
+                                                                                              (prop)
+                                                                                              (("1"
+                                                                                                (hide
+                                                                                                 -2
+                                                                                                 -3)
+                                                                                                (("1"
+                                                                                                  (name-replace
+                                                                                                   "D"
+                                                                                                   "q`y * q`y + q`z * q`z")
+                                                                                                  (("1"
+                                                                                                    (assert)
+                                                                                                    nil
+                                                                                                    nil))
+                                                                                                  nil))
+                                                                                                nil)
+                                                                                               ("2"
+                                                                                                (hide
+                                                                                                 -1
+                                                                                                 -3)
+                                                                                                (("2"
+                                                                                                  (assert)
+                                                                                                  nil
+                                                                                                  nil))
+                                                                                                nil)
+                                                                                               ("3"
+                                                                                                (hide
+                                                                                                 -2
+                                                                                                 -3)
+                                                                                                (("3"
+                                                                                                  (assert)
+                                                                                                  nil
+                                                                                                  nil))
+                                                                                                nil))
+                                                                                              nil))
+                                                                                            nil))
+                                                                                          nil))
+                                                                                        nil)
+                                                                                       ("2"
+                                                                                        (replace
+                                                                                         -1
+                                                                                         -3)
+                                                                                        (("2"
+                                                                                          (replace
+                                                                                           -1
+                                                                                           -3
+                                                                                           rl)
+                                                                                          (("2"
+                                                                                            (hide-all-but
+                                                                                             (-2
+                                                                                              -3))
+                                                                                            (("2"
+                                                                                              (assert)
+                                                                                              nil
+                                                                                              nil))
+                                                                                            nil))
+                                                                                          nil))
+                                                                                        nil)
+                                                                                       ("3"
+                                                                                        (assert)
+                                                                                        nil
+                                                                                        nil)
+                                                                                       ("4"
+                                                                                        (assert)
+                                                                                        nil
+                                                                                        nil))
+                                                                                      nil))
+                                                                                    nil))
+                                                                                  nil))
+                                                                                nil))
+                                                                              nil))
+                                                                            nil))
+                                                                          nil))
+                                                                        nil))
+                                                                      nil))
+                                                                    nil))
+                                                                  nil)
+                                                                 ("2"
+                                                                  (prop)
+                                                                  (("2"
+                                                                    (replace
+                                                                     -1
+                                                                     -2)
+                                                                    (("2"
+                                                                      (assert)
+                                                                      (("2"
+                                                                        (lemma
+                                                                         "sq_eq_0")
+                                                                        (("2"
+                                                                          (inst
+                                                                           -1
+                                                                           "q`z")
+                                                                          (("2"
+                                                                            (expand
+                                                                             "sq")
+                                                                            (("2"
+                                                                              (hide
+                                                                               -3)
+                                                                              (("2"
+                                                                                (expand
+                                                                                 "B")
+                                                                                (("2"
+                                                                                  (case
+                                                                                   "q`t/=0")
+                                                                                  (("1"
+                                                                                    (lemma
+                                                                                     "sq_eq_0")
+                                                                                    (("1"
+                                                                                      (inst
+                                                                                       -1
+                                                                                       "q`t")
+                                                                                      (("1"
+                                                                                        (prop)
+                                                                                        (("1"
+                                                                                          (expand
+                                                                                           "sq")
+                                                                                          (("1"
+                                                                                            (lemma
+                                                                                             "sq_pos")
+                                                                                            (("1"
+                                                                                              (inst-cp
+                                                                                               -1
+                                                                                               "q`t")
+                                                                                              (("1"
+                                                                                                (inst
+                                                                                                 -1
+                                                                                                 "q`x")
+                                                                                                (("1"
+                                                                                                  (expand
+                                                                                                   "sq")
+                                                                                                  (("1"
+                                                                                                    (expand
+                                                                                                     ">=")
+                                                                                                    (("1"
+                                                                                                      (expand
+                                                                                                       "<=")
+                                                                                                      (("1"
+                                                                                                        (prop)
+                                                                                                        (("1"
+                                                                                                          (hide
+                                                                                                           +)
+                                                                                                          (("1"
+                                                                                                            (lemma
+                                                                                                             "posreal_add_closed")
+                                                                                                            (("1"
+                                                                                                              (inst
+                                                                                                               -1
+                                                                                                               "q`t * q`t"
+                                                                                                               "q`x * q`x")
+                                                                                                              (("1"
+                                                                                                                (prop)
+                                                                                                                (("1"
+                                                                                                                  (name-replace
+                                                                                                                   "E"
+                                                                                                                   "q`t * q`t + q`x * q`x")
+                                                                                                                  (("1"
+                                                                                                                    (assert)
+                                                                                                                    nil
+                                                                                                                    nil))
+                                                                                                                  nil)
+                                                                                                                 ("2"
+                                                                                                                  (hide-all-but
+                                                                                                                   (-1
+                                                                                                                    1))
+                                                                                                                  (("2"
+                                                                                                                    (assert)
+                                                                                                                    nil
+                                                                                                                    nil))
+                                                                                                                  nil)
+                                                                                                                 ("3"
+                                                                                                                  (hide-all-but
+                                                                                                                   (-2
+                                                                                                                    1))
+                                                                                                                  (("3"
+                                                                                                                    (assert)
+                                                                                                                    nil
+                                                                                                                    nil))
+                                                                                                                  nil))
+                                                                                                                nil))
+                                                                                                              nil))
+                                                                                                            nil))
+                                                                                                          nil)
+                                                                                                         ("2"
+                                                                                                          (assert)
+                                                                                                          nil
+                                                                                                          nil)
+                                                                                                         ("3"
+                                                                                                          (lemma
+                                                                                                           "sq_eq_0")
+                                                                                                          (("3"
+                                                                                                            (inst
+                                                                                                             -1
+                                                                                                             "q`x")
+                                                                                                            (("3"
+                                                                                                              (expand
+                                                                                                               "sq")
+                                                                                                              (("3"
+                                                                                                                (prop)
+                                                                                                                (("1"
+                                                                                                                  (replace
+                                                                                                                   -4
+                                                                                                                   -7
+                                                                                                                   rl)
+                                                                                                                  (("1"
+                                                                                                                    (hide-all-but
+                                                                                                                     (-7
+                                                                                                                      2))
+                                                                                                                    (("1"
+                                                                                                                      (assert)
+                                                                                                                      nil
+                                                                                                                      nil))
+                                                                                                                    nil))
+                                                                                                                  nil)
+                                                                                                                 ("2"
+                                                                                                                  (assert)
+                                                                                                                  nil
+                                                                                                                  nil))
+                                                                                                                nil))
+                                                                                                              nil))
+                                                                                                            nil))
+                                                                                                          nil)
+                                                                                                         ("4"
+                                                                                                          (assert)
+                                                                                                          nil
+                                                                                                          nil))
+                                                                                                        nil))
+                                                                                                      nil))
+                                                                                                    nil))
+                                                                                                  nil))
+                                                                                                nil))
+                                                                                              nil))
+                                                                                            nil))
+                                                                                          nil))
+                                                                                        nil))
+                                                                                      nil))
+                                                                                    nil)
+                                                                                   ("2"
+                                                                                    (prop)
+                                                                                    (("2"
+                                                                                      (replace
+                                                                                       -1
+                                                                                       -4)
+                                                                                      (("2"
+                                                                                        (assert)
+                                                                                        (("2"
+                                                                                          (lemma
+                                                                                           "sq_eq_0")
+                                                                                          (("2"
+                                                                                            (inst
+                                                                                             -1
+                                                                                             "q`x")
+                                                                                            (("2"
+                                                                                              (expand
+                                                                                               "sq")
+                                                                                              (("2"
+                                                                                                (hide
+                                                                                                 -5)
+                                                                                                (("2"
+                                                                                                  (assert)
+                                                                                                  (("2"
+                                                                                                    (grind)
+                                                                                                    (("2"
+                                                                                                      (decompose-equality)
+                                                                                                      nil
+                                                                                                      nil))
+                                                                                                    nil))
+                                                                                                  nil))
+                                                                                                nil))
+                                                                                              nil))
+                                                                                            nil))
+                                                                                          nil))
+                                                                                        nil))
+                                                                                      nil))
+                                                                                    nil))
+                                                                                  nil))
+                                                                                nil))
+                                                                              nil))
+                                                                            nil))
+                                                                          nil))
+                                                                        nil))
+                                                                      nil))
+                                                                    nil))
+                                                                  nil))
+                                                                nil))
+                                                              nil))
+                                                            nil))
+                                                          nil))
+                                                        nil))
+                                                      nil))
+                                                    nil))
+                                                  nil))
+                                                nil))
+                                              nil))
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil)
+                   ("2" (assert) nil nil))
+                  nil)
+                 ("2" (assert) nil nil))
+                nil)
+               ("2" (assert) nil nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((- const-decl "[numfield -> numfield]" number_fields nil)
+    (* const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (restrict const-decl "R" restrict nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (red_norm_charac formula-decl nil quaternions nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (TRUE const-decl "bool" booleans nil)
+    (inv const-decl "{y | x * y = one AND y * x = one}" group nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (>= const-decl "bool" reals nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (<= const-decl "bool" reals nil)
+    (posreal_add_closed formula-decl nil real_axioms nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (int_times_even_is_even application-judgement "even_int" integers
+     nil)
+    (sq_eq_0 formula-decl nil sq reals)
+    (sq_pos formula-decl nil sq reals)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (nonneg_real_add_closed formula-decl nil real_types nil)
+    (associative_add formula-decl nil number_fields nil)
+    (sq const-decl "nonneg_real" sq reals)
+    (sq_plus_pos formula-decl nil sq reals)
+    (left_identity formula-decl nil monad nil)
+    (real_plus_real_is_real application-judgement "real" reals nil)
+    (real_times_real_is_real application-judgement "real" reals nil)
+    (minus_odd_is_odd application-judgement "odd_int" integers nil)
+    (nz_quat nonempty-type-eq-decl nil quaternions nil)
+    (zero_q const-decl "quat" quaternions_def nil)
+    (/= const-decl "boolean" notequal nil)
+    (quat type-eq-decl nil quaternions_def nil))
+   shostak))
+ (QH_inv_red_norm_TCC1 0
+  (QH_inv_red_norm_TCC1-1 nil 3889611598 ("" (subtype-tcc) nil nil) nil
+   nil
+   (QH_inv_red_norm subtype
+    "quaternions_def[real, restrict[[numfield, numfield], [real, real], numfield].restrict(number_fields.+), restrict[[numfield, numfield], [real, real], numfield].restrict(number_fields.*), 0, 1, (number_fields.-)(1), (number_fields.-)(1)].red_norm(quaternions_Hamilton.q)"
+    "nz_quat[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0, 1, -1, -1]")))
+ (QH_inv_red_norm_TCC2 0
+  (QH_inv_red_norm_TCC2-1 nil 3889611598 ("" (subtype-tcc) nil nil) nil
+   nil
+   (QH_inv_red_norm subtype
+    "restrict[[quat[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0, 1, -1, -1], quat[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0, 1, -1, -1]], [nz_quat[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0, 1, -1, -1], nz_quat[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0, 1, -1, -1]], quat[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0, 1, -1, -1]].restrict(quaternions_def[real, restrict[[numfield, numfield], [real, real], numfield].restrict(number_fields.+), restrict[[numfield, numfield], [real, real], numfield].restrict(number_fields.*), 0, 1, (number_fields.-)(1), (number_fields.-)(1)].*)"
+    "[[nz_quat[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0, 1, -1, -1], nz_quat[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0, 1, -1, -1]] -> nz_quat[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0, 1, -1, -1]]")))
+ (QH_inv_red_norm_TCC3 0
+  (QH_inv_red_norm_TCC3-1 nil 3889611598 ("" (subtype-tcc) nil nil) nil
+   nil
+   (QH_inv_red_norm subtype
+    "quaternions_def[real, restrict[[numfield, numfield], [real, real], numfield].restrict(number_fields.+), restrict[[numfield, numfield], [real, real], numfield].restrict(number_fields.*), 0, 1, (number_fields.-)(1), (number_fields.-)(1)].one_q"
+    "nz_quat[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0, 1, -1, -1]")))
+ (QH_inv_red_norm_TCC4 0
+  (QH_inv_red_norm_TCC4-1 nil 3889611598 ("" (assuming-tcc) nil nil)
+   nil nil
+   (QH_inv_red_norm assuming
+    "group[nz_quat[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0, 1, -1, -1], restrict[[quat[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0, 1, -1, -1], quat[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0, 1, -1, -1]], [nz_quat[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0, 1, -1, -1], nz_quat[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0, 1, -1, -1]], quat[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0, 1, -1, -1]].restrict(quaternions_def[real, restrict[[numfield, numfield], [real, real], numfield].restrict(number_fields.+), restrict[[numfield, numfield], [real, real], numfield].restrict(number_fields.*), 0, 1, (number_fields.-)(1), (number_fields.-)(1)].*), quaternions_def[real, restrict[[numfield, numfield], [real, real], numfield].restrict(number_fields.+), restrict[[numfield, numfield], [real, real], numfield].restrict(number_fields.*), 0, 1, (number_fields.-)(1), (number_fields.-)(1)].one_q].group"
+    "fullset_is_group: ASSUMPTION group_def[group.T, group.*, group.one].group?(sets[group.T].fullset)")))
+ (QH_inv_red_norm_TCC5 0
+  (QH_inv_red_norm_TCC5-1 nil 3889611598 ("" (subtype-tcc) nil nil) nil
+   nil
+   (QH_inv_red_norm subtype
+    "(quaternions_def[real, restrict[[numfield, numfield], [real, real], numfield].restrict(number_fields.+), restrict[[numfield, numfield], [real, real], numfield].restrict(number_fields.*), 0, 1, (number_fields.-)(1), (number_fields.-)(1)].red_norm(quaternions_Hamilton.q)`x)"
+    "nz_T[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0]")))
+ (QH_inv_red_norm_TCC6 0
+  (QH_inv_red_norm_TCC6-1 nil 3889611598 ("" (subtype-tcc) nil nil) nil
+   nil
+   (QH_inv_red_norm subtype
+    "restrict[[real, real], [nz_T[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0], nz_T[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0]], real].restrict(restrict[[numfield, numfield], [real, real], numfield].restrict(number_fields.*))"
+    "[[nz_T[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0], nz_T[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0]] -> nz_T[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0]]")))
+ (QH_inv_red_norm 0
+  (QH_inv_red_norm-1 nil 3889625473
+   ("" (skeep)
+    (("" (lemma "unique_inv[nz_quat,*,one_q]")
+      (("1"
+        (inst -1 "red_norm(q)"
+         "1 * inv[nz_T[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0], restrict [[real, real], [nz_T[real, restrict [[numfield, numfield], [real, real], numfield] (+), restrict [[numfield, numfield], [real, real], numfield] (*), 0], nz_T[real, restrict [[numfield, numfield], [real, real], numfield] (+), restrict [[numfield, numfield], [real, real], numfield] (*), 0]], real] (restrict[[numfield, numfield], [real, real], numfield] (*)), 1] ((red_norm(q)`x)) * one_q")
+        (("1" (prop)
+          (("1" (replace -3 1 rl) (("1" (propax) nil nil)) nil)
+           ("2" (hide 1 3)
+            (("2" (lemma "sc_comm")
+              (("2"
+                (inst -1
+                 "1 * inv[nz_T[real, restrict[[numfield, numfield], [real, real], numfield] (+) , restrict[[numfield, numfield], [real, real], numfield] (*), 0], restrict [[real, real], [nz_T[real, restrict [[numfield, numfield], [real, real], numfield] (+), restrict [[numfield, numfield], [real, real], numfield] (*), 0], nz_T[real, restrict [[numfield, numfield], [real, real], numfield] (+), restrict [[numfield, numfield], [real, real], numfield] (*), 0]], real] (restrict[[numfield, numfield], [real, real], numfield] (*)), 1] ((red_norm(q)`x))"
+                 "red_norm(q)" "one_q")
+                (("1" (replace -1 1 rl)
+                  (("1" (hide -1)
+                    (("1" (rewrite "times_one_q")
+                      (("1" (expand "*")
+                        (("1" (expand "one_q")
+                          (("1" (assert)
+                            (("1" (split)
+                              (("1"
+                                (assert)
+                                (("1"
+                                  (lemma
+                                   "inv_left[nz_T[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0], restrict [[real, real], [nz_T[real, restrict[[numfield, numfield], [real, real], numfield] (+), restrict[[numfield, numfield], [real, real], numfield] (*), 0], nz_T[real, restrict[[numfield, numfield], [real, real], numfield] (+) , restrict[[numfield, numfield], [real, real], numfield] (*), 0]], real] (restrict[[numfield, numfield], [real, real], numfield](*)), 1]")
+                                  (("1"
+                                    (inst -1 "red_norm(q)`x")
+                                    (("1"
+                                      (expand "restrict")
+                                      (("1" (propax) nil nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil)
+                               ("2"
+                                (lemma "red_norm_charac")
+                                (("2"
+                                  (inst -1 "q")
+                                  (("2"
+                                    (case-replace "red_norm(q)`y = 0")
+                                    (("1"
+                                      (name-replace
+                                       "A"
+                                       "inv[nz_T[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0], restrict [[real, real], [nz_T[real, restrict[[numfield, numfield], [real, real], numfield] (+), restrict[[numfield, numfield], [real, real], numfield] (*), 0], nz_T[real, restrict[[numfield, numfield], [real, real], numfield] (+) , restrict[[numfield, numfield], [real, real], numfield] (*), 0]], real] (restrict[[numfield, numfield], [real, real], numfield](*)), 1] ((red_norm(q)`x))")
+                                      (("1"
+                                        (hide -)
+                                        (("1" (assert) nil nil))
+                                        nil)
+                                       ("2"
+                                        (hide 2)
+                                        (("2"
+                                          (skeep)
+                                          (("2"
+                                            (expand "restrict")
+                                            (("2"
+                                              (lemma
+                                               " nzreal_times_nzreal_is_nzreal ")
+                                              (("2"
+                                                (inst -1 "x1`1" "x1`2")
+                                                (("2"
+                                                  (hide -3 -4)
+                                                  (("2"
+                                                    (grind)
+                                                    nil
+                                                    nil))
+                                                  nil))
+                                                nil))
+                                              nil))
+                                            nil))
+                                          nil))
+                                        nil)
+                                       ("3"
+                                        (hide 2)
+                                        (("3" (inst 1 "1") nil nil))
+                                        nil)
+                                       ("4"
+                                        (hide 2)
+                                        (("4"
+                                          (skeep)
+                                          (("4"
+                                            (hide -)
+                                            (("4" (grind) nil nil))
+                                            nil))
+                                          nil))
+                                        nil)
+                                       ("5"
+                                        (hide 2)
+                                        (("5"
+                                          (skeep)
+                                          (("5"
+                                            (hide -)
+                                            (("5"
+                                              (expand "restrict")
+                                              (("5" (propax) nil nil))
+                                              nil))
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil)
+                                     ("2"
+                                      (hide 2)
+                                      (("2"
+                                        (name-replace
+                                         "B"
+                                         "q`x * q`x + inv(-1) * (q`y * q`y) + inv(-1) * (q`z * q`z) + (-1 * -1) * (q`t * q`t)")
+                                        (("2" (assert) nil nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil)
+                               ("3"
+                                (lemma "red_norm_charac")
+                                (("3"
+                                  (inst -1 "q")
+                                  (("3"
+                                    (case-replace "red_norm(q)`z = 0")
+                                    (("1"
+                                      (name-replace
+                                       "A"
+                                       "inv[nz_T[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0], restrict [[real, real], [nz_T[real, restrict[[numfield, numfield], [real, real], numfield] (+), restrict[[numfield, numfield], [real, real], numfield] (*), 0], nz_T[real, restrict[[numfield, numfield], [real, real], numfield] (+) , restrict[[numfield, numfield], [real, real], numfield] (*), 0]], real] (restrict[[numfield, numfield], [real, real], numfield](*)), 1] ((red_norm(q)`x))")
+                                      (("1"
+                                        (hide -)
+                                        (("1" (assert) nil nil))
+                                        nil)
+                                       ("2"
+                                        (hide 2)
+                                        (("2"
+                                          (skeep)
+                                          (("2"
+                                            (expand "restrict")
+                                            (("2"
+                                              (lemma
+                                               " nzreal_times_nzreal_is_nzreal ")
+                                              (("2"
+                                                (inst -1 "x1`1" "x1`2")
+                                                (("2"
+                                                  (hide -3 -4)
+                                                  (("2"
+                                                    (grind)
+                                                    nil
+                                                    nil))
+                                                  nil))
+                                                nil))
+                                              nil))
+                                            nil))
+                                          nil))
+                                        nil)
+                                       ("3"
+                                        (hide 2)
+                                        (("3" (inst 1 "1") nil nil))
+                                        nil)
+                                       ("4"
+                                        (hide 2)
+                                        (("4"
+                                          (skeep)
+                                          (("4"
+                                            (hide -)
+                                            (("4" (grind) nil nil))
+                                            nil))
+                                          nil))
+                                        nil)
+                                       ("5"
+                                        (hide 2)
+                                        (("5"
+                                          (skeep)
+                                          (("5"
+                                            (hide -)
+                                            (("5"
+                                              (expand "restrict")
+                                              (("5" (propax) nil nil))
+                                              nil))
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil)
+                                     ("2"
+                                      (hide 2)
+                                      (("2"
+                                        (name-replace
+                                         "B"
+                                         "q`x * q`x + inv(-1) * (q`y * q`y) + inv(-1) * (q`z * q`z) + (-1 * -1) * (q`t * q`t)")
+                                        (("2" (assert) nil nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil)
+                               ("4"
+                                (lemma "red_norm_charac")
+                                (("4"
+                                  (inst -1 "q")
+                                  (("4"
+                                    (case-replace "red_norm(q)`t = 0")
+                                    (("1"
+                                      (name-replace
+                                       "A"
+                                       "inv[nz_T[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0], restrict [[real, real], [nz_T[real, restrict[[numfield, numfield], [real, real], numfield] (+), restrict[[numfield, numfield], [real, real], numfield] (*), 0], nz_T[real, restrict[[numfield, numfield], [real, real], numfield] (+) , restrict[[numfield, numfield], [real, real], numfield] (*), 0]], real] (restrict[[numfield, numfield], [real, real], numfield](*)), 1] ((red_norm(q)`x))")
+                                      (("1"
+                                        (hide -)
+                                        (("1" (assert) nil nil))
+                                        nil)
+                                       ("2"
+                                        (hide 2)
+                                        (("2"
+                                          (skeep)
+                                          (("2"
+                                            (expand "restrict")
+                                            (("2"
+                                              (lemma
+                                               " nzreal_times_nzreal_is_nzreal ")
+                                              (("2"
+                                                (inst -1 "x1`1" "x1`2")
+                                                (("2"
+                                                  (hide -3 -4)
+                                                  (("2"
+                                                    (grind)
+                                                    nil
+                                                    nil))
+                                                  nil))
+                                                nil))
+                                              nil))
+                                            nil))
+                                          nil))
+                                        nil)
+                                       ("3"
+                                        (hide 2)
+                                        (("3" (inst 1 "1") nil nil))
+                                        nil)
+                                       ("4"
+                                        (hide 2)
+                                        (("4"
+                                          (skeep)
+                                          (("4"
+                                            (hide -)
+                                            (("4" (grind) nil nil))
+                                            nil))
+                                          nil))
+                                        nil)
+                                       ("5"
+                                        (hide 2)
+                                        (("5"
+                                          (skeep)
+                                          (("5"
+                                            (hide -)
+                                            (("5"
+                                              (expand "restrict")
+                                              (("5" (propax) nil nil))
+                                              nil))
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil)
+                                     ("2"
+                                      (hide 2)
+                                      (("2"
+                                        (name-replace
+                                         "B"
+                                         "q`x * q`x + inv(-1) * (q`y * q`y) + inv(-1) * (q`z * q`z) + (-1 * -1) * (q`t * q`t)")
+                                        (("2" (assert) nil nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil)
+                       ("2" (hide 2)
+                        (("2" (skeep)
+                          (("2" (expand "restrict")
+                            (("2" (assert) nil nil)) nil))
+                          nil))
+                        nil)
+                       ("3" (hide 2)
+                        (("3" (skeep) (("3" (grind) nil nil)) nil))
+                        nil)
+                       ("4" (hide 2) (("4" (inst 1 "1") nil nil)) nil))
+                      nil))
+                    nil))
+                  nil)
+                 ("2" (hide 2)
+                  (("2" (skeep)
+                    (("2" (expand "restrict") (("2" (assert) nil nil))
+                      nil))
+                    nil))
+                  nil)
+                 ("3" (hide 2) (("3" (inst 1 "1") nil nil)) nil)
+                 ("4" (hide 2)
+                  (("4" (skeep) (("4" (grind) nil nil)) nil)) nil)
+                 ("5" (hide 2)
+                  (("5" (skeep)
+                    (("5" (expand "restrict") (("5" (propax) nil nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil)
+           ("3" (hide 1 3)
+            (("3" (lemma "sc_comm")
+              (("3"
+                (inst -1
+                 "1 * inv[nz_T[real, restrict[[numfield, numfield], [real, real], numfield] (+) , restrict[[numfield, numfield], [real, real], numfield] (*), 0], restrict [[real, real], [nz_T[real, restrict [[numfield, numfield], [real, real], numfield] (+), restrict [[numfield, numfield], [real, real], numfield] (*), 0], nz_T[real, restrict [[numfield, numfield], [real, real], numfield] (+), restrict [[numfield, numfield], [real, real], numfield] (*), 0]], real] (restrict[[numfield, numfield], [real, real], numfield] (*)), 1] ((red_norm(q)`x))"
+                 "one_q" "red_norm(q)")
+                (("1" (replace -1 1)
+                  (("1" (hide -1)
+                    (("1" (rewrite "one_q_times")
+                      (("1" (expand "*")
+                        (("1" (expand "one_q")
+                          (("1" (assert)
+                            (("1" (split)
+                              (("1"
+                                (assert)
+                                (("1"
+                                  (lemma
+                                   "inv_left[nz_T[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0], restrict [[real, real], [nz_T[real, restrict[[numfield, numfield], [real, real], numfield] (+), restrict[[numfield, numfield], [real, real], numfield] (*), 0], nz_T[real, restrict[[numfield, numfield], [real, real], numfield] (+) , restrict[[numfield, numfield], [real, real], numfield] (*), 0]], real] (restrict[[numfield, numfield], [real, real], numfield](*)), 1]")
+                                  (("1"
+                                    (inst -1 "red_norm(q)`x")
+                                    (("1"
+                                      (expand "restrict")
+                                      (("1" (propax) nil nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil)
+                               ("2"
+                                (lemma "red_norm_charac")
+                                (("2"
+                                  (inst -1 "q")
+                                  (("2"
+                                    (case-replace "red_norm(q)`y = 0")
+                                    (("1"
+                                      (name-replace
+                                       "A"
+                                       "inv[nz_T[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0], restrict [[real, real], [nz_T[real, restrict[[numfield, numfield], [real, real], numfield] (+), restrict[[numfield, numfield], [real, real], numfield] (*), 0], nz_T[real, restrict[[numfield, numfield], [real, real], numfield] (+) , restrict[[numfield, numfield], [real, real], numfield] (*), 0]], real] (restrict[[numfield, numfield], [real, real], numfield](*)), 1] ((red_norm(q)`x))")
+                                      (("1"
+                                        (hide -)
+                                        (("1" (assert) nil nil))
+                                        nil)
+                                       ("2"
+                                        (hide 2)
+                                        (("2"
+                                          (skeep)
+                                          (("2"
+                                            (expand "restrict")
+                                            (("2"
+                                              (lemma
+                                               " nzreal_times_nzreal_is_nzreal ")
+                                              (("2"
+                                                (inst -1 "x1`1" "x1`2")
+                                                (("2"
+                                                  (hide -3 -4)
+                                                  (("2"
+                                                    (grind)
+                                                    nil
+                                                    nil))
+                                                  nil))
+                                                nil))
+                                              nil))
+                                            nil))
+                                          nil))
+                                        nil)
+                                       ("3"
+                                        (hide 2)
+                                        (("3" (inst 1 "1") nil nil))
+                                        nil)
+                                       ("4"
+                                        (hide 2)
+                                        (("4"
+                                          (skeep)
+                                          (("4"
+                                            (hide -)
+                                            (("4" (grind) nil nil))
+                                            nil))
+                                          nil))
+                                        nil)
+                                       ("5"
+                                        (hide 2)
+                                        (("5"
+                                          (skeep)
+                                          (("5"
+                                            (hide -)
+                                            (("5"
+                                              (expand "restrict")
+                                              (("5" (propax) nil nil))
+                                              nil))
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil)
+                                     ("2"
+                                      (hide 2)
+                                      (("2"
+                                        (name-replace
+                                         "B"
+                                         "q`x * q`x + inv(-1) * (q`y * q`y) + inv(-1) * (q`z * q`z) + (-1 * -1) * (q`t * q`t)")
+                                        (("2" (assert) nil nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil)
+                               ("3"
+                                (lemma "red_norm_charac")
+                                (("3"
+                                  (inst -1 "q")
+                                  (("3"
+                                    (case-replace "red_norm(q)`z = 0")
+                                    (("1"
+                                      (name-replace
+                                       "A"
+                                       "inv[nz_T[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0], restrict [[real, real], [nz_T[real, restrict[[numfield, numfield], [real, real], numfield] (+), restrict[[numfield, numfield], [real, real], numfield] (*), 0], nz_T[real, restrict[[numfield, numfield], [real, real], numfield] (+) , restrict[[numfield, numfield], [real, real], numfield] (*), 0]], real] (restrict[[numfield, numfield], [real, real], numfield](*)), 1] ((red_norm(q)`x))")
+                                      (("1"
+                                        (hide -)
+                                        (("1" (assert) nil nil))
+                                        nil)
+                                       ("2"
+                                        (hide 2)
+                                        (("2"
+                                          (skeep)
+                                          (("2"
+                                            (expand "restrict")
+                                            (("2"
+                                              (lemma
+                                               " nzreal_times_nzreal_is_nzreal ")
+                                              (("2"
+                                                (inst -1 "x1`1" "x1`2")
+                                                (("2"
+                                                  (hide -3 -4)
+                                                  (("2"
+                                                    (grind)
+                                                    nil
+                                                    nil))
+                                                  nil))
+                                                nil))
+                                              nil))
+                                            nil))
+                                          nil))
+                                        nil)
+                                       ("3"
+                                        (hide 2)
+                                        (("3" (inst 1 "1") nil nil))
+                                        nil)
+                                       ("4"
+                                        (hide 2)
+                                        (("4"
+                                          (skeep)
+                                          (("4"
+                                            (hide -)
+                                            (("4" (grind) nil nil))
+                                            nil))
+                                          nil))
+                                        nil)
+                                       ("5"
+                                        (hide 2)
+                                        (("5"
+                                          (skeep)
+                                          (("5"
+                                            (hide -)
+                                            (("5"
+                                              (expand "restrict")
+                                              (("5" (propax) nil nil))
+                                              nil))
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil)
+                                     ("2"
+                                      (hide 2)
+                                      (("2"
+                                        (name-replace
+                                         "B"
+                                         "q`x * q`x + inv(-1) * (q`y * q`y) + inv(-1) * (q`z * q`z) + (-1 * -1) * (q`t * q`t)")
+                                        (("2" (assert) nil nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil)
+                               ("4"
+                                (lemma "red_norm_charac")
+                                (("4"
+                                  (inst -1 "q")
+                                  (("4"
+                                    (case-replace "red_norm(q)`t = 0")
+                                    (("1"
+                                      (name-replace
+                                       "A"
+                                       "inv[nz_T[real, restrict[[numfield, numfield], [real, real], numfield](+), restrict[[numfield, numfield], [real, real], numfield](*), 0], restrict [[real, real], [nz_T[real, restrict[[numfield, numfield], [real, real], numfield] (+), restrict[[numfield, numfield], [real, real], numfield] (*), 0], nz_T[real, restrict[[numfield, numfield], [real, real], numfield] (+) , restrict[[numfield, numfield], [real, real], numfield] (*), 0]], real] (restrict[[numfield, numfield], [real, real], numfield](*)), 1] ((red_norm(q)`x))")
+                                      (("1"
+                                        (hide -)
+                                        (("1" (assert) nil nil))
+                                        nil)
+                                       ("2"
+                                        (hide 2)
+                                        (("2"
+                                          (skeep)
+                                          (("2"
+                                            (expand "restrict")
+                                            (("2"
+                                              (lemma
+                                               " nzreal_times_nzreal_is_nzreal ")
+                                              (("2"
+                                                (inst -1 "x1`1" "x1`2")
+                                                (("2"
+                                                  (hide -3 -4)
+                                                  (("2"
+                                                    (grind)
+                                                    nil
+                                                    nil))
+                                                  nil))
+                                                nil))
+                                              nil))
+                                            nil))
+                                          nil))
+                                        nil)
+                                       ("3"
+                                        (hide 2)
+                                        (("3" (inst 1 "1") nil nil))
+                                        nil)
+                                       ("4"
+                                        (hide 2)
+                                        (("4"
+                                          (skeep)
+                                          (("4"
+                                            (hide -)
+                                            (("4" (grind) nil nil))
+                                            nil))
+                                          nil))
+                                        nil)
+                                       ("5"
+                                        (hide 2)
+                                        (("5"
+                                          (skeep)
+                                          (("5"
+                                            (hide -)
+                                            (("5"
+                                              (expand "restrict")
+                                              (("5" (propax) nil nil))
+                                              nil))
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil)
+                                     ("2"
+                                      (hide 2)
+                                      (("2"
+                                        (name-replace
+                                         "B"
+                                         "q`x * q`x + inv(-1) * (q`y * q`y) + inv(-1) * (q`z * q`z) + (-1 * -1) * (q`t * q`t)")
+                                        (("2" (assert) nil nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil)
+                       ("2" (hide 2)
+                        (("2" (skeep)
+                          (("2" (expand "restrict")
+                            (("2" (assert) nil nil)) nil))
+                          nil))
+                        nil)
+                       ("3" (hide 2)
+                        (("3" (skeep) (("3" (grind) nil nil)) nil))
+                        nil)
+                       ("4" (hide 2) (("4" (inst 1 "1") nil nil)) nil))
+                      nil))
+                    nil))
+                  nil)
+                 ("2" (hide 2)
+                  (("2" (skeep)
+                    (("2" (expand "restrict") (("2" (assert) nil nil))
+                      nil))
+                    nil))
+                  nil)
+                 ("3" (hide 2) (("3" (inst 1 "1") nil nil)) nil)
+                 ("4" (hide 2)
+                  (("4" (skeep) (("4" (grind) nil nil)) nil)) nil)
+                 ("5" (hide 2)
+                  (("5" (skeep)
+                    (("5" (expand "restrict") (("5" (propax) nil nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil)
+         ("2" (hide 1)
+          (("2" (expand "*")
+            (("2" (expand "one_q")
+              (("2" (expand "zero_q")
+                (("2" (lemma "QH_nzquat_nznorm")
+                  (("2" (inst -1 "q")
+                    (("2" (lemma "quotient_pos_lt")
+                      (("2"
+                        (inst -1 "(red_norm
+                [real,
+                 restrict[[numfield, numfield], [real, real], numfield](+),
+                
+ restrict[[numfield, numfield], [real, real], numfield](*),
+                 0, 1, -1, -1]
+                (q)`x)")
+                        (("2" (assert) nil nil)) nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil)
+         ("3" (hide 2)
+          (("3" (skeep)
+            (("3" (expand "restrict") (("3" (assert) nil nil)) nil))
+            nil))
+          nil)
+         ("4" (hide 2) (("4" (inst 1 "1") nil nil)) nil)
+         ("5" (hide 2)
+          (("5" (skeep)
+            (("5" (expand "restrict") (("5" (propax) nil nil)) nil))
+            nil))
+          nil)
+         ("6" (hide 2)
+          (("6" (skeep)
+            (("6" (expand "restrict") (("6" (propax) nil nil)) nil))
+            nil))
+          nil))
+        nil)
+       ("2" (hide 2)
+        (("2" (expand "one_q")
+          (("2" (expand "zero_q") (("2" (propax) nil nil)) nil)) nil))
+        nil)
+       ("3" (hide 2)
+        (("3" (skeep)
+          (("3" (lemma "QH_nzquat_nznorm")
+            (("3" (lemma "div_ring_iff_nz_rednorm")
+              (("3" (prop)
+                (("3" (hide -2)
+                  (("3" (expand "division_ring?")
+                    (("3" (expand "group?")
+                      (("3" (expand "monoid?")
+                        (("3" (expand "monad?")
+                          (("3" (flatten)
+                            (("3" (hide -1 -3 -4 -5 -6)
+                              (("3"
+                                (expand "star_closed?")
+                                (("3"
+                                  (inst -1 "x1`1" "x1`2")
+                                  (("1"
+                                    (expand "member")
+                                    (("1"
+                                      (expand "remove")
+                                      (("1"
+                                        (flatten)
+                                        (("1"
+                                          (hide -1 -2)
+                                          (("1" (grind) nil nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil)
+                                   ("2"
+                                    (expand "remove")
+                                    (("2"
+                                      (expand "member")
+                                      (("2"
+                                        (expand "fullset")
+                                        (("2"
+                                          (hide -)
+                                          (("2" (assert) nil nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil)
+                                   ("3"
+                                    (expand "remove")
+                                    (("3"
+                                      (expand "member")
+                                      (("3"
+                                        (expand "fullset")
+                                        (("3"
+                                          (hide -)
+                                          (("3" (assert) nil nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((one_q const-decl "quat" quaternions_def nil)
+    (* const-decl "[quat, quat -> quat]" quaternions_def nil)
+    (nz_quat nonempty-type-eq-decl nil quaternions nil)
+    (zero_q const-decl "quat" quaternions_def nil)
+    (/= const-decl "boolean" notequal nil)
+    (quat type-eq-decl nil quaternions_def nil)
+    (- const-decl "[numfield -> numfield]" number_fields nil)
+    (* const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (restrict const-decl "R" restrict nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (unique_inv formula-decl nil group nil)
+    (minus_odd_is_odd application-judgement "odd_int" integers nil)
+    (real_times_real_is_real application-judgement "real" reals nil)
+    (real_plus_real_is_real application-judgement "real" reals nil)
+    (QH_nzquat_nznorm formula-decl nil quaternions_Hamilton nil)
+    (quotient_pos_lt formula-decl nil real_props nil)
+    (nonzero_real nonempty-type-eq-decl nil reals nil)
+    (sc_comm formula-decl nil quaternions_def nil)
+    (times_one_q formula-decl nil quaternions_def nil)
+    (inv_left formula-decl nil group nil)
+    (nzreal_times_nzreal_is_nzreal judgement-tcc nil real_types nil)
+    (nzreal nonempty-type-eq-decl nil reals nil)
+    (odd_times_odd_is_odd application-judgement "odd_int" integers nil)
+    (red_norm_charac formula-decl nil quaternions nil)
+    (one_q_times formula-decl nil quaternions_def nil)
+    (left_identity formula-decl nil monad nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (* const-decl "quat" quaternions_def nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (inv const-decl "{y | x * y = one AND y * x = one}" group nil)
+    (red_norm const-decl "quat" quaternions_def nil)
+    (TRUE const-decl "bool" booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (nz_T type-eq-decl nil ring_nz_closed_def nil)
+    (nzreal_times_nzreal_is_nzreal application-judgement "nzreal"
+     real_types nil)
+    (div_ring_iff_nz_rednorm formula-decl nil quaternions nil)
+    (group? const-decl "bool" group_def nil)
+    (monad? const-decl "bool" monad_def nil)
+    (set type-eq-decl nil sets nil) (remove const-decl "set" sets nil)
+    (fullset const-decl "set" sets nil)
+    (member const-decl "bool" sets nil)
+    (star_closed? const-decl "bool" groupoid_def nil)
+    (monoid? const-decl "bool" monoid_def nil)
+    (division_ring? const-decl "bool" division_ring_def nil))
+   shostak))
+ (QH_inv_q_prod_charac 0
+  (QH_inv_q_prod_charac-1 nil 3889696459
+   ("" (skeep)
+    (("" (assert)
+      (("" (lemma "inv_q_prod_charac")
+        (("" (prop)
+          (("1" (inst -1 "q")
+            (("1" (replaces -1)
+              (("1" (lemma "QH_inv_red_norm")
+                (("1" (inst -1 "q")
+                  (("1" (replaces -1)
+                    (("1" (assert)
+                      (("1" (lemma "sc_comm")
+                        (("1"
+                          (inst -1 " inv[nz_T[real,
+                restrict[[numfield, numfield], [real, real], numfield](+),
+                restrict[[numfield,
+ numfield], [real, real], numfield](*),
+                0],
+           restrict
+               [[real, real],
+               
+ [nz_T[real,
+                      restrict[[numfield, numfield], [real, real], numfield]
+                          (+),
+      
+                restrict[[numfield, numfield], [real, real], numfield]
+                          (*),
+                      0]
+,
+                 nz_T[real,
+                      restrict[[numfield, numfield], [real, real], numfield]
+                    
+      (+),
+                      restrict[[numfield, numfield], [real, real], numfield]
+                          (*),
+        
+              0]],
+                real]
+               (restrict[[numfield, numfield], [real, real], numfield](*)),
+          
+ 1]
+           ((red_norm(q)`x))" "conjugate(q)" "one_q")
+                          (("1" (replace -1 1 rl)
+                            (("1" (rewrite "sc_quat_assoc" :dir rl)
+                              (("1" (rewrite "times_one_q") nil nil)
+                               ("2"
+                                (hide -1 2)
+                                (("2"
+                                  (skeep)
+                                  (("2"
+                                    (expand "restrict")
+                                    (("2" (assert) nil nil))
+                                    nil))
+                                  nil))
+                                nil)
+                               ("3"
+                                (hide -1 2)
+                                (("3"
+                                  (skeep)
+                                  (("3"
+                                    (expand "restrict")
+                                    (("3" (propax) nil nil))
+                                    nil))
+                                  nil))
+                                nil)
+                               ("4"
+                                (hide -1 2)
+                                (("4" (inst 1 "1") nil nil))
+                                nil))
+                              nil))
+                            nil)
+                           ("2" (hide -1 2)
+                            (("2" (skeep)
+                              (("2"
+                                (expand "restrict")
+                                (("2" (assert) nil nil))
+                                nil))
+                              nil))
+                            nil)
+                           ("3" (hide -1 2)
+                            (("3" (inst 1 "1") nil nil)) nil)
+                           ("4" (hide -1 2)
+                            (("4" (skeep)
+                              (("4"
+                                (expand "restrict")
+                                (("4" (propax) nil nil))
+                                nil))
+                              nil))
+                            nil)
+                           ("5" (hide -1 2)
+                            (("5" (skeep)
+                              (("5"
+                                (expand "restrict")
+                                (("5" (propax) nil nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil)
+           ("2" (hide -1 2)
+            (("2" (lemma "div_ring_iff_nz_rednorm")
+              (("2" (lemma "QH_nzquat_nznorm") (("2" (assert) nil nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((nzreal_times_nzreal_is_nzreal application-judgement "nzreal"
+     real_types nil)
+    (left_identity formula-decl nil monad nil)
+    (number nonempty-type-decl nil numbers nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (restrict const-decl "R" restrict nil)
+    (* const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (TRUE const-decl "bool" booleans nil)
+    (minus_odd_is_odd application-judgement "odd_int" integers nil)
+    (real_times_real_is_real application-judgement "real" reals nil)
+    (real_plus_real_is_real application-judgement "real" reals nil)
+    (nz_T type-eq-decl nil ring_nz_closed_def nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (inv const-decl "{y | x * y = one AND y * x = one}" group nil)
+    (red_norm const-decl "quat" quaternions_def nil)
+    (conjugate const-decl "quat" quaternions_def nil)
+    (one_q const-decl "quat" quaternions_def nil)
+    (sc_quat_assoc formula-decl nil quaternions_def nil)
+    (times_one_q formula-decl nil quaternions_def nil)
+    (sc_comm formula-decl nil quaternions_def nil)
+    (QH_inv_red_norm formula-decl nil quaternions_Hamilton nil)
+    (nz_quat nonempty-type-eq-decl nil quaternions nil)
+    (zero_q const-decl "quat" quaternions_def nil)
+    (/= const-decl "boolean" notequal nil)
+    (quat type-eq-decl nil quaternions_def nil)
+    (div_ring_iff_nz_rednorm formula-decl nil quaternions nil)
+    (QH_nzquat_nznorm formula-decl nil quaternions_Hamilton nil)
+    (inv_q_prod_charac formula-decl nil quaternions nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (- const-decl "[numfield -> numfield]" number_fields nil))
+   shostak))
+ (exists_arc 0
+  (exists_arc-1 nil 3891003633
+   ("" (skeep)
+    (("" (lemma "arc_sin_cos")
+      (("" (inst -1 "y" "x" "1")
+        (("" (expand "sq" -1 3)
+          (("" (prop)
+            (("" (skeep)
+              (("" (case-replace "1 * cos(d) = cos(d)")
+                (("1" (hide -1)
+                  (("1" (case-replace "1 * sin(d) = sin(d)")
+                    (("1" (hide -1)
+                      (("1" (expand "exists1")
+                        (("1" (prop)
+                          (("1" (inst?)
+                            (("1" (prop)
+                              (("1" (assert) nil nil)
+                               ("2" (assert) nil nil))
+                              nil)
+                             ("2" (typepred "d")
+                              (("2"
+                                (typepred "x")
+                                (("2"
+                                  (lemma "arc_sin_bij")
+                                  (("2"
+                                    (expand "bijective?")
+                                    (("2"
+                                      (flatten)
+                                      (("2"
+                                        (expand "surjective?")
+                                        (("2"
+                                          (inst -2 "d")
+                                          (("1"
+                                            (skeep)
+                                            (("1"
+                                              (lemma "arc_sin_sin")
+                                              (("1"
+                                                (inst -1 "d")
+                                                (("1"
+                                                  (replace -8 -1 rl)
+                                                  (("1"
+                                                    (hide-all-but
+                                                     (-1 -4 -5 1))
+                                                    (("1"
+                                                      (typepred
+                                                       "arc_sin(x)")
+                                                      (("1"
+                                                        (assert)
+                                                        (("1"
+                                                          (postpone)
+                                                          nil
+                                                          nil))
+                                                        nil))
+                                                      nil))
+                                                    nil))
+                                                  nil)
+                                                 ("2"
+                                                  (postpone)
+                                                  nil
+                                                  nil))
+                                                nil))
+                                              nil))
+                                            nil)
+                                           ("2" (postpone) nil nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil)
+                           ("2" (postpone) nil nil))
+                          nil))
+                        nil))
+                      nil)
+                     ("2" (postpone) nil nil))
+                    nil))
+                  nil)
+                 ("2" (postpone) nil nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   nil shostak)))
+
